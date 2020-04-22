@@ -111,6 +111,8 @@ function Twins:OnSync(msg)
 
 	elseif msg:sub(0, 13) == "Conflagration" then
 		msg = msg:sub(14)
+		self:StartStatusBarTimer(31, "Next Conflag", 45321) 
+		self:StartStatusBarTimer(3.5, "Conflag", 45321) 
 		if self.Options.WarnConflagration then
 			self:Announce(DBM_TWINS_WARN_CONFLAG_ON:format(msg), 4)
 		end
