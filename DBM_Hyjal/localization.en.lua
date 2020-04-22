@@ -85,7 +85,7 @@ DBM_MHT_DESCRIPTION1				= "Announce what mobs are incoming";
 DBM_MHT_DESCRIPTION2				= "Announces when a ghoul starts cannibalizing";
 DBM_MHT_OPTION_WAVE				= "Announce incoming wave";
 
-
+DBM_MHT_WARN_GHOUL				= "Ghoul gains Cannibalize"
 DBM_MHT_WAVE_CHECK				= "Current Wave = (%d+) of 8";
 DBM_MHT_WAVE_SOON				= "Next wave soon";
 DBM_MHT_WAVE_NOW				= "Next wave incoming!";

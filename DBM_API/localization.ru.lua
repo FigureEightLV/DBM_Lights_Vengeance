@@ -1,130 +1,122 @@
-﻿-- --------------------------------------- --
--- Deadly Boss Mods - english localization --
---          by DeadlyMinds|Tandanu         --
--- --------------------------------------- --
+﻿-- ---------------------------------------- --
+-- Deadly Boss Mods - russian localization  --
+--                                          --
+-- Translations by:                         --
+--   LV|Nitram  -> EN                       --
+--   LV|Tandanu -> DE                       --
+--   LV|Tandanu -> fixed typos              --
+--   LV|Bootwin -> RU                       --
+-- ---------------------------------------- --
 
 if (GetLocale() == "ruRU") then
 
 --classes
 DBM_MAGE		= "Маг";
-DBM_PRIEST		= "Жрец";
+DBM_PRIEST		= "Жрец" or "Жрица";
 DBM_PALADIN		= "Паладин";
 DBM_DRUID		= "Друид";
-DBM_WARLOCK		= "Чернокнижник";
-DBM_ROGUE		= "Разбойник";
-DBM_HUNTER		= "Охотник";
+DBM_WARLOCK		= "Чернокнижник" or "Чернокнижница";
+DBM_ROGUE		= "Разбойник" or "Разбойница";
+DBM_HUNTER		= "Охотник" or "Охотница";
 DBM_WARRIOR		= "Воин";
-DBM_SHAMAN		= "Шаман";
+DBM_SHAMAN		= "Шаман" or "Шаманка";
 
 --zones
-DBM_NAXX			= "Naxxramas";
-DBM_AQ40			= "Ahn'Qiraj";
-DBM_BWL			= "Blackwing Lair";
-DBM_MC				= "Molten Core";
-DBM_AQ20			= "Ruins of Ahn'Qiraj";
-DBM_ZG 			= "Zul'Gurub";
-DBM_ONYXIAS_LAIR	= "Onyxia's Lair";
-DBM_DUSKWOOD		= "Duskwood";
-DBM_ASHENVALE		= "Ashenvale";
-DBM_FERALAS		= "Feralas";
-DBM_HINTERLANDS	= "The Hinterlands";
-DBM_BLASTED_LANDS	= "Blasted Lands";
-DBM_AZSHARA		= "Azshara";
-DBM_HELLFIRE	= "Hellfire Peninsula";
-DBM_SHADOWMOON	= "Shadowmoon Valley";
+DBM_NAXX			= "Наксрамас";
+DBM_AQ40			= "Храм Ан'Киража";
+DBM_BWL			    = "Логово Крыльев Тьмы";
+DBM_MC				= "Огненные Недра";
+DBM_AQ20			= "Руины Ан'Киража";
+DBM_ZG 			    = "Зул'Гуруб";
+DBM_ONYXIAS_LAIR	= "Логово Ониксии";
+DBM_DUSKWOOD		= "Сумеречный лес";
+DBM_ASHENVALE		= "Ясеневый лес";
+DBM_FERALAS		    = "Фералас";
+DBM_HINTERLANDS	    = "Внутренние земли";
+DBM_BLASTED_LANDS	= "Выжженные земли";
+DBM_AZSHARA		    = "Азшара";
+DBM_HELLFIRE	    = "Полуостров Адского Пламени";
+DBM_SHADOWMOON	    = "Долина Призрачной Луны";
 
-DBM_BLACK_MORASS	= "The Black Morass";
+DBM_BLACK_MORASS	= "Черные топи";
 
-DBM_BATTLEGROUND	= "Battleground";
-DBM_BATTLEGROUNDS	= "Battlegrounds";
+DBM_BATTLEGROUND	= "Поле боя";
+DBM_BATTLEGROUNDS	= "Поля битвы";
 DBM_ARATHI			= "Низина Арати";
-DBM_WARSONG		= "Warsong Gulch";
-DBM_ALTERAC		= "Альтеракская долина";
-DBM_EYEOFTHESTORM = "Око Бури";
-DBM_OTHER			= "Other";
+DBM_WARSONG		    = "Ущелье Песни Войны";
+DBM_ALTERAC		    = "Альтеракская долина";
+DBM_EYEOFTHESTORM   = "Око Бури";
+DBM_OTHER			= "Другие";
 
-DBM_GRUULS_LAIR		= "Gruul's Lair";
-DBM_MAGS_LAIR		= "Magtheridon's Lair";
-
---Gui Tabs
-DBMGUI_TAB_NAXX				= "Naxxramas";		-- DO NOT TRANSLATE!!!
-DBMGUI_TAB_AQ40				= "Ahn'Qiraj";		-- DO NOT TRANSLATE!!!
-DBMGUI_TAB_BWL					= "BlackWingLair";	-- DO NOT TRANSLATE!!!
-DBMGUI_TAB_MC					= "Molten Core";	-- DO NOT TRANSLATE!!!
-DBMGUI_TAB_AQ20				= "Ahn'Qiraj 20";	-- DO NOT TRANSLATE!!!
-DBMGUI_TAB_ZG				= "Zul'Gurub";		-- DO NOT TRANSLATE!!!
-DBMGUI_TAB_OTHER				= "Other";			-- DO NOT TRANSLATE!!!
-DBMGUI_TAB_OTHER_BC				= "Other (BC)";               -- DO NOT TRANSLATE!!!
-DBM_NO_GUI_TAB					= "No GUI"; 		-- DO NOT TRANSLATE!!!
-
-
+DBM_GRUULS_LAIR		= "Логово Груула";
+DBM_MAGS_LAIR		= "Логово Магтеридона";
 
 --spells/buffs
-DBM_CHARGE			= "Charge";
+DBM_CHARGE			= "Рывок";
 DBM_FERALCHARGE		= "Звериная атака";
-DBM_BLOODRAGE			= "Bloodrage";
-DBM_REDEMPTION 		= "Spirit of Redemption";
-DBM_FEIGNDEATH			= "Feign Death";
-DBM_MINDCONTROL		= "Mind Control";
+DBM_BLOODRAGE		= "Кровопускание";
+DBM_REDEMPTION 		= "Дух воздаяния";
+DBM_FEIGNDEATH		= "Притвориться мертвым";
+DBM_MINDCONTROL		= "Контроль над разумом";
 
 --create status bar timer localization table
 DBM_SBT = {};
 
 --key bindings
-BINDING_HEADER_DBM 		= "Deadly Boss Mods";
-BINDING_NAME_DBMTOGGLE 		= "Toggle GUI";
+BINDING_HEADER_DBM 		= "Deadly Boss Mod";
+BINDING_NAME_DBMTOGGLE 	= "Включение или выключение GUI";
 
 --OnLoad messages
-DBM_LOADED			= "Deadly Boss Mods v%s by DeadlyMinds|Tandanu @ EU-Aegwynn and La Vendetta|Nitram @ EU-Azshara loaded.";
-DBM_MODS_LOADED		= "%s %s boss mods загружен."
+DBM_LOADED			= "Deadly Boss Mod v%s Автор: DeadlyMinds|Tandanu @ EU-Aegwynn и La Vendetta|Nitram @ EU-Azshara loaded.";
+DBM_MODS_LOADED		= "%s %s Boss Mod загружен."
 
 --Slash command messages
-DBM_MOD_ENABLED		= "Boss mod включен.";
-DBM_MOD_DISABLED		= "Boss mod выключен.";
-DBM_ANNOUNCE_ENABLED		= "Анонс включен.";
-DBM_ANNOUNCE_DISABLED		= "Анонс выключен.";
-DBM_MOD_STOPPED		= "Timers stopped.";
-DBM_MOD_INFO			= "Boss mod v%s by %s";
-DBM_SLASH_HELP1		= " вкл/выкл";
-DBM_SLASH_HELP2		= " анонс вкл/выкл";
-DBM_SLASH_HELP3		= " stop";
-DBM_SLASH_HELP4		= "You can use %s instead of /%s.";
-DBM_RANGE_CHECK		= "More than 30 yards away: ";
-DBM_FOUND_CLIENTS		= "Found %s players with Deadly Boss Mods";
+DBM_MOD_ENABLED		    = "Boss Mod включен.";
+DBM_MOD_DISABLED		= "Boss Mod выключен.";
+DBM_ANNOUNCE_ENABLED	= "Объявление включено.";
+DBM_ANNOUNCE_DISABLED	= "Объявление отключено.";
+DBM_MOD_STOPPED		    = "Таймеры остановлены.";
+DBM_MOD_INFO			= "Boss Mod v%s для %s";
+DBM_SLASH_HELP1		    = " вкл/выкл";
+DBM_SLASH_HELP2		    = " объявление вкл/выкл";
+DBM_SLASH_HELP3		    = " остановлено";
+DBM_SLASH_HELP4		    = "Можно использовать %s вместо /%s.";
+DBM_RANGE_CHECK		    = "Более 30 метров: ";
+DBM_FOUND_CLIENTS		= "Обнаружено %s игрока с установленным Deadly Boss Mod";
 
 --Sync options
-DBM_SOMEONE_SET_SYNC_CHANNEL	= "%s set the sync channel to: %s";
-DBM_SET_SYNC_CHANNEL		= "Sync channel set to: %s";
-DBM_CHANNEL_NOT_SET		= "Channel not set. Cannot broadcast.";
-DBM_NEED_LEADER		= "You need to be promoted or leader to broadcast the channel!";
-DBM_NEED_LEADER_STOP_ALL	= "You need to be promoted or leader to use this function!";
-DBM_ALL_STOPPED		= "Stopped all timers.";
-DBM_REC_STOP_ALL		= "Received stop all command from %s.";
+DBM_SOMEONE_SET_SYNC_CHANNEL	= "%s канал синхронизации задан для: %s";
+DBM_SET_SYNC_CHANNEL		    = "Канал синхронизации для: %s";
+DBM_CHANNEL_NOT_SET		        = "Канал не задано. Вещание не ведется.";
+DBM_NEED_LEADER		            = "Для вещания в канале нужны права помощника или лидера";
+DBM_NEED_LEADER_STOP_ALL	    = "Для использования этой функции необходимы права помощника или лидера!";
+DBM_ALL_STOPPED		            = "Остановлено все таймеры.";
+DBM_REC_STOP_ALL		        = "Остановлено все команды от %s.";
 
 --Update dialog
-DBM_UPDATE_DIALOG		= "Your version of Deadly Boss Mods is out of date!\n%s and %s got version %s.\nPlease visit www.deadlybossmods.com to get the latest version.";
-DBM_YOUR_VERSION_SUCKS	= "Your version of Deadly Boss Mods is out of date! Please visit www.deadlybossmods.com to get the latest version.";
-DBM_REQ_PATCHNOTES		= "Requesting patch notes from %s...please wait.";
-DBM_SHOW_PATCHNOTES		= "Show patch notes";
-DBM_PATCHNOTES			= "Patch Notes";
-DBM_COPY_PASTE_URL		= "Copy & paste URL";
-DBM_COPY_PASTE_NOW		= "Press ctrl-c to copy the URL to the clipboard";
+DBM_UPDATE_DIALOG		= "Устаревшая версия Deadly Boss Mod!\n%s и %s получите версию %s.\nЗагрузить последнюю версию можно на веб-узле www.deadlybossmods.com.";
+DBM_YOUR_VERSION_SUCKS	= "Устаревшая версия Deadly Boss Mod! Загрузить последнюю версию можно на веб-узле www.deadlybossmods.com.";
+DBM_REQ_PATCHNOTES		= "Запрашивается информации об исправлениях у %s... Подождите.";
+DBM_SHOW_PATCHNOTES		= "Показать сообщение";
+DBM_PATCHNOTES			= "Об исправлениях";
+DBM_COPY_PASTE_URL		= "Копировать/вставить";
+DBM_COPY_PASTE_NOW		= "Нажмите клавиши Ctrl+C чтобы скопировать URL в буфер обмена";
 
 --Status Bar Timers
-DBM_SBT_TIMELEFT				= "Time left:";
-DBM_SBT_TIMEELAPSED			= "Времени прошло:";
-DBM_SBT_TOTALTIME				= "Времени осталось:";
-DBM_SBT_REPETITIONS			= "Repetitions:";
-DBM_SBT_INFINITE				= "infinite";
-DBM_SBT_BOSSMOD				= "Boss mod:";
+DBM_SBT_TIMELEFT				= "Осталось времени:";
+DBM_SBT_TIMEELAPSED			    = "Прошло времени:";
+DBM_SBT_TOTALTIME				= "Общее время:";
+DBM_SBT_REPETITIONS			    = "Повторения:";
+DBM_SBT_INFINITE				= "бесконечно";
+DBM_SBT_BOSSMOD				    = "Boss Mod:";
 DBM_SBT_STARTEDBY				= "Запущен:";
-DBM_SBT_RIGHTCLICK				= "Правый клик на баре для его закрытия.";
-DBM_SBT_LEFTCLICK				= "Шифт+левый клик на баре для анонса";
-DBM_TIMER_IS_ABOUT_TO_EXPIRE	= "Timer \"%s\" is about to expire!";
-DBM_BAR_STYLE_DEFAULT			= "Default";
-DBM_BAR_STYLE_MODERN			= "Modern";
-DBM_BAR_STYLE_CLOUDS			= "Clouds";
-DBM_BAR_STYLE_PERL				= "Perl";
+DBM_SBT_RIGHTCLICK				= "Щелкните правой кнопкой по полосе, чтобы скрыть";
+DBM_SBT_LEFTCLICK				= "Shift + левый щелчок по полосе для объявления";
+DBM_TIMER_IS_ABOUT_TO_EXPIRE	= "Таймер \"%s\" скоро истекает!";
+DBM_BAR_STYLE_DEFAULT			= "Стандартный";
+DBM_BAR_STYLE_MODERN			= "Современный";
+DBM_BAR_STYLE_CLOUDS			= "Облака";
+DBM_BAR_STYLE_PERL				= "Перл";
 
 
 --Combat messages
@@ -132,175 +124,175 @@ DBM_BOSS_ENGAGED			= "%s спуллен. Удачного лута! :)";
 DBM_BOSS_SYNCED_BY			= "(получена синхронизация от %s)";
 DBM_BOSS_DOWN				= "%s убит за %s!";
 DBM_COMBAT_ENDED			= "Бой окончен после %s.";
-DBM_DEFAULT_BUSY_MSG			= "%P занят. (В бою с %B - %HP - %ALIVE/%RAID игроков живые.) О результатах боя будет сообщено после.";
-DBM_RAID_STATUS_WHISPER		= "%B - %HP - %ALIVE/%RAID people alive.";
-DBM_SEND_STATUS_INFO			= "Whisper \"status\" to query the raid's status.";
-DBM_AUTO_RESPOND_SHORT			= "Auto-responded.";
-DBM_AUTO_RESPOND_LONG			= "Auto-responded to a whisper from %s";
-DBM_MISSED_WHISPERS			= "Missed whispers during combat:";
+DBM_DEFAULT_BUSY_MSG		= "%P занят. (В бою с %B - %HP - %ALIVE/%RAID живых игроков.) О результатах боя будет сообщено после.";
+DBM_RAID_STATUS_WHISPER		= "%B - %HP - %ALIVE/%RAID живых игроков.";
+DBM_SEND_STATUS_INFO		= "Шепотом \"status\" на запрос состояния рейда.";
+DBM_AUTO_RESPOND_SHORT		= "Автоответ.";
+DBM_AUTO_RESPOND_LONG		= "Автоответ на обращение шепотом от %s";
+DBM_MISSED_WHISPERS			= "Пропущено обращение шепотом в бою:";
 DBM_SHOW_MISSED_WHISPER		= "|Hplayer:%1\$s|h[%1\$s]|h: %2\$s";
-DBM_BALCONY_PHASE			= "Balcony phase #%s";
+DBM_BALCONY_PHASE			= "Балкон - фаза #%s";
 
 --Misc stuff
-DBM_YOU					= "You";
-DBM_ARE					= "are";
-DBM_IS						= "is";
-DBM_OR						= "or";
-DBM_AND					= "and";
-DBM_UNKNOWN			 		= "unknown";
-DBM_LOCAL					= "local";
-DBM_DEFAULT_DESCRIPTION			= "Description not available.";
-DBM_SEC					= "sec";
-DBM_MIN					= "min";
-DBM_SECOND					= "second";
-DBM_SECONDS					= "seconds";
-DBM_MINUTES					= "minutes";
-DBM_MINUTE					= "minute";
-DBM_HIT					= "hit";
-DBM_HITS					= "hits";
-DBM_CRIT					= "crit";
-DBM_CRITS					= "crits";
-DBM_MISS					= "miss";
-DBM_DODGE					= "dodge";
-DBM_PARRY					= "parry";
-DBM_FROST					= "Frost";
-DBM_ARCANE					= "Arcane";
-DBM_FIRE					= "Fire";
-DBM_HOLY					= "Holy";
-DBM_NATURE					= "Nature";
-DBM_SHADOW					= "Shadow";
-DBM_CLOSE					= "Close";
-DBM_AGGRO_FROM					= "Aggro from ";
-DBM_SET_ICON					= "Set icon";
-DBM_SEND_WHISPER				= "Шепнуть";
-DBM_DEAD					= "Dead";
-DBM_OFFLINE					= "Offline";
-DBM_PHASE					= "Фаза %s";
-DBM_WAVE					= "Волна %s";
+DBM_YOU					= "Вы";
+DBM_ARE					= "";
+DBM_IS					= "-";
+DBM_OR					= "или";
+DBM_AND					= "и";
+DBM_UNKNOWN			 	= "неизвестно";
+DBM_LOCAL				= "локально";
+DBM_DEFAULT_DESCRIPTION	= "Описание недоступно.";
+DBM_SEC					= "сек.";
+DBM_MIN					= "мин.";
+DBM_SECOND				= "секунда";
+DBM_SECONDS				= "секунд";
+DBM_MINUTES				= "минут";
+DBM_MINUTE				= "минута";
+DBM_HIT					= "удар";
+DBM_HITS				= "удары";
+DBM_CRIT				= "критический";
+DBM_CRITS				= "критические";
+DBM_MISS				= "промах";
+DBM_DODGE				= "уклонение";
+DBM_PARRY				= "парирование";
+DBM_FROST				= "Лед";
+DBM_ARCANE				= "Тайна";
+DBM_FIRE				= "Огонь";
+DBM_HOLY				= "Свет";
+DBM_NATURE				= "Природа";
+DBM_SHADOW				= "Темная";
+DBM_CLOSE				= "Закрыть";
+DBM_AGGRO_FROM			= "Агрессивность от";
+DBM_SET_ICON			= "Значок";
+DBM_SEND_WHISPER		= "Шепотом";
+DBM_DEAD				= "Мертвый";
+DBM_OFFLINE				= "Нет в игре";
+DBM_PHASE				= "Фаза %s";
+DBM_WAVE				= "Волна %s";
 
 
 -- Added 11.11.06
-DBM_NOGUI_ERROR				= "Sorry, please activate the DBM GUI to access this function";
-DBM_NOSYNCBARS					= "Currently there are no bars";
+DBM_NOGUI_ERROR			= "Пожалуйста, активируйте DBM GUI для доступа к этой функции";
+DBM_NOSYNCBARS			= "В настоящее время полосы отсутствуют";
 
 
 
 
 -- Added 1.12.06
 
-DBM_LEFT	= "left";
-DBM_RIGHT	= "right";
+DBM_LEFT	= "слева";
+DBM_RIGHT	= "справа";
 
-DBM_GUI_COMBATLOG_RANGE_TITLE      = "Combat log range";
-DBM_GUI_COMBATLOG_MIN_RANGE        = "Combat log set to minimum range";
-DBM_GUI_COMBATLOG_MAX_RANGE        = "Combat log set to maximum range";
-DBM_GUI_COMBATLOG_LONG_RANGE       = "Combat log set to long range";
-DBM_GUI_COMBATLOG_DEFAULT_RANGE    = "Combat log set to default range";
+DBM_GUI_COMBATLOG_RANGE_TITLE      = "Диапазон Боевого журнала";
+DBM_GUI_COMBATLOG_MIN_RANGE        = "Установлено минимальный диапазон";
+DBM_GUI_COMBATLOG_MAX_RANGE        = "Установлено максимальный диапазон";
+DBM_GUI_COMBATLOG_LONG_RANGE       = "Установлено полный диапазон";
+DBM_GUI_COMBATLOG_DEFAULT_RANGE    = "Установлено диапазон по умолчанию";
 
 DBMGUI_DISTANCE_FRAME_TITLE		= "Расстояние";
-DBMGUI_DISTANCE_FRAME_TEXT		= "Очень близко:";
-DBMGUI_DISTANCE_FRAME_TEXT_15YD	= "Очень близко (15 ярдов):";
+DBMGUI_DISTANCE_FRAME_TEXT		= "Слишком близко:";
+DBMGUI_DISTANCE_FRAME_TEXT_15YD	= "Очень близко (15 метров):";
 
-DBMGUI_INFOFRAME_TOOLTIP_TITLE		= "Info Frame";
-DBMGUI_INFOFRAME_TOOLTIP_TEXT		= "Right-click to move\nShift + right-click to hide";
+DBMGUI_INFOFRAME_TOOLTIP_TITLE		= "Информация";
+DBMGUI_INFOFRAME_TOOLTIP_TEXT		= "Щелчок правой кнопкой для перемещения\nShift + правый щелчок для скрытия";
 
-DBMGUI_STATUSBAR_WIDTH_SLIDER		= "Bar width";
-DBMGUI_STATUSBAR_SCALE_SLIDER		= "Bar scale";
+DBMGUI_STATUSBAR_WIDTH_SLIDER		= "Ширина";
+DBMGUI_STATUSBAR_SCALE_SLIDER		= "Масштаб";
 
-DBMGUI_BUTTON_RANGECHECK		= "Range check";
-DBMGUI_TOOLTIP_RANGECHECK_TITLE	= "Range check";
-DBMGUI_TOOLTIP_RANGECHECK_TEXT		= "Starts a range check which shows you all players who stand more than 30 yards away from you.";
+DBMGUI_BUTTON_RANGECHECK		    = "Диапазон";
+DBMGUI_TOOLTIP_RANGECHECK_TITLE	    = "Контрольное окно придельного диапазона";
+DBMGUI_TOOLTIP_RANGECHECK_TEXT		= "Отображение или скрытие контрольного окна границ диапазона, в котором показаны все игроки, находящиеся более чем за 30 метров от вас.";
 
-DBMGUI_BUTTON_DISTANCEFRAME		= "Distance frame";
-DBMGUI_TOOLTIP_DISTANCEFRAME_TITLE	= "Distance frame";
-DBMGUI_TOOLTIP_DISTANCEFRAME_TEXT	= "Shows or hides a distance check frame. It shows all players who stand too close to you (10 yards). This frame is useful for encounters like C'Thun or Huhuran.";
+DBMGUI_BUTTON_DISTANCEFRAME		    = "Дистанция";
+DBMGUI_TOOLTIP_DISTANCEFRAME_TITLE	= "Контрольное окно придельной дистанции";
+DBMGUI_TOOLTIP_DISTANCEFRAME_TEXT	= "Отображение или скрытие контрольного окна границ дистанции, в котором показаны все игроки, находящиеся слишком близкий к вам (10 метров). Помогает при сражении с К'Тун или Принцессой Хухуран.";
 
 
 -- Added 2.12.06
 
-DBM_NAME			= "Name";
+DBM_NAME			= "Имя";
 DBM_DURABILITY		= "Прочность";
 
-DBM_LOAD_GUI_ERROR_FORMAT	= "Error while loading GUI: %s";
-DBM_LOAD_GUI_ERROR_UNKNOWN	= "Unknown error while loading GUI.";
+DBM_LOAD_GUI_ERROR_FORMAT	= "Ошибка при загрузке GUI: %s";
+DBM_LOAD_GUI_ERROR_UNKNOWN	= "Неизвестная ошибка при загрузке GUI.";
 
 -- Added 9.12.06
 
-DBM_ERROR_INVALID_MODID	= "ERROR: The mod's ID must be a string!";
-DBM_ERROR_MODID_EXISTS		= "ERROR: A mod with ID '%s' already exists!";
+DBM_ERROR_INVALID_MODID	    = "ОШИБКА: ID модуля должна быть строка!";
+DBM_ERROR_MODID_EXISTS		= "ОШИБКА: модуль с ID '%s' уже существует!";
 
 -- Added 11.12.06
-DBM_COMBAT_TABLE_WARNING	= "WARNING: A boss mod with this ID is already registered, updating information..."
+DBM_COMBAT_TABLE_WARNING	= "ПРЕДУПРЕЖДЕНИЕ: модуль DBM с этим ID уже зарегистрирован, обновите информацию..."
 
 -- Added 13.12.06
-DBM_TIMER_SLASHCMD_HELP1	= "/dbm timer <time> <text>  -  starts a timer";
-DBM_TIMER_SLASHCMD_HELP2	= "/dbm broadcast timer <time> <text>  -  broadcasts a timer";
+DBM_TIMER_SLASHCMD_HELP1	= "/dbm timer <time> <text>  -  запускает таймер";
+DBM_TIMER_SLASHCMD_HELP2	= "/dbm broadcast timer <time> <text>  -  транслирует таймер";
 
 -- Added 20.12.06
 DBM_HORDE		= "Орда";
 DBM_ALLIANCE	= "Альянс";
 
 -- Added 22.12.06
-DBM_ENABLED_GREEN	= GREEN_FONT_COLOR_CODE.."enabled"..FONT_COLOR_CODE_CLOSE;
-DBM_DISABLED_RED	= RED_FONT_COLOR_CODE.."disabled"..FONT_COLOR_CODE_CLOSE;
-DBM_ERROR			= "Error";
+DBM_ENABLED_GREEN	= GREEN_FONT_COLOR_CODE.."включено"..FONT_COLOR_CODE_CLOSE;
+DBM_DISABLED_RED	= RED_FONT_COLOR_CODE.."отключено"..FONT_COLOR_CODE_CLOSE;
+DBM_ERROR			= "Ошибка";
 
 
 -- 2.1.07
-DBM_UPGRADE			= "upgrade";
-DBM_BAR_STYLE_GLAZE = "Glaze";
+DBM_UPGRADE			= "обновление";
+DBM_BAR_STYLE_GLAZE = "Глазурь";
 
 -- 9.1.07
-DBM_BOSS_MOD_LOADED	= "Loaded '%s' boss mods!";
+DBM_BOSS_MOD_LOADED	= "Загружен Deadly Boss Mod для '%s'!";
 
-DBM_MISC			= "miscellaneous";
+DBM_MISC			= "смешанный";
 
-DBMGUI_TAB_NAXX_TEXT	= "Naxx";
-DBMGUI_TAB_AQ40_TEXT	= "AQ40";
-DBMGUI_TAB_BWL_TEXT		= "BWL";
-DBMGUI_TAB_MC_TEXT		= "MC";
-DBMGUI_TAB_OTHER_TEXT	= "Other";
-DBMGUI_TAB_AQ20_TEXT	= "AQ20";
-DBMGUI_TAB_ZG_TEXT		= "ZG";
-DBMGUI_TAB_BG_TEXT		= "BGs"
+DBMGUI_TAB_NAXX_TEXT	= "Накс";
+DBMGUI_TAB_AQ40_TEXT	= "АК40";
+DBMGUI_TAB_BWL_TEXT		= "ЛКТ";
+DBMGUI_TAB_MC_TEXT		= "ОН";
+DBMGUI_TAB_OTHER_TEXT	= "Другой";
+DBMGUI_TAB_AQ20_TEXT	= "АК20";
+DBMGUI_TAB_ZG_TEXT		= "ЗГ";
+DBMGUI_TAB_BG_TEXT		= "БТ"
 
-DBMGUI_TAB_1_TITLE_TEXT		= "Naxxramas Boss Mods";
-DBMGUI_TAB_2_TITLE_TEXT		= "Temple of Ahn'Qiraj Boss Mods";
-DBMGUI_TAB_3_TITLE_TEXT		= "Blackwing Lair Boss Mods";
-DBMGUI_TAB_4_TITLE_TEXT		= "Molten Core Boss Mods";
-DBMGUI_TAB_6_TITLE_TEXT		= "Other Boss Mods";
-DBMGUI_TAB_ZG_TITLE_TEXT	= "Zul'Gurub Boss Mods";
-DBMGUI_TAB_AQ20_TITLE_TEXT	= "Ruins of Ahn'Qiraj Boss Mods";
-DBMGUI_TAB_BG_TITLE_TEXT	= "Battlegrounds";
+DBMGUI_TAB_1_TITLE_TEXT		= "Действия главарей Наксрамаса";
+DBMGUI_TAB_2_TITLE_TEXT		= "Действия главарей храма Ан'Киража";
+DBMGUI_TAB_3_TITLE_TEXT		= "Действия главарей логова Крыла Тьмы";
+DBMGUI_TAB_4_TITLE_TEXT		= "Действия главарей Огненных Недр";
+DBMGUI_TAB_6_TITLE_TEXT		= "Действия других главарей";
+DBMGUI_TAB_ZG_TITLE_TEXT	= "Действия главарей Зул'Гуруба";
+DBMGUI_TAB_AQ20_TITLE_TEXT	= "Действия главарей руин Ан'Киража";
+DBMGUI_TAB_BG_TITLE_TEXT	= "Поля битвы";
 
 -- 10.1.07
 -- outdoor boss names for load on demand
-DBM_OUTDOOR_YSONDRE		= "Ysondre";
-DBM_OUTDOOR_EMERISS		= "Emeriss";
-DBM_OUTDOOR_TAERAR		= "Taerar";
-DBM_OUTDOOR_LETHON		= "Lethon";
-DBM_AZUREGOS_NAME		= "Azuregos";
-DBM_KAZZAK_NAME			= "Doom Lord Kazzak";
-DBM_DOOMW_NAME			= "Doomwalker";
+DBM_OUTDOOR_YSONDRE		= "Исондра";
+DBM_OUTDOOR_EMERISS		= "Эмерисс";
+DBM_OUTDOOR_TAERAR		= "Таэрар";
+DBM_OUTDOOR_LETHON		= "Летон";
+DBM_AZUREGOS_NAME		= "Азурегоса";
+DBM_KAZZAK_NAME			= "Владыка Судеб Каззак";
+DBM_DOOMW_NAME			= "Судьболом";
 
-DBM_ERROR_LVBM_STILL_LOADED	= "You did not delete the old folders, there are two versions of DBM running!\nClick on the \"Okay\" Button to disable the old version and reload your interface.\nYou don't need to delete the folder after doing so.";
-DBM_DISABLE_AND_RELOAD		= "Okay";
+DBM_ERROR_LVBM_STILL_LOADED	= "Вы не удалили старые папки, работает две версии DBM!\nНажмите кнопку \"ОК\" чтобы отключить старую версию и перезагрузить интерфейс.\nВам не ненужно будет удалять папку после этого действия.";
+DBM_DISABLE_AND_RELOAD		= "ОК";
 
 -- event abstraction layer
-DBM_EAL_MOBCASTSTART_EXPR	= "(.+) begins to %w+ (.+)%.";
-DBM_EAL_MOBCAST_EXPR		= "(.+) casts (.+)%.";
-DBM_EAL_DEBUFF_EXPR			= "([^%s]+) %w+ afflicted by (.+)%.";
-DBM_EAL_MOB_BUFF_EXPR		= "(.+) gains (.+)%.";
-DBM_EAL_MOBDEAD_EXPR		= "(.+) dies%.";
+DBM_EAL_MOBCASTSTART_EXPR	= "(.+) начинает %w+ (.+)%.";
+DBM_EAL_MOBCAST_EXPR		= "(.+) читает заклинание (.+)%.";
+DBM_EAL_DEBUFF_EXPR			= "([^%s]+) %w+ поражен болезнью (.+)%.";
+DBM_EAL_MOB_BUFF_EXPR		= "(.+) получает (.+)%.";
+DBM_EAL_MOBDEAD_EXPR		= "(.+) умирает%.";
 
 
 
 --20.2.07
-DBM_MSG_CLEANICONS = "Cleaned up raid icons!";
+DBM_MSG_CLEANICONS = "Значки рейда удалены!";
 
 --18.3.07
 DBM_HEAVY_NW_BANDAGE = "Плотные бинты из ткани Пустоты";
-DBM_RANGE_FRAME_BANDAGE_MISSING	= "Error while setting the range check frame to 15 yards. Please make sure that you have a Heavy Netherweave Bandage with you."
+DBM_RANGE_FRAME_BANDAGE_MISSING	= "Ошибка при установке контрольных границ на 15 метров. Убедитесь, что у вас при себе Плотные бинты из ткани Пустоты."
 
 
 -- copied from "drt"
@@ -313,29 +305,30 @@ DRT_SPAMBLOCK_SLASHHELP	= {
 	"/dbm spamblock Battleground on||off (%s)",
 };
 
-DRT_PULLCOMMAND_ANNOUNCE	= "*** ПУЛЛ!!! ***";
-DRT_PULLCOMMAND_SELFWARN	= "ПУЛЛ!!!";
-DRT_PULLCOMMAND_PREWARN		= "*** Пулл через %d сек. ***";
+DRT_PULLCOMMAND_ANNOUNCE	= "*** Приготовьтесь к Атаке ***";
+DRT_PULLCOMMAND_SELFWARN	= "АТАКА";
+DRT_PULLCOMMAND_PREWARN		= "*** Атака через %d сек. ***";
 DRT_PULLCOMMAND_FAILED		= "Используйте команду /dbm pull 10";
+DBM_SBT["Incoming Pull"]    = "Приготовьтесь к Атаке";
 
-DRT_INVITE_NOPERMISSION	= "Sorry, you need to be promoted or leader to use this function.";
-DRT_SPAMBLOCK_OPTION_SET	= "Set spamblock option \"%s\" to \"%s\"";
+DRT_INVITE_NOPERMISSION	    = "Для использования этой функции необходимы права помощника или лидера.";
+DRT_SPAMBLOCK_OPTION_SET	= "Параметры настройки SpamBlock \"%s\" для \"%s\"";
 
 -- 28.4.07
-DBM_REQUEST_BARS_FROM	= "Requesting bars from %s...";
-DBM_REQUEST_BARS_FAILED	= "Error: The timer recovery system requires at least one player with version 2.60 or higher in your raid group.";
+DBM_REQUEST_BARS_FROM	= "Запрос полос у %s...";
+DBM_REQUEST_BARS_FAILED	= "Ошибка: таймеру системы восстановление требуется хотя бы один игрока рейдовой группы с установленной версией 2.60 или выше.";
 
 -- 20.9.07
-DBM_GENERIC_ENRAGE_WARN	= "Озверение через %s %s"
+DBM_GENERIC_ENRAGE_WARN	= "Ярость через %s %s"
 
 -- 6.10.07
 DBM_GENERIC_PHASE_MSG		= "Фаза %s"
 DBM_GENERIC_PHASE_MSG2		= "%s фаза"
 
-DBM_HP_UNKNOWN				= "HP unknown"
+DBM_HP_UNKNOWN				= "ЗД неизвестно"
 
-DBMGUI_OPTIONS_BAR_TARGET	= "<target>"
+DBMGUI_OPTIONS_BAR_TARGET	= "<цель>"
 
 
-DBM_NO_TARGET				= "<no target>"
+DBM_NO_TARGET				= "<нет цели>"
 end

@@ -2,7 +2,7 @@
 
 --   Deadly Boss Mods - Chinese localization   --
 --    by kc10577 Nightkiller@日落沼澤          --
---                  05-Aug-08                  --
+--                  08-Oct-08                  --
 
 DBM_SW_TAB				= "SunwellTab"
 DBM_SUNWELL				= "太陽之井高地"
@@ -184,6 +184,8 @@ DBM_SBT["Shadow Blades"]		= "暗影之刃";
 DBM_SBT["Next Shadow Blades"]		= "下一次 暗影之刃";
 DBM_SBT["Next Shadow Nova"]		= "下一次 暗影新星";
 DBM_SBT["Shadow Nova"]			= "暗影新星";
+DBM_SBT["Conflagration CD"]		= "下一次 燃燒";
+DBM_SBT["Conflagration"]		= "燃燒";
 DBM_SBT["Confounding Blow"]		= "混亂痛擊";
 DBM_SBT["Next Confounding Blow"]	= "下一次混亂痛擊";
 

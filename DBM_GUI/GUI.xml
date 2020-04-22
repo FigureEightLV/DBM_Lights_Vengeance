@@ -8,6 +8,7 @@
 	<Script file="localization.gui.tw.lua"/>
 	<Script file="localization.gui.cn.lua"/>
 	<Script file="localization.gui.es.lua"/>
+	<Script file="localization.gui.ru.lua"/>
 	<!-- ****************************************** -->
 
 	<Frame name="DBMBossModFrame" toplevel="true" parent="UIParent" enableMouse="true" hidden="true" frameStrata="DIALOG">

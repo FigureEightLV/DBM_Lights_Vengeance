@@ -127,8 +127,6 @@ DBM_MAG_OPTION_3			= "提示衝擊新星";
 DBM_MAG_EMOTE_PULL			= "%s的束縛開始變弱!";
 DBM_MAG_YELL_PHASE2			= "我……被……釋放了!"
 DBM_MAG_EMOTE_NOVA			= "%s開始施放衝擊新星!";
-DBM_MAG_CAST_INFERNAL			= "地獄火導魔師施放了燃燒的冥淵火。";
-DBM_MAG_CAST_HEAL			= "地獄火導魔師開始施放黑暗治療。";
 DBM_MAG_CAST_CUT			= "別再來了!別再來了……";
 
 DBM_MAG_PHASE2_WARN			= "*** %s 秒後開始第二階段 ***";
@@ -136,9 +134,8 @@ DBM_MAG_WARN_P2				= "*** 瑪瑟里頓獲得自由！ ***";
 DBM_MAG_WARN_INFERNAL			= "*** 地獄火 ***";
 DBM_MAG_WARN_HEAL			= "*** 治療術 ***";
 DBM_MAG_WARN_NOVA_NOW			= "*** 衝擊新星 - 立即點盒子斷法！ ***";
-DBM_MAG_WARN_30SEC_NOVA_SOON		= "*** 30秒後施放衝擊新星 - 人員就位準備！ ***";
 DBM_MAG_WARN_NOVA_SOON			= "*** 即將施放衝擊新星！ ***";
-DBM_MAG_WARN_CAST_CUT			= "*** 斷法成功 - 放開盒子！ ***";
+
 
 DBM_SBT["Blast Nova"]			= "衝擊新星";
 DBM_SBT["Phase 2"]			= "第二階段";

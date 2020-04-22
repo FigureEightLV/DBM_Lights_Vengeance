@@ -1,8 +1,10 @@
 ﻿## Interface: 20400
 ## Title: |cff0055FFDeadly Boss Mod GUI|r
+## Title-ruRU: |cff0055FFDeadly Boss Mod|r GUI
 ## Title-zhCN: |cff0055FFDeadly Boss Mod|r GUI
 ## Notes: Graphical User Interface for DBM
 ## Notes-zhCN: Deadly Boss Mod 的图形设置界面
+## Notes-ruRU: Графический интерфейс GUI для Deadly Boss Mod
 ## RequiredDeps: DBM_API
 ## LoadOnDemand: 1
 ## DefaultState: enabled

@@ -1,10 +1,10 @@
 ﻿## Interface: 20400
 ## Title: |cff0055FFDeadly Battleground Mods|r
 ## Title-zhCN: |cff0055FFDeadly|r 战场 |cff0055FF模组|r
-## Title-ruRU: |cff0055FFДедли Мод БГ|r
+## Title-ruRU: |cff0055FFDeadly Boss Mod|r Поле боя
 ## Notes: Battleground Mods
 ## Notes-zhCN: Deadly Boss Mod 的战场模组
-## Notes-ruRU: БГ Мод
+## Notes-ruRU: Deadly Boss Mod для Поля боя
 ## Author: Tandanu and Nitram
 ## LoadOnDemand: 1
 ## RequiredDeps: DBM_API

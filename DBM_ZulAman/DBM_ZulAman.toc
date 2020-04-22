@@ -1,10 +1,10 @@
 ﻿## Interface: 20400
 ## Title: |cff0055FFDeadly Zul'Aman Boss Mods|r
-## Title-ruRU: |cff0055FFDeadly Зул'Аман Boss Mods|r
+## Title-ruRU: |cff0055FFDeadly Boss Mod|r Зул'Аман
 ## Title-zhCN: |cff0055FFDeadly|r 祖阿曼 |cff0055FF模组|r
 ## Title-zhTW: |cff0055FFDeadly Boss Mod|r 祖阿曼
 ## Notes: Boss Mods for Zul'Aman
-## Notes-ruRU: Зул'Аман Boss Mods
+## Notes-ruRU: Deadly Boss Mod для Зул'Аман
 ## Notes-zhCN: Deadly Boss Mod 的祖阿曼模组
 ## Notes-zhTW: Deadly Boss Mod 祖阿曼首領模組
 ## Author: Tandanu
@@ -23,7 +23,7 @@
 ## X-DBM-Tab-Text-zhCN: 祖阿曼
 ## X-DBM-Tab-Text-zhTW: 祖阿曼
 ## X-DBM-Tab-Title-enGB: Zul'Aman Boss Mods
-## X-DBM-Tab-Title-ruRU: Зул'Аман Boss Mods
+## X-DBM-Tab-Title-ruRU: Зул'Аман
 ## X-DBM-Tab-Title-zhCN: 祖阿曼
 ## X-DBM-Tab-Title-zhTW: 祖阿曼
 ## X-DBM-Tab-LoadZone-enGB: Zul'Aman
