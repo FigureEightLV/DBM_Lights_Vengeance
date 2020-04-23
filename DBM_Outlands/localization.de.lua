@@ -2,6 +2,7 @@
 	-- Maulgar
 	DBM_MAULGAR_NAME			= "Hochkönig Raufgar";
 	DBM_MAULGAR_DESCRIPTION		= "Sagt die Schilder und Heilungen an und zeigt Timer für Teufelsjäger, Wirbelwind und Bogenzerkracher.";
+	DBM_MAULGAR_SAY_PULL		= "Gronn are the real power in Outland!";
 	DBM_MAULGAR_OPTION_1		= "Großes Machtwort: Schild ansagen";
 	DBM_MAULGAR_OPTION_2		= "Zauberschild ansagen";
 	DBM_MAULGAR_OPTION_3		= "Gebet der Heilung ansagen";

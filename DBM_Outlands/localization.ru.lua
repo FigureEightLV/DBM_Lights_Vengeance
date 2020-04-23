@@ -3,6 +3,7 @@
 -- Maulgar
 DBM_MAULGAR_NAME			= "Король Молгар";
 DBM_MAULGAR_DESCRIPTION		= "Объявляет щит и исцеление и показывает таймеры для Удар по дуге, Вихрь и Охотник Скверны spawn.";
+DBM_MAULGAR_SAY_PULL		= "Gronn are the real power in Outland!";
 DBM_MAULGAR_OPTION_1		= "Объявить Большее слово силы: щит";
 DBM_MAULGAR_OPTION_2		= "Объявить Щит заклятий";
 DBM_MAULGAR_OPTION_3		= "Объявить Молитва исцеления";

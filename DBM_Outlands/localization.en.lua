@@ -1,6 +1,7 @@
 -- Maulgar
 DBM_MAULGAR_NAME			= "High King Maulgar";
 DBM_MAULGAR_DESCRIPTION		= "Announces shield and heal and shows a timer for Arcing Smash, Whirlwind and Felhunter spawn.";
+DBM_MAULGAR_SAY_PULL		= "Gronn are the real power in Outland!";
 DBM_MAULGAR_OPTION_1		= "Announce Greater Power Word: Shield";
 DBM_MAULGAR_OPTION_2		= "Announce Spell Shield";
 DBM_MAULGAR_OPTION_3		= "Announce Prayer of Healing";

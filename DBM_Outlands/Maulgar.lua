@@ -1,10 +1,10 @@
 local Maulgar = DBM:NewBossMod("Maulgar", DBM_MAULGAR_NAME, DBM_MAULGAR_DESCRIPTION, DBM_GRUULS_LAIR, DBMGUI_TAB_OTHER_BC, 1);
 
-Maulgar.Version			= "1.0";
-Maulgar.Author			= "Tandanu";
+Maulgar.Version			= "1.2";
+Maulgar.Author			= "FigureEightLV"; -- Originally by Tandanu
 Maulgar.LastSpellShield = 0;
 
-Maulgar:RegisterCombat("COMBAT");
+Maulgar:RegisterCombat("YELL", DBM_MAULGAR_SAY_PULL);
 
 Maulgar:RegisterEvents(
 	"SPELL_AURA_APPLIED",
@@ -31,8 +31,10 @@ Maulgar:AddBarOption("Arcing Smash")
 Maulgar:AddBarOption("Spell Shield: (.*)")
 
 function Maulgar:OnCombatStart(delay)
-	self:StartStatusBarTimer(58 - delay, "Next Whirlwind", "Interface\\Icons\\Ability_Whirlwind");
-	self:ScheduleSelf(54 - delay, "WhirlwindWarning");
+	self:StartStatusBarTimer(30 - delay, "Next Whirlwind", "Interface\\Icons\\Ability_Whirlwind");
+	self:ScheduleSelf(26 - delay, "WhirlwindWarning");
+	self:StartStatusBarTimer(13, "Felhunter", "Interface\\Icons\\Spell_Shadow_SummonFelHunter");
+	self:StartStatusBarTimer(30, "Next Prayer of Healing", "Interface\\Icons\\Spell_Holy_PrayerOfHealing02");
 end
 
 function Maulgar:OnEvent(event, arg1)
@@ -45,7 +47,7 @@ function Maulgar:OnEvent(event, arg1)
 					self:Announce(DBM_MAULGAR_WARN_SHIELD, 3);
 				end
 				self.LastSpellShield = GetTime();
-			else
+			-- else
 				local buffTimer = 30 - (GetTime() - self.LastSpellShield);
 				if buffTimer < 35 and buffTimer > 1 then
 					self:StartStatusBarTimer(buffTimer, "Spell Shield: "..tostring(arg1.destName), "Interface\\Icons\\Spell_Arcane_ArcaneResilience");
@@ -66,22 +68,21 @@ function Maulgar:OnEvent(event, arg1)
 				self:Announce(DBM_MAULGAR_WARN_POH, 1);
 			end
 			self:StartStatusBarTimer(4, "Prayer of Healing", "Interface\\Icons\\Spell_Holy_PrayerOfHealing02");
+			self:SendSync("Nextprayer");
 		elseif arg1.spellId == 33144 then
 			if self.Options.WarnHeal then
 				self:Announce(DBM_MAULGAR_WARN_HEAL, 2);
 			end
 			self:StartStatusBarTimer(2, "Heal", "Interface\\Icons\\Spell_Holy_Heal");
-		end
-	elseif event == "SPELL_CAST_SUCCESS" then
-		if arg1.spellId == 33131 then
-			self:SendSync("Felhunter");
+		elseif arg1.spellId == 33131 then
+			self:SendSync("FelhunterCast");
 		end
 	elseif event == "SPELL_DAMAGE" then
-		if arg1.spellId == 38761 then
+		if arg1.spellId == 39144 then -- should be 38761
 			self:SendSync("Arcing "..tostring(arg1.destName).." "..tostring(arg1.amount));
 		end
 	elseif event == "SPELL_MISSED" then
-		if arg1.spellId == 38761 then
+		if arg1.spellId == 39144 then -- should be 38761
 			self:SendSync("Arcing "..tostring(arg1.destName).." "..tostring(arg1.missType));
 		end
 	end
@@ -92,15 +93,23 @@ function Maulgar:OnSync(msg)
 		if self.Options.WarnWW then
 			self:Announce(DBM_MAULGAR_WARN_WHIRLWIND, 3);
 		end
-		self:StartStatusBarTimer(55, "Next Whirlwind", "Interface\\Icons\\Ability_Whirlwind");
+		self:StartStatusBarTimer(34, "Next Whirlwind", "Interface\\Icons\\Ability_Whirlwind");
 		self:StartStatusBarTimer(15.2, "Whirlwind", "Interface\\Icons\\Ability_Whirlwind");
-		self:ScheduleSelf(51, "WhirlwindWarning");
-	elseif msg == "Felhunter" then
-		if self.Options.WarnFelhunter then
-			self:Announce(DBM_MAULGAR_WARN_FELHUNTER, 2);
+		self:ScheduleSelf(30, "WhirlwindWarning");
+	elseif msg:sub(1, 9) == "Felhunter" then
+		if msg:sub(10, 13) ~= "cast" then
+			if self.Options.WarnFelhunter then
+				self:Announce(DBM_MAULGAR_WARN_FELHUNTER, 2);
+			end
+			self:StartStatusBarTimer(28, "Felhunter", "Interface\\Icons\\Spell_Shadow_SummonFelHunter");
+			self:ScheduleMethod(28, "SendSync", "FelhunterCast");
+		else
+			self:StartStatusBarTimer(3, "Felhunter", "Interface\\Icons\\Spell_Shadow_SummonFelHunter");
+			self:ScheduleMethod(3, "SendSync", "Felhunter");
 		end
-		self:StartStatusBarTimer(48.5, "Felhunter", "Interface\\Icons\\Spell_Shadow_SummonFelHunter");
-	elseif string.sub(msg, 1, 6) == "Arcing" then
+	elseif msg == "Nextprayer" then
+		self:StartStatusBarTimer(30, "Next Prayer of Healing", "Interface\\Icons\\Spell_Holy_PrayerOfHealing02");
+	elseif msg:sub(1, 6) == "Arcing" then
 		if self.Options.WarnSmash then
 			local _, _, target, damage = string.find(msg, "Arcing ([^%s]+) (%w+)");			
 			if target and damage then
@@ -115,6 +124,6 @@ function Maulgar:OnSync(msg)
 			end			
 		end
 		
-		self:StartStatusBarTimer(10, "Arcing Smash", "Interface\\Icons\\Ability_Warrior_Cleave");
+		self:StartStatusBarTimer(9, "Arcing Smash", "Interface\\Icons\\Ability_Warrior_Cleave");
 	end
 end

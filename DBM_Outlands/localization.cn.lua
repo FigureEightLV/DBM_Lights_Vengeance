@@ -10,6 +10,7 @@ if (GetLocale() == "zhCN") then
 -- Maulgar
 	DBM_MAULGAR_NAME			= "莫加尔大王";
 	DBM_MAULGAR_DESCRIPTION		= "警报治疗、圆弧斩、旋风斩和地狱犬";
+	DBM_MAULGAR_SAY_PULL		= "Gronn are the real power in Outland!";
 	DBM_MAULGAR_OPTION_1		= "警报强效真言术：盾";
 	DBM_MAULGAR_OPTION_2		= "警报法术护盾";
 	DBM_MAULGAR_OPTION_3		= "警报治疗祷言";

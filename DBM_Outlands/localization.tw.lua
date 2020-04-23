@@ -3,6 +3,7 @@
 -- Maulgar
 DBM_MAULGAR_NAME		= "大君王莫卡爾";
 DBM_MAULGAR_DESCRIPTION		= "提示盾,補血 和 提供旋風斬;圓弧斬;野生地獄行者計時";
+DBM_MAULGAR_SAY_PULL		= "Gronn are the real power in Outland!";
 DBM_MAULGAR_OPTION_1		= "提示強效真言術：盾";
 DBM_MAULGAR_OPTION_2		= "提示法術護盾";
 DBM_MAULGAR_OPTION_3		= "提示治療禱言";

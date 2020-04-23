@@ -1,7 +1,7 @@
 local Gruul = DBM:NewBossMod("Gruul", DBM_GRUUL_NAME, DBM_GRUUL_DESCRIPTION, DBM_GRUULS_LAIR, DBMGUI_TAB_OTHER_BC, 2);
 
-Gruul.Version	= "1.0";
-Gruul.Author	= "Tandanu";
+Gruul.Version	= "1.2";
+Gruul.Author	= "FigureEightLV"; -- Originally by Tandanu
 Gruul.Grows		= 0;
 
 Gruul.MinVersionToSync = 3.00;
@@ -27,24 +27,24 @@ Gruul:AddBarOption("Silence")
 
 function Gruul:OnCombatStart(delay)
 	self.Grows = 0;	
-	self:ScheduleSelf(104 - delay, "SilenceSoon");
-	self:StartStatusBarTimer(108 - delay, "Silence", "Interface\\Icons\\Spell_Holy_ImprovedResistanceAuras");	
-	self:ScheduleSelf(33 - delay, "SlamSoon");
-	self:StartStatusBarTimer(38 - delay, "Ground Slam", "Interface\\Icons\\Spell_Nature_ThunderClap");	
+	self:ScheduleSelf(106 - delay, "SilenceSoon");
+	self:StartStatusBarTimer(110 - delay, "Silence", "Interface\\Icons\\Spell_Holy_ImprovedResistanceAuras");	
+	self:ScheduleSelf(35 - delay, "SlamSoon");
+	self:StartStatusBarTimer(40 - delay, "Ground Slam", "Interface\\Icons\\Spell_Nature_ThunderClap");	
 	self:StartStatusBarTimer(30 - delay, "Grow #1", "Interface\\Icons\\Spell_Nature_ShamanRage", true);
 
 	if self.Options.RangeCheck then
 		DBM_Gui_DistanceFrame_Show();
+		DBM_Gui_DistanceFrame_SetDistance(15);
 	end
-	DBM_Gui_DistanceFrame_SetDistance(15);
 end
 
 function Gruul:OnCombatEnd()
 	self.Grows = 0;
 	if self.Options.RangeCheck then
 		DBM_Gui_DistanceFrame_Hide();
+		DBM_Gui_DistanceFrame_SetDistance(10);
 	end
-	DBM_Gui_DistanceFrame_SetDistance(10);
 end
 
 function Gruul:OnEvent(event, arg1)
@@ -82,6 +82,7 @@ function Gruul:OnEvent(event, arg1)
 		if arg1.spellId == 33525 then -- 39187?
 			if self.Options.ShatterWarn then
 				self:Announce(DBM_GRUUL_SHATTER_10WARN, 2);
+				self:SendSync("ExtendSilence");
 			end
 			self:EndStatusBarTimer("Ground Slam");
 			self:StartStatusBarTimer(10, "Shatter", "Interface\\Icons\\Spell_Nature_ThunderClap");
@@ -94,5 +95,14 @@ function Gruul:OnEvent(event, arg1)
 		if self.Options.SilenceWarn then
 			self:Announce(DBM_GRUUL_SILENCE_SOON_WARN, 1)
 		end
+	end
+end
+
+function Gruul:OnSync(msg)
+	if msg == "ExtendSilence" then
+        local timeLeft = self:GetStatusBarTimerTimeLeft("Silence")
+        self:EndStatusBarTimer("Silence")
+		self:StartStatusBarTimer(timeLeft + 11, "Silence", "Interface\\Icons\\Spell_Holy_ImprovedResistanceAuras");
+		self:ScheduleSelf(timeLeft + 11, "SilenceWarn");
 	end
 end
