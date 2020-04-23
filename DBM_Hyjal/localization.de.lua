@@ -105,42 +105,41 @@ DBM_ARCHIMONDE_WARN_BURST				= "*** Windböe: >%s< ***";
 DBM_ARCHIMONDE_WARN_BURST_ME			= "Windböe kommt!";
 DBM_ARCHIMONDE_SPECWARN_BURST			= "Windböe auf dir!";
 
-
 -- MHTrash
-DBM_MHT_NAME               = "Trash Mobs"
-DBM_MHT_DESCRIPTION            = "Zeigt einen Timer für die nächste Welle"
-DBM_MHT_DESCRIPTION1         = "Sagt an welche Mobs kommen"
-DBM_MHT_OPTION_WAVE            = "Sagt die nächste Welle an"
+DBM_MHT_NAME					= "Trash Mobs"
+DBM_MHT_DESCRIPTION				= "Zeigt einen Timer für die nächste Welle"
+DBM_MHT_DESCRIPTION1			= "Sagt an welche Mobs kommen"
+DBM_MHT_OPTION_WAVE				= "Sagt die nächste Welle an"
 
-DBM_MHT_WAVE_CHECK            = "Derzeitige Welle = (%d+) von 8"
-DBM_MHT_WAVE_SOON            = "Nächste Welle kommt bald"
-DBM_MHT_WAVE_NOW            = "Nächste Welle kommt!"
-DBM_MHT_BOSS_SOON            = "Boss kommt bald"
-DBM_MHT_BOSS_NOW            = "Boss kommt!"
+DBM_MHT_WAVE_CHECK				= "Derzeitige Welle = (%d+) von 8"
+DBM_MHT_WAVE_SOON				= "Nächste Welle kommt bald"
+DBM_MHT_WAVE_NOW				= "Nächste Welle kommt!"
+DBM_MHT_BOSS_SOON				= "Boss kommt bald"
+DBM_MHT_BOSS_NOW				= "Boss kommt!"
 
-DBM_MHT_THRALL               = "Thrall"
-DBM_MHT_JAINA               = "Lady Jaina Prachtmeer"
-DBM_MHT_THRALL_DIES            = "Thrall stirbt."
-DBM_MHT_JAINA_DIES            = "Lady Jaina Prachtmeer stirbt."
-DBM_MHT_RAGE_MSG            = "Meine Gefährten und ich werden Euch zur Seite stehen, Lady Prachtmeer."
-DBM_MHT_ANETHERON_MSG         = "Was auch immer Archimonde gegen uns ins Feld schicken mag, wir sind bereit, Lady Prachtmeer."
-DBM_MHT_KAZROGAL_MSG         = "Ich werde Euch zur Seite stehen, Thrall!"
-DBM_MHT_AZGALOR_MSG            = "Wir haben nichts zu befürchten."
+DBM_MHT_THRALL					= "Thrall"
+DBM_MHT_JAINA					= "Lady Jaina Prachtmeer"
+DBM_MHT_THRALL_DIES				= "Thrall stirbt."
+DBM_MHT_JAINA_DIES				= "Lady Jaina Prachtmeer stirbt."
+DBM_MHT_RAGE_MSG				= "Meine Gefährten und ich werden Euch zur Seite stehen, Lady Prachtmeer."
+DBM_MHT_ANETHERON_MSG			= "Was auch immer Archimonde gegen uns ins Feld schicken mag, wir sind bereit, Lady Prachtmeer."
+DBM_MHT_KAZROGAL_MSG			= "Ich werde Euch zur Seite stehen, Thrall!"
+DBM_MHT_AZGALOR_MSG				= "Wir haben nichts zu befürchten."
 
-DBM_MHT_WAVE_INC_WARNING1         = "*** Welle %s/8 - %s %s  ***";
-DBM_MHT_WAVE_INC_WARNING2         = "*** Welle %s/8 - %s %s und %s %s ***";
-DBM_MHT_WAVE_INC_WARNING3         = "*** Welle %s/8 - %s %s, %s %s und %s %s ***";
-DBM_MHT_WAVE_INC_WARNING4         = "*** Welle %s/8 - %s %s, %s %s, %s %s und %s %s ***";
-DBM_MHT_WAVE_INC_WARNING5         = "*** Welle %s/8 - %s %s, %s %s, %s %s, %s %s und %s %s ***";
+DBM_MHT_WAVE_INC_WARNING1			= "*** Welle %s/8 - %s %s  ***";
+DBM_MHT_WAVE_INC_WARNING2			= "*** Welle %s/8 - %s %s und %s %s ***";
+DBM_MHT_WAVE_INC_WARNING3			= "*** Welle %s/8 - %s %s, %s %s und %s %s ***";
+DBM_MHT_WAVE_INC_WARNING4			= "*** Welle %s/8 - %s %s, %s %s, %s %s und %s %s ***";
+DBM_MHT_WAVE_INC_WARNING5			= "*** Welle %s/8 - %s %s, %s %s, %s %s, %s %s und %s %s ***";
 
-DBM_MHT_GHOUL               = "Ghule"
-DBM_MHT_ABOMINATION            = "Monstrositäten"
-DBM_MHT_NECROMANCER            = "Nekromanten"
-DBM_MHT_BANSHEE               = "Banshees"
-DBM_MHT_FIEND               = "Gruftscheusale"
-DBM_MHT_GARGOYLE            = "Gargoyles"
-DBM_MHT_WYRM               = "Frostwyrm"
-DBM_MHT_STALKER               = "Teufelspirscher"
-DBM_MHT_INFERNAL            = "Höllenbestien" 
+DBM_MHT_GHOUL					= "Ghule"
+DBM_MHT_ABOMINATION				= "Monstrositäten"
+DBM_MHT_NECROMANCER				= "Nekromanten"
+DBM_MHT_BANSHEE					= "Banshees"
+DBM_MHT_FIEND					= "Gruftscheusale"
+DBM_MHT_GARGOYLE				= "Gargoyles"
+DBM_MHT_WYRM					= "Frostwyrm"
+DBM_MHT_STALKER					= "Teufelspirscher"
+DBM_MHT_INFERNAL				= "Höllenbestien"
 
 end

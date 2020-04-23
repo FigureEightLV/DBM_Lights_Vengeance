@@ -13,7 +13,10 @@ DBM_RAGE_OPTION_DND_SOON				= "Show \"Death & Decay soon\" warning";
 
 DBM_RAGE_YELL_PULL						= "The Legion's final conquest has begun! Once again the subjugation of this world is within our grasp. Let none survive!";
 
+DBM_RAGE_DEBUFF_ICEBOLT					= "([^%s]+) (%w+) afflicted by Icebolt.";
 DBM_RAGE_SPELL_DEATH_DECAY				= "Death & Decay";
+DBM_RAGE_CAST_DEATH_DECAY				= "Rage Winterchill begins to cast Death & Decay.";
+DBM_RAGE_DEBUFF_DND_YOU					= "You are afflicted by Death & Decay."
 
 DBM_RAGE_WARN_ICEBOLT					= "*** Icebolt on >%s< ***";
 DBM_RAGE_WARN_DND						= "*** Death & Decay ***";
@@ -32,6 +35,7 @@ DBM_ANETHERON_YELL_PULL					= "You are defenders of a doomed world! Flee here, a
 
 DBM_ANETHERON_INFERNO					= "Inferno";
 DBM_ANETHERON_CARRION_SWARM				= "Carrion Swarm";
+DBM_ANETHERON_CAST_INFERNO				= "Anetheron begins to perform Inferno.";
 
 DBM_ANETHERON_WARN_CARRION				= "*** Carrion Swarm ***";
 DBM_ANETHERON_WARN_INFERNO				= "*** Infernal on >%s< ***";
@@ -42,6 +46,7 @@ DBM_KAZROGAL_NAME						= "Kaz'rogal";
 DBM_KAZROGAL_DESCRIPTION				= "Announces Mark of Kaz'rogal.";
 
 DBM_KAZROGAL_YELL_PULL					= "Cry for mercy! Your meaningless lives will soon be forfeit!";
+DBM_KAZROGAL_DEBUFF_MARK				= "afflicted by Mark of Kaz'rogal";
 
 DBM_KAZROGAL_WARN_MARK					= "*** Mark #%s ***";
 
@@ -53,6 +58,8 @@ DBM_AZGALOR_OPTION_ICON					= "Set icon on doom target";
 
 DBM_AZGALOR_YELL_PULL					= "Abandon all hope! The Legion has returned to finish what was begun so many years ago. This time, there will be no escape!";
 
+DBM_AZGALOR_DEBUFF_DOOM					= "([^%s]+) (%w+) afflicted by Doom%.";
+DBM_AZGALOR_DEBUFF_SILENCE				= "afflicted by Howl of Azgalor";
 
 DBM_AZGALOR_SPECWARN_DOOM_YOU			= "Doom!";
 DBM_AZGALOR_WARN_DOOM					= "*** Doom on >%s< ***";
@@ -70,6 +77,10 @@ DBM_ARCHIMONDE_OPTION_BURSTSPECWARN		= "Show special warning when he casts Air B
 
 DBM_ARCHIMONDE_YELL_PULL				= "Your resistance is insignificant.";
 
+DBM_ARCHIMONDE_DEBUFF_GRIP				= "([^%s]+) (%w+) afflicted by Grip of the Legion%.";
+DBM_ARCHIMONDE_CAST_FEAR				= "Archimonde begins to cast Fear."
+DBM_ARCHIMONDE_CAST_BURST				= "Archimonde begins to cast Air Burst."
+
 DBM_ARCHIMONDE_WARN_GRIP				= "*** Grip: >%s< ****"
 DBM_ARCHIMONDE_WARN_ENRAGE				= "*** Enrage in %s %s ***";
 DBM_ARCHIMONDE_WARN_FEAR				= "*** Fear ***";
@@ -85,6 +96,8 @@ DBM_MHT_DESCRIPTION1				= "Announce what mobs are incoming";
 DBM_MHT_DESCRIPTION2				= "Announces when a ghoul starts cannibalizing";
 DBM_MHT_OPTION_WAVE				= "Announce incoming wave";
 
+
+DBM_MHT_GHOUL_CHECK				= "Ghoul gains Cannibalize.";
 DBM_MHT_WARN_GHOUL				= "Ghoul gains Cannibalize"
 DBM_MHT_WAVE_CHECK				= "Current Wave = (%d+) of 8";
 DBM_MHT_WAVE_SOON				= "Next wave soon";

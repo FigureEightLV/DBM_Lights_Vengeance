@@ -7,6 +7,12 @@
 -- Changes --
 -- ------- --
 --
+--  v3.30
+--  localization/ruRU: full support! (special thanks 2 Igor Bootwin)
+--  added a /dbm help command (thanks 2 Misfortunado Farmbuyer)
+--  Note: this version won't sync with DBM 4 as DBM 4 is a complete rewrite
+--  
+--
 --  v3.22
 --  localization/ruRU: added basic support for russian clients
 --  Sunwell/Kalecgos: fixed a bug that could cause the spectral realm frame to stick to your cursor
@@ -304,6 +310,8 @@
 --
 
 
+if select(4, GetAddOnInfo("DBM-Core")) and select(5, GetAddOnInfo("DBM-Core")) then return end -- don't load DBMv3 if v4 is installed and enabled
+
 
 
 if not math.mod and math.fmod then
@@ -323,11 +331,11 @@ DBM_SavedVars = {
 
 DBM = {}
 
-DBM.Version = "3.22" -- used for "a new version of dbm is available"-spam
+DBM.Version = "3.30" -- used for "a new version of dbm is available"-spam
 DBMGUI_VERSION = "3.02"
 
-DBM_REVISION = tonumber(("$Revision: 296 $"):sub(12, -3) or 0) + 783 -- 783 = revision number from the old SVN repository
-DBM_VERSION = "3.22" -- this version is used for /dbm ver commands
+DBM_REVISION = tonumber(("$Revision: 392 $"):sub(12, -3) or 0) + 783 -- 783 = revision number from the old SVN repository
+DBM_VERSION = "3.30" -- this version is used for /dbm ver commands
 DBM.BetaVersion = DBM_VERSION.." (rev "..DBM_REVISION..")" -- this will be shown in the GUI if set
 
 
@@ -618,13 +626,14 @@ function DBM.OnLoad()
 	SLASH_LVNAXXRAMASBOSSMODS5 = "/deadlyboss";
 	SLASH_LVNAXXRAMASBOSSMODS6 = "/deadly";
 	SlashCmdList["LVNAXXRAMASBOSSMODS"] = function(msg)
-		if string.lower(msg) == "unlock" then
+		local cmd = string.lower(msg) or "";
+		if cmd == "unlock" then
 			DBM_StatusBarTimerDrag:Show();
 			DBM_StatusBarTimerDrag2:Show();
-		elseif string.lower(msg) == "lock" then
+		elseif cmd == "lock" then
 			DBM_StatusBarTimerDrag:Hide();
 			DBM_StatusBarTimerDrag2:Hide();
-		elseif string.lower(msg) == "ver" or string.lower(msg) == "version" then
+		elseif cmd == "ver" or cmd == "version" then
 			local syncInfo = {}
 			for i = 1, GetNumRaidMembers() do
 				local name, server = UnitName("raid"..i)
@@ -658,7 +667,7 @@ function DBM.OnLoad()
 			end
 			DBM.AddMsg(DBM_FOUND_CLIENTS:format(#syncInfo))
 
-		elseif string.lower(msg) == "ver2" then
+		elseif cmd == "ver2" then
 			local syncInfo = {};
 			local msg = "";
 			for i = 1, GetNumRaidMembers() do
@@ -677,7 +686,7 @@ function DBM.OnLoad()
 			end
 
 
-		elseif string.lower(msg) == "bars" or string.lower(msg) == "barinfo" or string.lower(msg) == "syncedby" or string.lower(msg) == "syncinfo" then
+		elseif cmd == "bars" or cmd == "barinfo" or cmd == "syncedby" or cmd == "syncinfo" then
 			local syncedBars = false;
 			for index, value in pairs(DBM.StatusBarData) do
 				if value.syncedBy then
@@ -688,21 +697,21 @@ function DBM.OnLoad()
 			if( syncedBars == false ) then
 				DBM.AddMsg(DBM_NOSYNCBARS);
 			end
-		elseif string.lower(msg) == "stop" then
+		elseif cmd == "stop" then
 			if DBM.Rank >= 1 then
 				DBM.AddSyncMessage("ENDALL", true);
 				DBM.AddMsg(DBM_ALL_STOPPED);
 			else
 				DBM.AddMsg(DBM_NEED_LEADER_STOP_ALL);
 			end
-		elseif string.sub(msg, 0, 5) == "timer" then -- blah...
-			local _, _, _, timer, name = string.find(msg, "(%w+) ([:%d]+) (.+)");
+		elseif cmd:sub(0, 5) == "timer" then -- blah...
+			local _, _, _, timer, name = cmd:find("(%w+) ([:%d]+) (.+)");
 			if not timer then
 				local h, m, s, stringEndh, stringEndm, stringEnds;
-				_, stringEndh, h = string.find(msg, "(%d+)%s*h");
-				_, stringEndm, m = string.find(msg, "(%d+)%s*m");
-				_, stringEnds, s = string.find(msg, "(%d+)%s*s");
-				name = string.sub(msg, math.max((stringEndh or 0), (stringEndm or 0), (stringEnds or 0)) + 1);
+				_, stringEndh, h = cmd:find("(%d+)%s*h");
+				_, stringEndm, m = cmd:find("(%d+)%s*m");
+				_, stringEnds, s = cmd:find("(%d+)%s*s");
+				name = string.sub(cmd, math.max((stringEndh or 0), (stringEndm or 0), (stringEnds or 0)) + 1);
 				timer = 3600 * (tonumber(h) or 0) + 60 * (tonumber(m) or 0) + (tonumber(s) or 0);
 			end
 			if timer and name and timer ~= 0 and name ~= "" then
@@ -711,17 +720,17 @@ function DBM.OnLoad()
 				DBM.AddMsg(DBM_TIMER_SLASHCMD_HELP1);
 				DBM.AddMsg(DBM_TIMER_SLASHCMD_HELP2);
 			end
-		elseif string.sub(msg, 0, 15) == "broadcast timer" then
-			local _, _, _, _, timer, name = string.find(msg, "(%w+) (%w+) ([:%d]+) (.+)");
+		elseif cmd:sub(0, 15) == "broadcast timer" then
+			local _, _, _, _, timer, name = cmd:find("(%w+) (%w+) ([:%d]+) (.+)");
 			if not timer then
 				local h, m, s, stringEndh, stringEndm, stringEnds;
-				_, stringEndh, h = string.find(msg, "(%d+)%s*h");
-				_, stringEndm, m = string.find(msg, "(%d+)%s*m");
-				_, stringEnds, s = string.find(msg, "(%d+)%s*s");
-				name = string.sub(msg, math.max((stringEndh or 0), (stringEndm or 0), (stringEnds or 0)) + 1);
+				_, stringEndh, h = cmd:find("(%d+)%s*h");
+				_, stringEndm, m = cmd:find("(%d+)%s*m");
+				_, stringEnds, s = cmd:find("(%d+)%s*s");
+				name = string.sub(cmd, math.max((stringEndh or 0), (stringEndm or 0), (stringEnds or 0)) + 1);
 				timer = 3600 * (tonumber(h) or 0) + 60 * (tonumber(m) or 0) + (tonumber(s) or 0);
 			end
-			if timer and name then				
+			if timer and name then
 				if DBM.Rank >= 1 then
 					DBM.StartStatusBarTimer(timer, name:gsub("%%t", UnitName("target") or DBM_NO_TARGET));
 				else
@@ -731,9 +740,9 @@ function DBM.OnLoad()
 				DBM.AddMsg(DBM_TIMER_SLASHCMD_HELP1);
 				DBM.AddMsg(DBM_TIMER_SLASHCMD_HELP2);
 			end
-		elseif string.sub(msg, 0, 4) == "pull" then
+		elseif cmd:sub(0, 4) == "pull" then
 			if DBM.Rank >= 1 then
-				local _, _, timer = string.find(msg, "%w+ (%d+)");
+				local _, _, timer = cmd:find("%w+ (%d+)");
 				if tonumber(timer) then
 					DBM.Announce_Pull(tonumber(timer)); 
 				else
@@ -742,10 +751,10 @@ function DBM.OnLoad()
 			else
 				DBM.AddMsg(DRT_INVITE_NOPERMISSION);
 			end
-		elseif string.sub(msg, 0, 7) == "recover" then
+		elseif cmd == "recover" then
 			DBM.RequestBars(true);
-		elseif string.sub(msg, 0, 9) == "spamblock" then
-			local _, _, xArg1, xArg2 = string.find(msg, "%w+ (%w+) (%w+)");
+		elseif cmd:sub(0, 9) == "spamblock" then
+			local _, _, xArg1, xArg2 = cmd:find("%w+ (%w+) (%w+)");
 			xArg1, xArg2 = string.lower(tostring(xArg1)), string.lower(tostring(xArg2));
 			
 			if (xArg2 ~= "on" and xArg2 ~= "off") or (xArg1 ~= "raid" and xArg1 ~= "raidwarning" and xArg1 ~= "raidwarningframe" and xArg1 ~= "ctraid" and xArg1 ~= "battleground") then
@@ -817,6 +826,16 @@ function DBM.OnLoad()
 					end
 				end
 			end
+			
+		elseif cmd == "help" then
+			DBM.AddMsg("lock/unlock -- to drag bars");
+			DBM.AddMsg("ver/version -- version check");
+			DBM.AddMsg("stop -- halt boss timers");
+			DBM.AddMsg("pull <time> -- announce a pull");
+			DBM.AddMsg("recover -- from screwed up boss");
+			-- these two print their own help text already, take advantage of that
+			SlashCmdList["LVNAXXRAMASBOSSMODS"]("timer");
+			SlashCmdList["LVNAXXRAMASBOSSMODS"]("spamblock");
 
 		else
 			DBMMinimapButton:GetScript("OnClick")();
