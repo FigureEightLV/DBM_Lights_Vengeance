@@ -9,6 +9,8 @@ DBM_ATH_OPTION_1		= "顯示 5 秒警告";
 
 DBM_ATH_WARN_CURSE		= "*** 詛咒 ***";
 DBM_ATH_CURSE_SOON		= "*** 即將施放詛咒 ***";
+DBM_ATH_SUMMON			= "*** Attumen has been summoned***";
+DBM_ATH_WARN_PHASE		= "*** 第 %s 階段 ***";
 
 DBM_ATH_MIDNIGHT		= "午夜";
 DBM_ATH_CURSE			= "受到無形守護";
@@ -23,6 +25,8 @@ DBM_MOROES_OPTION_1		= "提示消失警告";
 DBM_MOROES_OPTION_2		= "提示失去消失警告";
 DBM_MOROES_OPTION_3		= "提示即將消失警告";
 DBM_MOROES_OPTION_4		= "提示絞喉警告";
+DBM_MOROES_OPTION_5		= "Show gouge warning";
+DBM_MOROES_OPTION_6		= "Show blind warning";
 
 DBM_MOROES_VANISH_WARN		= "*** 摩洛消失 ***";
 DBM_MOROES_VANISH_FADED		= "*** 摩洛失去消失 ***";
@@ -41,6 +45,7 @@ DBM_MOV_NAME			= "貞潔聖女";
 DBM_MOV_DESCRIPTION		= "提供懺悔計時, 顯示神聖之火警告 和 顯示距離檢查框.";
 DBM_MOV_OPTION_1		= "顯示距離檢查框";
 DBM_MOV_OPTION_2		= "神聖之火通告";
+DBM_MOV_OPTION_3		= "Announce Repentance";
 
 DBM_MOV_YELL_PULL		= "你的行為不能被容忍。";
 DBM_MOV_REPENTANCE		= "受到懺悔效果的影響。";

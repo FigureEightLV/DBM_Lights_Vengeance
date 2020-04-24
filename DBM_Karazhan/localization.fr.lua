@@ -6,6 +6,8 @@
 	
 	DBM_ATH_WARN_CURSE		= "*** Malédiction ***";
 	DBM_ATH_CURSE_SOON		= "*** Malédiction dans %s sec ***";
+	DBM_ATH_SUMMON			= "*** Attumen has been summoned***";
+	DBM_ATH_WARN_PHASE		= "*** Phase %s ***";
 	
 	DBM_ATH_MIDNIGHT		= "Minuit";
 	DBM_ATH_CURSE			= "subit les effets %w+ Présence immatérielle";
@@ -20,11 +22,15 @@
 	DBM_MOROES_OPTION_2		= "Affiche un avertissement pour son retour";
 	DBM_MOROES_OPTION_3		= "Affiche un avertissement pour sa disparition imminente";
 	DBM_MOROES_OPTION_4		= "Affiche un avertissement pour le Garrot";
+	DBM_MOROES_OPTION_5		= "Show gouge warning";
+	DBM_MOROES_OPTION_6		= "Show blind warning";
 	
 	DBM_MOROES_VANISH_WARN	= "*** Disparition ***";
 	DBM_MOROES_VANISH_FADED	= "*** Retour de Moroes ***";
 	DBM_MOROES_VANISH_SOON	= "*** Disparition imminente ***";
 	DBM_MOROES_GARROTE_WARN	= "*** Garrot sur >%s< ***";
+	DBM_MOROES_GOUGE_WARN	= "*** Gouge on >%s< ***";
+	DBM_MOROES_BLIND_WARN	= "*** Blind on >%s< ***";
 	
 	DBM_MOROES_YELL_START	= "Hum. Des visiteurs imprévus. Il va falloir se préparer.";
 	DBM_MOROES_VANISH_GAIN	= "Moroes gagne Disparition.";
@@ -38,6 +44,7 @@
 	DBM_MOV_DESCRIPTION		= "Affiche une estimation de temps du Repentir, Alerte des Flammes sacrées et affiche la fenêtre de contrôle de distance";
 	DBM_MOV_OPTION_1		= "Affiche la fenêtre de contrôle de distance";
 	DBM_MOV_OPTION_2		= "Alerte Flammes sacrées";
+	DBM_MOV_OPTION_3		= "Announce Repentance";
 	
 	DBM_MOV_REPENTANCE		= "subit les effets %w+ Repentir";
 	DBM_MOV_WARN_REP		= "*** Repentir ***";

@@ -6,6 +6,8 @@ DBM_ATH_OPTION_1		= "Muestra el Warning de 5 segundos";
 
 DBM_ATH_WARN_CURSE		= "*** Maldicion ***";
 DBM_ATH_CURSE_SOON		= "*** Maldicion en %s segundos ***";
+DBM_ATH_SUMMON			= "*** Attumen has been summoned***";
+DBM_ATH_WARN_PHASE		= "*** Phase %s ***";
 
 DBM_ATH_MIDNIGHT		= "Medianoche";
 DBM_ATH_CURSE			= "sufre de Presencia intangible";
@@ -19,11 +21,15 @@ DBM_MOROES_OPTION_1		= "Muestra un warning cuando haga Vanish";
 DBM_MOROES_OPTION_2		= "Muestra un warning cuando se le acabe el Vanish";
 DBM_MOROES_OPTION_3		= "Muestra un warning cuando quede poco para el Vanish";
 DBM_MOROES_OPTION_4		= "Muestra un Warning cuando haga Garrote";
+DBM_MOROES_OPTION_5		= "Show gouge warning";
+DBM_MOROES_OPTION_6		= "Show blind warning";
 
 DBM_MOROES_VANISH_WARN	= "*** Vanish ***";
 DBM_MOROES_VANISH_FADED	= "*** Vanish acabado ***";
 DBM_MOROES_VANISH_SOON	= "*** Vanish pronto ***";
 DBM_MOROES_GARROTE_WARN	= "*** Garrote en >%s< ***";
+DBM_MOROES_GOUGE_WARN	= "*** Gouge on >%s< ***";
+DBM_MOROES_BLIND_WARN	= "*** Blind on >%s< ***";
 
 DBM_MOROES_YELL_START	= "Mm, visitantes inesperados. Hay que hacer preparativos...";
 DBM_MOROES_VANISH_GAIN	= "Moroes gana Esfumarse.";
@@ -37,6 +43,7 @@ DBM_MOV_NAME			= "Doncella de la Virtud";
 DBM_MOV_DESCRIPTION		= "Muestra el tiempo aproximado para el arrepentimiento, un cuadro de test de rango, y los afectados por el fuego sagrado.";
 DBM_MOV_OPTION_1		= "Muestra un Cuadro de test de rango";
 DBM_MOV_OPTION_2		= "Anunciar Holy Fire";
+DBM_MOV_OPTION_3		= "Announce Repentance";
 
 DBM_MOV_REPENTANCE		= "sufre de Arrepentimiento";
 DBM_MOV_WARN_REP		= "*** Arrepentimiento ***";

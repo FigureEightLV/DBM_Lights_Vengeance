@@ -8,6 +8,8 @@
 
 	DBM_ATH_WARN_CURSE		= "*** Курса ***";
 	DBM_ATH_CURSE_SOON		= "*** скоро Курса ***";
+	DBM_ATH_SUMMON			= "*** Attumen has been summoned***";
+	DBM_ATH_WARN_PHASE		= "*** Фаза %s ***";
 
 	DBM_ATH_MIDNIGHT		= "Полночь";
 	DBM_ATH_CURSE			= "поражен Intangible Presence";
@@ -21,11 +23,15 @@
 	DBM_MOROES_OPTION_2		= "Показать предупреждение \"Исчезновение рассеивается\"";
 	DBM_MOROES_OPTION_3		= "Показать предупреждение \"Cкоро Исчезновение\"";
 	DBM_MOROES_OPTION_4		= "Показать предупреждение Гаррота";
+	DBM_MOROES_OPTION_5		= "Show gouge warning";
+	DBM_MOROES_OPTION_6		= "Show blind warning";
 
 	DBM_MOROES_VANISH_WARN	= "*** Исчезновение ***";
 	DBM_MOROES_VANISH_FADED	= "*** Исчезновение рассеивается ***";
 	DBM_MOROES_VANISH_SOON	= "*** Исчезновение через 5 секунд ***";
 	DBM_MOROES_GARROTE_WARN	= "*** Гаррота на >%s< ***";
+	DBM_MOROES_GOUGE_WARN	= "*** Gouge on >%s< ***";
+	DBM_MOROES_BLIND_WARN	= "*** Blind on >%s< ***";
 
 	DBM_MOROES_YELL_START	= "Хмм, неожиданные посетители. Нужно подготовиться...";
 	DBM_MOROES_VANISH_GAIN	= "Мороуз читает Исчезновение.";
@@ -39,6 +45,7 @@
 	DBM_MOV_DESCRIPTION		= "Объявляет и показывает таймер для Покаяние, Священный огонь и область границы контроля.";
 	DBM_MOV_OPTION_1		= "Показать область границы контроля";
 	DBM_MOV_OPTION_2		= "Объявить Священный огонь";
+	DBM_MOV_OPTION_3		= "Announce Repentance";
 
 	DBM_MOV_YELL_PULL		= "Ваше поведение нестерпимо.";
 	DBM_MOV_YELL_REP_1		= "Отбросьте свои нечистые помыслы.";

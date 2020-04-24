@@ -12,6 +12,8 @@ DBM_ATH_OPTION_1		= "Show 5 second warning";
 
 DBM_ATH_WARN_CURSE		= "*** Curse ***";
 DBM_ATH_CURSE_SOON		= "*** Curse soon ***";
+DBM_ATH_SUMMON			= "*** Attumen has been summoned***";
+DBM_ATH_WARN_PHASE		= "*** Phase %s ***";
 
 DBM_ATH_MIDNIGHT		= "Midnight";
 DBM_ATH_CURSE			= "afflicted by Intangible Presence";
@@ -25,11 +27,15 @@ DBM_MOROES_OPTION_1		= "Show vanish warning";
 DBM_MOROES_OPTION_2		= "Show vanish fade warning";
 DBM_MOROES_OPTION_3		= "Show vanish soon warning";
 DBM_MOROES_OPTION_4		= "Show garrote warning";
+DBM_MOROES_OPTION_5		= "Show gouge warning";
+DBM_MOROES_OPTION_6		= "Show blind warning";
 
 DBM_MOROES_VANISH_WARN	= "*** Vanish ***";
 DBM_MOROES_VANISH_FADED	= "*** Vanish faded ***";
 DBM_MOROES_VANISH_SOON	= "*** Vanish in 5 sec ***";
 DBM_MOROES_GARROTE_WARN	= "*** Garrote on >%s< ***";
+DBM_MOROES_GOUGE_WARN	= "*** Gouge on >%s< ***";
+DBM_MOROES_BLIND_WARN	= "*** Blind on >%s< ***";
 
 DBM_MOROES_YELL_START	= "Hm, unannounced visitors. Preparations must be made...";
 DBM_MOROES_VANISH_GAIN	= "Moroes gains Vanish.";
@@ -43,6 +49,7 @@ DBM_MOV_NAME			= "Maiden of Virtue";
 DBM_MOV_DESCRIPTION		= "Provides a timer for Repentance, shows a warning for Holy Fire and shows the range check frame.";
 DBM_MOV_OPTION_1		= "Show range check frame";
 DBM_MOV_OPTION_2		= "Announce Holy Fire";
+DBM_MOV_OPTION_3		= "Announce Repentance";
 
 DBM_MOV_YELL_PULL		= "Your behavior will not be tolerated.";
 DBM_MOV_REPENTANCE		= "is afflicted by Repentance";

@@ -6,6 +6,8 @@
 
 	DBM_ATH_WARN_CURSE		= "*** Fluch ***";
 	DBM_ATH_CURSE_SOON		= "*** Fluch bald ***";
+	DBM_ATH_SUMMON			= "*** Attumen has been summoned***";
+	DBM_ATH_WARN_PHASE		= "*** Phase %s ***";
 
 	DBM_ATH_MIDNIGHT		= "Mittnacht";
 	DBM_ATH_CURSE			= "von Körperlose Präsenz betroffen";
@@ -20,12 +22,15 @@
 	DBM_MOROES_OPTION_2		= "\"Wieder da\" Warnung anzeigen";
 	DBM_MOROES_OPTION_3		= "\"Verschwinden bald\" Warnung anzeigen";
 	DBM_MOROES_OPTION_4		= "Erdrosseln Warnung anzeigen";
+	DBM_MOROES_OPTION_5		= "Show gouge warning";
+	DBM_MOROES_OPTION_6		= "Show blind warning";
 
 	DBM_MOROES_VANISH_WARN	= "*** Vanish ***";
 	DBM_MOROES_VANISH_FADED	= "*** Moroes ist wieder da ***";
 	DBM_MOROES_VANISH_SOON	= "*** Vanish bald ***";
 	DBM_MOROES_GARROTE_WARN	= "*** Erdrosseln auf >%s< ***";
-
+	DBM_MOROES_GOUGE_WARN	= "*** Gouge on >%s< ***";
+	DBM_MOROES_BLIND_WARN	= "*** Blind on >%s< ***";
 
 	DBM_MOROES_YELL_START	= "Hm, unangekündigte Besucher. Es müssen Vorbereitungen getroffen werden";
 	DBM_MOROES_VANISH_GAIN	= "Moroes bekommt 'Verschwinden'.";
@@ -39,7 +44,7 @@
 	DBM_MOV_DESCRIPTION		= "Zeigt einen Timer für Buße.";
 	DBM_MOV_OPTION_1		= "Reichweiten Check";
 	DBM_MOV_OPTION_2		= "Heiliges Feuer ansagen";
-	
+	DBM_MOV_OPTION_3		= "Announce Repentance";
 	
 	DBM_MOV_YELL_PULL		= "Euer Verhalten wird nicht toleriert.";
 	DBM_MOV_REPENTANCE		= "ist von Buße betroffen";

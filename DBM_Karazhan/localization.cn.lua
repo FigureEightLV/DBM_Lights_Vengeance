@@ -17,6 +17,8 @@ if (GetLocale() == "zhCN") then
 
 	DBM_ATH_WARN_CURSE	= "*** 诅咒 ***";
 	DBM_ATH_CURSE_SOON	= "*** 诅咒 - 即将施放 ***";
+	DBM_ATH_SUMMON			= "*** Attumen has been summoned***";
+	DBM_ATH_WARN_PHASE		= "*** 第%s阶段 ***";
 
 	DBM_ATH_MIDNIGHT	= "午夜";
 	DBM_ATH_CURSE		= "受到了无形效果的影响";
@@ -32,11 +34,15 @@ if (GetLocale() == "zhCN") then
 	DBM_MOROES_OPTION_2		= "警报消失效果消失";
 	DBM_MOROES_OPTION_3		= "警报即将消失";
 	DBM_MOROES_OPTION_4		= "警报锁喉";
+	DBM_MOROES_OPTION_5		= "Show gouge warning";
+	DBM_MOROES_OPTION_6		= "Show blind warning";
 
 	DBM_MOROES_VANISH_WARN	= "*** 消失 ***";
 	DBM_MOROES_VANISH_FADED	= "*** 消失 - 效果消失 ***";
 	DBM_MOROES_VANISH_SOON	= "*** 消失 - 即将施放 ***";
 	DBM_MOROES_GARROTE_WARN	= "*** 锁喉 -> >%s< ***";
+	DBM_MOROES_GOUGE_WARN	= "*** Gouge on >%s< ***";
+	DBM_MOROES_BLIND_WARN	= "*** Blind on >%s< ***";
 
 	DBM_MOROES_YELL_START	= "啊，不速之客。我得准备一下……";
 	DBM_MOROES_VANISH_GAIN	= "莫罗斯获得了消失的效果。";
@@ -51,6 +57,7 @@ if (GetLocale() == "zhCN") then
 	DBM_MOV_DESCRIPTION	= "警报悔改和神圣之火";
 	DBM_MOV_OPTION_1	= "显示距离框体";
 	DBM_MOV_OPTION_2	= "警报神圣之火";
+	DBM_MOV_OPTION_3		= "Announce Repentance";
 	
 	DBM_MOV_YELL_PULL		= "你们的行为是不可饶恕的。";
 	DBM_MOV_REPENTANCE		= "受到了悔改效果的影响";
