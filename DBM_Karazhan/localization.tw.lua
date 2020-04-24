@@ -192,8 +192,9 @@ DBM_PRINCE_DESCRIPTION		= "提示地獄火, 削弱, 暗言術:痛, 暗影新星.
 DBM_PRINCE_OPTION_1		= "提示暗影新星";
 DBM_PRINCE_OPTION_2		= "提示削弱";
 DBM_PRINCE_OPTION_3		= "傳送密語";
-DBM_PRINCE_OPTION_4		= "提示暗言術:痛";
+DBM_PRINCE_OPTION_4		= "Announce Shadow Word: Pain in Phase 1";
 DBM_PRINCE_OPTION_5		= "提示地獄火";
+DBM_PRINCE_OPTION_6		= "Announce Shadow Word: Pain in Phase 3";
 
 DBM_PRINCE_YELL_PULL		= "瘋狂把你帶到我的面前。我會成為你失敗的原因!";
 DBM_PRINCE_YELL_P2		= "頭腦簡單的笨蛋!你在燃燒的是時間的火焰!";

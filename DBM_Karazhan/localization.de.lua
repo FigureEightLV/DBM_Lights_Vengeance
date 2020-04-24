@@ -178,8 +178,9 @@
 	DBM_PRINCE_OPTION_1		= "Schattennova ansagen";
 	DBM_PRINCE_OPTION_2		= "Entkräften ansagen";
 	DBM_PRINCE_OPTION_3		= "Whisper verschicken";
-	DBM_PRINCE_OPTION_4		= "Schattenwort: Schmerz ansagen";
+	DBM_PRINCE_OPTION_4		= "Announce Shadow Word: Pain in Phase 1";
 	DBM_PRINCE_OPTION_5		= "Inferno ansagen";
+	DBM_PRINCE_OPTION_6		= "Announce Shadow Word: Pain in Phase 3";
 
 	DBM_PRINCE_YELL_PULL	= "Der Wahnsinn führte Euch zu mir. Ich werde Euch das Genick brechen!";
 	DBM_PRINCE_YELL_P2		= "Dummköpfe! Zeit ist das Feuer, in dem Ihr brennen werdet!";

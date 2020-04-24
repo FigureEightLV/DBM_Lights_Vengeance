@@ -171,8 +171,9 @@
 	DBM_PRINCE_OPTION_1		= "Объявить Кольцо Тьмы";
 	DBM_PRINCE_OPTION_2		= "Объявить Ослабление";
 	DBM_PRINCE_OPTION_3		= "Отправить сообщение шепотом";
-	DBM_PRINCE_OPTION_4		= "Объявить Слово Тьмы: Боль";
+	DBM_PRINCE_OPTION_4		= "Announce Shadow Word: Pain in Phase 1";
 	DBM_PRINCE_OPTION_5		= "Объявить Инфернал";
+	DBM_PRINCE_OPTION_6		= "Announce Shadow Word: Pain in Phase 3";
 
 	DBM_PRINCE_YELL_PULL	= "Безумие привело вас сюда, ко мне. Я стану вашей погибелью!";
 	DBM_PRINCE_YELL_P2		= "Простофили! Время – это пламя, в котором вы сгорите!";

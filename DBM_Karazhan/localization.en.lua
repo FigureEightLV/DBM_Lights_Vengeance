@@ -174,8 +174,9 @@ DBM_PRINCE_DESCRIPTION	= "Announces Infernals, Enfeeble, Shadow Word: Pain and S
 DBM_PRINCE_OPTION_1		= "Announce Shadow Nova";
 DBM_PRINCE_OPTION_2		= "Announce Enfeeble";
 DBM_PRINCE_OPTION_3		= "Send whisper";
-DBM_PRINCE_OPTION_4		= "Announce Shadow Word: Pain";
+DBM_PRINCE_OPTION_4		= "Announce Shadow Word: Pain in Phase 1";
 DBM_PRINCE_OPTION_5		= "Announce Infernal";
+DBM_PRINCE_OPTION_6		= "Announce Shadow Word: Pain in Phase 3";
 
 DBM_PRINCE_YELL_PULL	= "Madness has brought you here to me. I shall be your undoing!";
 DBM_PRINCE_YELL_P2		= "Simple fools! Time is the fire in which you'll burn!";

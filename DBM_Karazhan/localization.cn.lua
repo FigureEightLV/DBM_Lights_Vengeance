@@ -212,8 +212,9 @@ if (GetLocale() == "zhCN") then
 	DBM_PRINCE_OPTION_1		= "警报暗影新星";
 	DBM_PRINCE_OPTION_2		= "警报能量衰弱";
 	DBM_PRINCE_OPTION_3		= "密语玩家";
-	DBM_PRINCE_OPTION_4		= "警报暗言术：痛";
+	DBM_PRINCE_OPTION_4		= "Announce Shadow Word: Pain in Phase 1";
 	DBM_PRINCE_OPTION_5		= "警报地狱火";
+	DBM_PRINCE_OPTION_6		= "Announce Shadow Word: Pain in Phase 3";
 
 	DBM_PRINCE_YELL_PULL	= "疯狂将你们带到我的面前，而我将以死亡终结你们！";
 	DBM_PRINCE_YELL_P2		= "愚蠢的家伙！时间就是吞噬你躯体的烈焰！";

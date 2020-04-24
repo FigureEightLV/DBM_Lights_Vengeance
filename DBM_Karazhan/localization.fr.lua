@@ -176,8 +176,9 @@
 	DBM_PRINCE_OPTION_1		= "Annonce Nova de l'ombre";
 	DBM_PRINCE_OPTION_2		= "Annonce affaiblir";
 	DBM_PRINCE_OPTION_3		= "Envoi un whisp";
-	DBM_PRINCE_OPTION_4		= "Annonce Mot de l'ombre : Douleur";
+	DBM_PRINCE_OPTION_4		= "Announce Shadow Word: Pain in Phase 1";
 	DBM_PRINCE_OPTION_5		= "Annonce Infernal";
+	DBM_PRINCE_OPTION_6		= "Announce Shadow Word: Pain in Phase 3";
 
 	DBM_PRINCE_YELL_PULL	= "La folie vous a fait venir ici, devant moi. Et je serai votre perte !";
 	DBM_PRINCE_YELL_P2		= "Imb\195\169ciles heureux ! Le temps est le brasier dans lequel vous br\195\187lerez !";
