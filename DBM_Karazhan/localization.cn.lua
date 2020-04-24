@@ -199,6 +199,8 @@ if (GetLocale() == "zhCN") then
 	DBM_NS_WARN_BREATH		= "*** 虚空吐息 ***";
 	DBM_NS_WARN_VOID_ZONE	= "*** 虚空领域 ***";
 	DBM_NS_WARN_ENRAGE		= "*** %s%s后激怒 ***";
+	DBM_NS_BREATH_SPECWARN	= "Netherbreath on you!";
+	DBM_NS_VOID_SPECWARN	= "虚空领域";
 
 	DBM_SBT["Portal Phase"]	= "虚空门阶段";
 	DBM_SBT["Banish Phase"]	= "放逐阶段";

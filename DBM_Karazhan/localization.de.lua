@@ -169,6 +169,8 @@
 	DBM_NS_WARN_BANISH_SOON	= "*** Banish Phase in 5 Sek ***";
 	DBM_NS_WARN_BREATH		= "*** Netheratem ***";
 	DBM_NS_WARN_VOID_ZONE	= "*** Zone der Leere ***";
+	DBM_NS_BREATH_SPECWARN	= "Netherbreath on you!";
+	DBM_NS_VOID_SPECWARN	= "Zone der Leere";
 	
 	DBM_SBT["Netherbreath"]	= "Netheratem";
 	

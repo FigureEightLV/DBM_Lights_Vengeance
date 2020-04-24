@@ -1,14 +1,15 @@
 local Netherspite = DBM:NewBossMod("Netherspite", DBM_NS_NAME, DBM_NS_DESCRIPTION, DBM_KARAZHAN, DBM_KARAZHAN_TAB, 11);
 
-Netherspite.Version			= "1.1";
-Netherspite.Author			= "Tandanu";
+Netherspite.Version			= "1.4";
+Netherspite.Author			= "FigureEightLV"; -- Originally by Tandanu
 Netherspite.Phase			= 1;
 
 
 Netherspite:RegisterEvents(
 	"SPELL_CAST_START",
 	"SPELL_CAST_SUCCESS",
-	"CHAT_MSG_RAID_BOSS_EMOTE"
+	"CHAT_MSG_RAID_BOSS_EMOTE",
+	"SPELL_DAMAGE"
 );
 
 Netherspite:RegisterCombat("COMBAT");
@@ -25,8 +26,8 @@ Netherspite:AddBarOption("Netherbreath")
 
 function Netherspite:OnCombatStart(delay)
 	self.Phase = 1;
-	self:StartStatusBarTimer(62 - delay, "Portal Phase", "Interface\\Icons\\Spell_Arcane_PortalIronForge");
-	self:ScheduleSelf(57 - delay, "PhaseWarning", 2);
+	self:StartStatusBarTimer(60 - delay, "Portal Phase", "Interface\\Icons\\Spell_Arcane_PortalIronForge");
+	self:ScheduleSelf(55 - delay, "PhaseWarning", 2);
 	
 	self:StartStatusBarTimer(540 - delay, "Enrage", "Interface\\Icons\\Spell_Shadow_UnholyFrenzy");
 	self:ScheduleSelf(240 - delay, "EnrageWarn", 300);
@@ -42,18 +43,21 @@ end
 
 function Netherspite:OnEvent(event, arg1)
 	if event == "SPELL_CAST_START" then
-		if arg1.spellId == 38523 then -- ???
-			if self.Options.BreathWarn then
-				self:Announce(DBM_NS_WARN_BREATH, 2);
+		if arg1.spellId == 38523 then
+			if arg1.spellId == 38523 then
+				self:SendSync("Netherbreath");
 			end
-			self:StartStatusBarTimer(2.5, "Netherbreath", "Interface\\Icons\\Spell_Arcane_MassDispel");
 		end
 	elseif event == "SPELL_CAST_SUCCESS" then
-		if arg1.spellId == 37014 or arg1.spellId == 37063 then -- ??
+		if arg1.spellId == 37014 or arg1.spellId == 37063 then
 			if self.Options.VoidWarn then
 				self:Announce(DBM_NS_WARN_VOID_ZONE, 1);
 			end
 		end
+	elseif event == "SPELL_DAMAGE" then
+		if arg1.spellId == 28865 and arg1.destName == UnitName("player") then
+			self.AddSpecialWarning(DBM_NS_VOID_SPECWARN);
+		end	
 	elseif event == "CHAT_MSG_RAID_BOSS_EMOTE" then
 		if arg1 == DBM_NS_EMOTE_PHASE_2 then
 			self.Phase = 2;
@@ -67,8 +71,8 @@ function Netherspite:OnEvent(event, arg1)
 		elseif arg1 == DBM_NS_EMOTE_PHASE_1 then
 			self.Phase = 1;
 			self:EndStatusBarTimer("Banish Phase");
-			self:StartStatusBarTimer(61.5, "Portal Phase", "Interface\\Icons\\Spell_Arcane_PortalIronForge");
-			self:ScheduleSelf(56.5, "PhaseWarning", 2);
+			self:StartStatusBarTimer(60, "Portal Phase", "Interface\\Icons\\Spell_Arcane_PortalIronForge");
+			self:ScheduleSelf(55, "PhaseWarning", 2);
 			
 			if self.Options.PhaseWarn then
 				self:Announce(DBM_NS_WARN_PORTAL, 3);
@@ -86,5 +90,28 @@ function Netherspite:OnEvent(event, arg1)
 		else
 			self:Announce(string.format(DBM_NS_WARN_ENRAGE, arg1, DBM_SEC), 3)
 		end
+	end
+end
+
+function Netherspite:OnSync(msg)
+	if msg == "Netherbreath" then
+		local target
+		for i = 1, GetNumRaidMembers() do
+			if UnitName("raid"..i.."target") == DBM_NS_NAME then
+				target = UnitName("raid"..i.."targettarget");
+			end
+		end
+		if target then
+			if target == UnitName("player") then
+				self:AddSpecialWarning(DBM_NS_BREATH_SPECWARN);
+			end
+			if self.Options.BreathWarn then
+				self:Announce(string.format(DBM_NS_WARN_BREATH, target), 2);
+			end	
+			if self.Options.ThalaIcon then
+				self:SetIcon(target, 5);
+			end
+			self:StartStatusBarTimer(2.5, "Netherbreath", "Interface\\Icons\\Spell_Arcane_MassDispel");
+		end	
 	end
 end

@@ -167,6 +167,8 @@ DBM_NS_WARN_BANISH_SOON	= "*** Banish phase in 5 sec ***";
 DBM_NS_WARN_BREATH		= "*** Netherbreath ***";
 DBM_NS_WARN_VOID_ZONE	= "*** Void Zone ***";
 DBM_NS_WARN_ENRAGE		= "*** Enrage in %s %s ***";
+DBM_NS_BREATH_SPECWARN	= "Netherbreath on you!";
+DBM_NS_VOID_SPECWARN	= "Void Zone";
 
 --Prince Malchezaar
 DBM_PRINCE_NAME			= "Prince Malchezaar"

@@ -165,6 +165,8 @@
 	DBM_NS_WARN_BANISH_SOON	= "*** Phase Bannir dans 5 sec ***";
 	DBM_NS_WARN_BREATH		= "*** Souffle de N\195\169ant ***";
 	DBM_NS_WARN_VOID_ZONE	= "*** Zone de vide ***";
+	DBM_NS_BREATH_SPECWARN	= "Netherbreath on you!";
+	DBM_NS_VOID_SPECWARN	= "Zone de vide";
 	
 	DBM_SBT["Portal Phase"]	= "Phase Portail";
 	DBM_SBT["Banish Phase"]	= "Phase Bannir";

@@ -159,6 +159,8 @@
 	DBM_NS_WARN_BREATH		= "*** Дыхание Хаоса ***";
 	DBM_NS_WARN_VOID_ZONE	= "*** Портал Бездны ***";
 	DBM_NS_WARN_ENRAGE		= "*** Ярость через %s %s ***";
+	DBM_NS_BREATH_SPECWARN	= "Netherbreath on you!";
+	DBM_NS_VOID_SPECWARN	= "Портал Бездны";
 
 	DBM_SBT["Portal Phase"]	= "Фаза порталов";
 	DBM_SBT["Banish Phase"]	= "Фаза изгнания";
