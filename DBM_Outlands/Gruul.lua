@@ -100,8 +100,8 @@ end
 
 function Gruul:OnSync(msg)
 	if msg == "ExtendSilence" then
-        local timeLeft = self:GetStatusBarTimerTimeLeft("Silence")
-        self:EndStatusBarTimer("Silence")
+		local timeLeft = self:GetStatusBarTimerTimeLeft("Silence")
+		self:EndStatusBarTimer("Silence")
 		self:StartStatusBarTimer(timeLeft + 11, "Silence", "Interface\\Icons\\Spell_Holy_ImprovedResistanceAuras");
 		self:ScheduleSelf(timeLeft + 11, "SilenceWarn");
 	end

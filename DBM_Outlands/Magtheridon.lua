@@ -24,7 +24,7 @@ Mag:AddBarOption("Enrage", false)
 
 function Mag:OnCombatStart(delay)
 	self:SendSync("Combat")
-    self:ScheduleMethod(120, "SendSync", "Phase2")
+	self:ScheduleMethod(120, "SendSync", "Phase2")
 	self:ScheduleMethod(120, "SendSync", "Firstnova");
 	self:ScheduleMethod(120, "SendSync", "Quake1");
 	self:ScheduleMethod(120, "SendSync", "Enrage");
@@ -62,13 +62,13 @@ function Mag:OnEvent(event, arg1)
 		self:Announce(DBM_MAG_WARN_NOVA_SOON, 2);
 	end
 end
-    
+
 function Mag:OnSync(msg)
-    if msg == "Combat" then
-        self:StartStatusBarTimer(120, "Phase 2", "Interface\\Icons\\INV_Weapon_Halberd16");
-        self:ScheduleSelf(60, "Phase2Warn", 60);
-        self:ScheduleSelf(90, "Phase2Warn", 30);
-        self:ScheduleSelf(110, "Phase2Warn", 10);
+	if msg == "Combat" then
+		self:StartStatusBarTimer(120, "Phase 2", "Interface\\Icons\\INV_Weapon_Halberd16");
+		self:ScheduleSelf(60, "Phase2Warn", 60);
+		self:ScheduleSelf(90, "Phase2Warn", 30);
+		self:ScheduleSelf(110, "Phase2Warn", 10);
 	elseif msg == "Firstnova" then
 		self:StartStatusBarTimer(55, "Blast Nova", "Interface\\Icons\\Spell_Fire_SealOfFire");
 	elseif msg:sub(1, 5) == "Quake" then -- Quake timers can become off when Blast Nova occurs at the same time

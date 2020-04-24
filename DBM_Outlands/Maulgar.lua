@@ -78,11 +78,11 @@ function Maulgar:OnEvent(event, arg1)
 			self:SendSync("FelhunterCast");
 		end
 	elseif event == "SPELL_DAMAGE" then
-		if arg1.spellId == 39144 then -- should be 38761
+		if arg1.spellId == 38761 or arg1.spellId == 39144 then -- should be 38761
 			self:SendSync("Arcing "..tostring(arg1.destName).." "..tostring(arg1.amount));
 		end
 	elseif event == "SPELL_MISSED" then
-		if arg1.spellId == 39144 then -- should be 38761
+		if arg1.spellId == 38761 or arg1.spellId == 39144 then -- should be 38761
 			self:SendSync("Arcing "..tostring(arg1.destName).." "..tostring(arg1.missType));
 		end
 	end
