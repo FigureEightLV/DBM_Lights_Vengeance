@@ -1,0 +1,43 @@
+Monday 12 May 2008 (10:55 CET)
+Changed Paths
+	DBM_Auchindoun\Labyrinth\Murmur.lua
+	DBM_Auchindoun\Labyrinth\Vorpil.lua
+
+- Murmur: Updated (Murmur's Touch)
+- Vorpil: Fixed (StatusBar error)
+------------------------------------------------------------------------
+Friday 9 May 2008 (9:37 CET)
+Changed Paths
+	DBM_Auchindoun\Labyrinth\Inciter.lua
+	DBM_Auchindoun\localization.en.lua
+
+- Inciter: Added (Warns for Incite Chaos and shows duration timer)
+------------------------------------------------------------------------
+Thursday 8 May 2008 (11:21 CET)
+Changed Paths:
+	DBM_Auchindoun\Sethekk\Ikiss.lua
+	DBM_Auchindoun\localization.en.lua
+
+- Ikiss: Added (Warns for Arcane Explosion and Polymorph)
+------------------------------------------------------------------------
+Thursday 8 May 2008 (10:58 CET)
+Changed Paths:
+	DBM_TempestKeep\Mechanar\Ironhand.lua
+	DBM_TempestKeep\Mechanar\Gyrokill.lua
+	DBM_TempestKeep\localization.en.lua
+
+- Gyro-Kill: Added (Warns for Shadow Power)
+- Iron-Hand: Added (Warns for Shadow Power and Jackhammer)
+------------------------------------------------------------------------
+Tuesday 6 May 2008 (11:27 CET)
+Changed Paths:
+	DBM_Auchindoun\Crypts\Exarch Maladaar.lua
+	DBM_TempestKeep\Botanica\Freywinn.lua
+	DBM_TempestKeep\Botanica\Thorngrin.lua
+	DBM_TempestKeep\Mechanar\Pathaleon.lua
+	DBM_TempestKeep\localization.en.lua
+
+- Maladaar: Updated Avatar spellID
+- Freywinn: Changed Tranquility check (spellID instead of emote)
+- Thorngrin: Added (Timers and Announce for Sacrifice)
+- Pathaleon: Added (Announces for Mind Control and Summoned Adds)
