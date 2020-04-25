@@ -21,16 +21,16 @@ Gruul:AddOption("SilenceWarn", false, DBM_GRUUL_SILENCE_OPT);
 Gruul:AddOption("SpecWarning", true, DBM_GRUUL_CAVE_OPTION);
 
 Gruul:AddBarOption("Grow #(%d+)", true, DBM_GRUUL_OPTION_GROWBAR)
-Gruul:AddBarOption("Ground Slam")
+Gruul:AddBarOption("Ground Slam on CD")
 Gruul:AddBarOption("Shatter")
-Gruul:AddBarOption("Silence")
+Gruul:AddBarOption("Silence on CD")
 
 function Gruul:OnCombatStart(delay)
 	self.Grows = 0;	
 	self:ScheduleSelf(106 - delay, "SilenceSoon");
 	self:StartStatusBarTimer(110 - delay, "Silence", "Interface\\Icons\\Spell_Holy_ImprovedResistanceAuras");	
 	self:ScheduleSelf(35 - delay, "SlamSoon");
-	self:StartStatusBarTimer(40 - delay, "Ground Slam", "Interface\\Icons\\Spell_Nature_ThunderClap");	
+	self:StartStatusBarTimer(40 - delay, "Ground Slam on CD", "Interface\\Icons\\Spell_Nature_ThunderClap");	
 	self:StartStatusBarTimer(30 - delay, "Grow #1", "Interface\\Icons\\Spell_Nature_ShamanRage", true);
 
 	if self.Options.RangeCheck then
@@ -61,9 +61,9 @@ function Gruul:OnEvent(event, arg1)
 				self:Announce(DBM_GRUUL_SHATTER_WARN, 3);
 			end
 			
-			self:ScheduleSelf(71, "SlamSoon");
-			self:EndStatusBarTimer("Ground Slam");
-			self:StartStatusBarTimer(76, "Ground Slam", "Interface\\Icons\\Spell_Nature_ThunderClap");
+			self:ScheduleSelf(61, "SlamSoon");
+			self:EndStatusBarTimer("Ground Slam on CD");
+			self:StartStatusBarTimer(65, "Ground Slam", "Interface\\Icons\\Spell_Nature_ThunderClap");
 		end
 	elseif event == "SPELL_AURA_APPLIED" then
 		if arg1.spellId == 36240 and arg1.destName == UnitName("player") and self.Options.SpecWarning then
@@ -74,17 +74,17 @@ function Gruul:OnEvent(event, arg1)
 			end
 			
 			self:UnScheduleSelf("SilenceSoon");
-			self:EndStatusBarTimer("Silence");
-			self:ScheduleSelf(34, "SilenceSoon");
-			self:StartStatusBarTimer(38, "Silence", "Interface\\Icons\\Spell_Holy_ImprovedResistanceAuras");
+			self:EndStatusBarTimer("Silence on CD");
+			self:ScheduleSelf(31, "SilenceSoon");
+			self:StartStatusBarTimer(35, "Silence on CD", "Interface\\Icons\\Spell_Holy_ImprovedResistanceAuras");
 		end
 	elseif event == "SPELL_CAST_START" then
 		if arg1.spellId == 33525 then -- 39187?
 			if self.Options.ShatterWarn then
 				self:Announce(DBM_GRUUL_SHATTER_10WARN, 2);
-				self:SendSync("ExtendSilence");
 			end
-			self:EndStatusBarTimer("Ground Slam");
+			self:SendSync("ExtendSilence");
+			self:EndStatusBarTimer("Ground Slam on CD");
 			self:StartStatusBarTimer(10, "Shatter", "Interface\\Icons\\Spell_Nature_ThunderClap");
 		end
 	elseif event == "SlamSoon" then
@@ -100,9 +100,10 @@ end
 
 function Gruul:OnSync(msg)
 	if msg == "ExtendSilence" then
-		local timeLeft = self:GetStatusBarTimerTimeLeft("Silence")
-		self:EndStatusBarTimer("Silence")
-		self:StartStatusBarTimer(timeLeft + 11, "Silence", "Interface\\Icons\\Spell_Holy_ImprovedResistanceAuras");
+		local timeLeft = self:GetStatusBarTimerTimeLeft("Silence on CD")
+		if type(timeLeft) ~= "number" or timeLeft >= 11 then return end
+		self:EndStatusBarTimer("Silence on CD")
+		self:StartStatusBarTimer(timeLeft + 11, "Silence on CD", "Interface\\Icons\\Spell_Holy_ImprovedResistanceAuras");
 		self:ScheduleSelf(timeLeft + 11, "SilenceWarn");
 	end
 end
