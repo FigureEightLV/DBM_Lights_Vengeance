@@ -49,7 +49,7 @@ function Prince:OnEvent(event, arg1)
 					if self.Options.WarnEnfeeble then
 						self:Announce(DBM_PRINCE_WARN_ENFEEBLE, 3);
 					end
-					self:StartStatusBarTimer(10, "Enfeeble", "Interface\\Icons\\Spell_Shadow_LifeDrain02")
+					self:StartStatusBarTimer(9, "Enfeeble", "Interface\\Icons\\Spell_Shadow_LifeDrain02")
 					self.LastEnfeeble = GetTime();
 				end
 			end
