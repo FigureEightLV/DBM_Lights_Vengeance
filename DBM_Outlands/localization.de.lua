@@ -107,6 +107,7 @@
 	DBM_MAG_OPTION_1		= "Infernos ansagen";
 	DBM_MAG_OPTION_2		= "Heilung ansagen";
 	DBM_MAG_OPTION_3		= "Drucknova ansagen";
+	DBM_MAG_OPTION_4		= "Erdbeben";
 
 	DBM_MAG_EMOTE_PULL		= "Die Fesseln von %s werden schwächer!";
 	DBM_MAG_YELL_PHASE2		= "Ich... bin... frei!"

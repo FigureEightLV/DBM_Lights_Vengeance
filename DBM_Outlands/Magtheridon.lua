@@ -1,6 +1,6 @@
 local Mag = DBM:NewBossMod("Magtheridon", DBM_MAG_NAME, DBM_MAG_DESCRIPTION, DBM_MAGS_LAIR, DBMGUI_TAB_OTHER_BC, 3);
 
-Mag.Version		= "1.2";
+Mag.Version		= "1.3";
 Mag.Author		= "FigureEightLV"; -- Originally by Tandanu
 
 Mag:RegisterCombat("EMOTE", DBM_MAG_EMOTE_PULL);
@@ -19,7 +19,7 @@ Mag:AddOption("WarnNova", true, DBM_MAG_OPTION_3);
 Mag:AddBarOption("Phase 2")
 Mag:AddBarOption("Heal")
 Mag:AddBarOption("Blast Nova")
-Mag:AddBarOption("Quake")
+Mag:AddBarOption("Quake%d", true, DBM_MAG_OPTION_4)
 Mag:AddBarOption("Enrage", false)
 
 function Mag:OnCombatStart(delay)
@@ -71,15 +71,11 @@ function Mag:OnSync(msg)
 		self:ScheduleSelf(110, "Phase2Warn", 10);
 	elseif msg == "Firstnova" then
 		self:StartStatusBarTimer(55, "Blast Nova", "Interface\\Icons\\Spell_Fire_SealOfFire");
-	elseif msg:sub(1, 5) == "Quake" then -- Quake timers can become off when Blast Nova occurs at the same time
-		local count = msg:sub(6, 7)
-		if count == "1" then
-			self:StartStatusBarTimer(40, "Quake", "Interface\\Icons\\Spell_Nature_Earthquake");
-			self:ScheduleMethod(40, "SendSync", "Quake2");
-		else
-			self:StartStatusBarTimer(50, "Quake", "Interface\\Icons\\Spell_Nature_Earthquake");
-			self:ScheduleMethod(50, "SendSync", "Quake" .. count);
-		end
+	elseif msg:sub(1,5) == "Quake" then -- Quake timers can become off when Blast Nova occurs at the same time
+		local count = tonumber(msg:sub(6,7))
+		local timer = count > 1 and 50 or 38
+		self:StartStatusBarTimer(timer, "Quake"..count, "Interface\\Icons\\Spell_Nature_Earthquake");
+		self:ScheduleMethod(timer, "SendSync", "Quake"..(count + 1));
 	elseif msg == "Enrage" then
 		self:StartStatusBarTimer(1200, "Enrage", "Interface\\Icons\\Spell_Shadow_UnholyFrenzy")
 		self:ScheduleAnnounce(600, DBM_GENERIC_ENRAGE_WARN:format(10, DBM_MIN), 1)

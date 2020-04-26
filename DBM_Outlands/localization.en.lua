@@ -101,6 +101,7 @@ DBM_MAG_DESCRIPTION		= "Announces Infernals and Dark Mending and shows timers fo
 DBM_MAG_OPTION_1		= "Announce Infernals";
 DBM_MAG_OPTION_2		= "Announce Heal";
 DBM_MAG_OPTION_3		= "Announce Blast Nova";
+DBM_MAG_OPTION_4		= "Quake";
 
 DBM_MAG_EMOTE_PULL		= "%s's bonds begin to weaken!";
 DBM_MAG_YELL_PHASE2		= "I... am... unleashed!"

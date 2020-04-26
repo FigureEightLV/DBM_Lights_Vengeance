@@ -135,6 +135,7 @@ if (GetLocale() == "zhCN") then
 	DBM_MAG_OPTION_1		= "警报地狱火";
 	DBM_MAG_OPTION_2		= "警报黑暗治愈";
 	DBM_MAG_OPTION_3		= "警报冲击新星";
+	DBM_MAG_OPTION_4		= "地震";
 
 	DBM_MAG_EMOTE_PULL		= "%s的禁锢开始变弱！";
 	DBM_MAG_YELL_PHASE2		= "我……自由了！"

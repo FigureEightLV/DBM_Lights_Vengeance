@@ -124,6 +124,7 @@ DBM_MAG_DESCRIPTION			= "提示地獄火, 補血, 衝擊新星, 顯示階段計�
 DBM_MAG_OPTION_1			= "提示召喚地獄火";
 DBM_MAG_OPTION_2			= "提示補血";
 DBM_MAG_OPTION_3			= "提示衝擊新星";
+DBM_MAG_OPTION_4			= "Quake";
 
 DBM_MAG_EMOTE_PULL			= "%s的束縛開始變弱!";
 DBM_MAG_YELL_PHASE2			= "我……被……釋放了!"
