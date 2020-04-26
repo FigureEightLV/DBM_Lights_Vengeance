@@ -7,6 +7,9 @@
 -- Changes --
 -- ------- --
 --
+--  v3.31
+--  New timers and features for most T4 content on Stormspire (Light's Vengeance).
+--
 --  v3.30
 --  localization/ruRU: full support! (special thanks 2 Igor Bootwin)
 --  added a /dbm help command (thanks 2 Misfortunado Farmbuyer)
@@ -331,11 +334,11 @@ DBM_SavedVars = {
 
 DBM = {}
 
-DBM.Version = "3.30" -- used for "a new version of dbm is available"-spam
+DBM.Version = "3.31" -- used for "a new version of dbm is available"-spam
 DBMGUI_VERSION = "3.02"
 
-DBM_REVISION = tonumber(("$Revision: 392 $"):sub(12, -3) or 0) + 783 -- 783 = revision number from the old SVN repository
-DBM_VERSION = "3.30" -- this version is used for /dbm ver commands
+DBM_REVISION = tonumber(("$Revision: 393 $"):sub(12, -3) or 0) + 783 -- 783 = revision number from the old SVN repository
+DBM_VERSION = "3.31" -- this version is used for /dbm ver commands
 DBM.BetaVersion = DBM_VERSION.." (rev "..DBM_REVISION..")" -- this will be shown in the GUI if set
 
 
