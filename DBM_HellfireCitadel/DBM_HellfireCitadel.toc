@@ -1,0 +1,36 @@
+﻿## Interface: 20400
+## Title: |cff0055FFDeadly Party Boss Mods Hellfire Citadel|r
+## Notes: Boss Mods for Hellfire Citadel
+## Author: Arta
+## LoadOnDemand: 1
+## RequiredDeps: DBM_API
+## X-DBM-AddOn: 1
+## X-DBM-Tab-ID: HellfireTab
+## X-DBM-Tab-BCTab: 1
+## X-DBM-Tab-Sort: 13
+## X-DBM-Name: Hellfire Citadel
+## X-DBM-Tab-Text: Hellfire
+## X-DBM-Tab-Title: Hellfire Citadel Boss Mods
+## X-DBM-Tab-LoadZone: The Blood Furnace, Hellfire Ramparts, The Shattered Halls
+## X-DBM-Tab-LoadZone-deDE: Höllenfeuerbollwerk, Der Blutkessel, Die zerschmetterten Hallen
+## X-DBM-Tab-LoadZone-frFR: Remparts des Flammes infernales, La Fournaise du sang, Les Salles brisées
+## X-DBM-Tab-LoadZone-esES: Murallas del Fuego Infernal, El Horno de la Sangre, Las Salas Arrasadas
+## X-DBM-Tab-LoadZone-zhTW: 地獄火壁壘, 血熔爐, 破碎大廳
+## X-DBM-Tab-LoadZone-zhCN: 地狱火城墙, 鲜血熔炉, 破碎大厅
+localization.en.lua
+localization.fr.lua
+localization.de.lua
+localization.es.lua
+localization.tw.lua
+localization.cn.lua
+localization.kr.lua
+Ramparts\Gargolmar.lua
+Ramparts\Omor.lua
+Ramparts\Nazan.lua
+Furnace\Maker.lua
+Furnace\Broggok.lua
+Furnace\Kelidan.lua
+Halls\Warlock.lua
+Halls\Omrogg.lua
+Halls\Kargath.lua
+Halls\Porung.lua
