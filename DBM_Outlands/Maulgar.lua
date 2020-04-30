@@ -9,7 +9,6 @@ Maulgar:RegisterCombat("YELL", DBM_MAULGAR_SAY_PULL);
 Maulgar:RegisterEvents(
 	"SPELL_AURA_APPLIED",
 	"SPELL_CAST_START",
-	"SPELL_CAST_SUCCESS",
 	"SPELL_DAMAGE",
 	"SPELL_MISSED"
 );

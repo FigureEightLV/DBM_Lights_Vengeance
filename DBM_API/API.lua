@@ -7,6 +7,9 @@
 -- Changes --
 -- ------- --
 --
+--  v3.32
+--  Various fixes to the DBM_Party modules to prevent some errors.
+--
 --  v3.31
 --  New timers and features for most T4 content on Stormspire (Light's Vengeance).
 --
@@ -334,11 +337,11 @@ DBM_SavedVars = {
 
 DBM = {}
 
-DBM.Version = "3.31" -- used for "a new version of dbm is available"-spam
+DBM.Version = "3.32" -- used for "a new version of dbm is available"-spam
 DBMGUI_VERSION = "3.02"
 
-DBM_REVISION = tonumber(("$Revision: 393 $"):sub(12, -3) or 0) + 783 -- 783 = revision number from the old SVN repository
-DBM_VERSION = "3.31" -- this version is used for /dbm ver commands
+DBM_REVISION = tonumber(("$Revision: 394 $"):sub(12, -3) or 0) + 783 -- 783 = revision number from the old SVN repository
+DBM_VERSION = "3.32" -- this version is used for /dbm ver commands
 DBM.BetaVersion = DBM_VERSION.." (rev "..DBM_REVISION..")" -- this will be shown in the GUI if set
 
 
