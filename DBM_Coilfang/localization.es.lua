@@ -55,7 +55,8 @@ DBM_STEAMRIGGER_NAME				= "Mekigeniero Vaporino"
 DBM_STEAMRIGGER_DESCRIPTION			= "Las advertencias y los relojes para Mekigeniero Vaporino"
 
 DBM_STEAMRIGGER_OPTION_SUMMON			= "Warns for Summoned Mechanics"
-DBM_STEAMRIGGER_CHECK_SUMMON			= "Tune 'em up good, boys!"
+DBM_STEAMRIGGER_CHECK_SUMMON1			= "Tune 'em up good, boys!"
+DBM_STEAMRIGGER_CHECK_SUMMON2			= "I'm bringin' the pain!"
 DBM_STEAMRIGGER_WARN_SUMMON			= "Steamrigger Mechanics soon"
 
 -- Warlord Kalithresh

@@ -56,7 +56,8 @@ DBM_STEAMRIGGER_NAME				= "Robogenieur Dampfhammer"
 DBM_STEAMRIGGER_DESCRIPTION			= "Ansages und Zeitgebers für Robogenieur Dampfhammer"
 
 DBM_STEAMRIGGER_OPTION_SUMMON			= "Warns for Summoned Mechanics"
-DBM_STEAMRIGGER_CHECK_SUMMON			= "Tune 'em up good, boys!"
+DBM_STEAMRIGGER_CHECK_SUMMON1			= "Tune 'em up good, boys!"
+DBM_STEAMRIGGER_CHECK_SUMMON2			= "I'm bringin' the pain!"
 DBM_STEAMRIGGER_WARN_SUMMON			= "Steamrigger Mechanics soon"
 
 -- Warlord Kalithresh

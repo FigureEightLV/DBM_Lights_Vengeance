@@ -13,7 +13,7 @@ Steamrigger:AddOption("WarnSummon", true, DBM_STEAMRIGGER_OPTION_SUMMON)
 
 function Steamrigger:OnEvent(event, args)
 	if event == "CHAT_MSG_MONSTER_YELL"then
-		if args == "DBM_STEAMRIGGER_CHECK_SUMMON" then
+		if args == DBM_STEAMRIGGER_CHECK_SUMMON1 or args == DBM_STEAMRIGGER_CHECK_SUMMON2 then
 			self:SendSync("Summon")
 		end
 	end
