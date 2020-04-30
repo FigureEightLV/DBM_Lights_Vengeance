@@ -27,9 +27,9 @@ function Skyriss:OnEvent(event, args)
 			self:SendSync("SplitNow")
 		end
 	elseif event == "UNIT_HEALTH" then
-		if UnitName(msg) == "DBM_TK_SKYRISS_NAME" then
-			local hp = UnitHealth(msg);
-			if hp > 66 and hp <70 and not FirstSplit then
+		if UnitName(args) == DBM_TK_SKYRISS_NAME then
+			local hp = UnitHealth(args);
+			if hp > 66 and hp < 70 and not FirstSplit then
 				self:SendSync("Split")
 				FirstSplit = true;
 			elseif hp > 33 and hp < 37 and not SecondSplit then
