@@ -1,7 +1,7 @@
 local Syth = DBM:NewBossMod("Syth", DBM_SYTH_NAME, DBM_SYTH_DESCRIPTION, DBM_SETHEKK, DBM_AUCH_TAB, 7);
 
 Syth.Version		= "1.0";
-Syth.Author		= "Arta";
+Syth.Author			= "Arta";
 
 Syth:RegisterCombat("COMBAT");
 

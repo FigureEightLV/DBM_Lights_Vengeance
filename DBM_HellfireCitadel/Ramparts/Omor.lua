@@ -35,7 +35,7 @@ function Omor:OnSync(msg)
 			self:SendHiddenWhisper(DBM_OMOR_WHISPER_AURA:format(spellName), target)
 		end
 		if self.Options.IconAura then
-			DBM_SetTargetIcon(target)
+			self:SetIcon(target, 15)
 		end
 		if self.Options.WarnAura then
 			self:Announce(DBM_OMOR_WARN_AURA:format(target), 3)

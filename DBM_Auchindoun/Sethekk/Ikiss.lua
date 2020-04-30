@@ -16,11 +16,11 @@ Ikiss:AddOption("WarnPoly", true, DBM_IKISS_OPTION_POLY)
 
 function Ikiss:OnEvent(event, args)
 	if event == "SPELL_CAST_START" or "SPELL_CAST_SUCCESS" then
-		if args.spellId == 1953 then
+		if args.spellId == 1953 or args.spellId == 38194 then
 			self:SendSync("Blink")
 		end
 	elseif event == "SPELL_AURA_APPLIED" then
-		if args.spellId == 12826 and args.destName then
+		if (args.spellId == 12826 or args.spellId == 38245 or args.spellId == 43309) and args.destName then
 			self:SendSync("Poly"..tostring(args.destName))
 		end
 	end

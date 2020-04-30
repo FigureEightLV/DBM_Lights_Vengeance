@@ -15,7 +15,7 @@ Maladaar:AddOption("WarnAvatar", false, DBM_MALADAAR_OPTION_AVATAR)
 
 function Maladaar:OnEvent(event, args)
 	if event == "SPELL_AURA_APPLIED" then
-		if args.spellId == 32346 and args.destName then
+		if (args.spellId == 32346 or args.spellId == 32421) and args.destName then
 			self:SendSync("Soul"..tostring(args.destName))
 		end
 	elseif event == "SPELL_CAST_START" then

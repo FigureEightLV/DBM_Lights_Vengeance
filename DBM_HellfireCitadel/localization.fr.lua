@@ -51,7 +51,7 @@ DBM_KELIDAN_NAME		= "Keli'dan le Briseur"
 DBM_KELIDAN_DESCRIPTION		= "Les avertissements et les minuteurs pour Keli'dan the Breaker"
 
 DBM_KELIDAN_OPTION_NOVA		= "Warns for Burning Nova"
-DBM_KELIDAN_CHECK_NOVA		= "Come closer"
+DBM_KELIDAN_CHECK_NOVA		= "Closer! Come closer... and burn!"
 DBM_KELIDAN_WARN_NOVA		= "Burning Nova"
 
 
@@ -68,9 +68,9 @@ DBM_KARGATH_NAME		= "Chef de guerre Kargath Lamepoing"
 DBM_KARGATH_DESCRIPTION		= "Les avertissements et les minuteurs pour Chef de guerre Kargath Lamepoing"
 
 DBM_KARGATH_OPTION_DANCE	= "Warns for Blade Dance"
-DBM_KARGATH_CHECK_DANCE1	= "I am called"	
-DBM_KARGATH_CHECK_DANCE2	= "I'll carve"
-DBM_KARGATH_CHECK_DANCE3	= "Ours is"
+DBM_KARGATH_CHECK_DANCE1	= "I am called Bladefist for a reason. As you will see."	
+DBM_KARGATH_CHECK_DANCE2	= "I'll carve the meat from your bones!"
+DBM_KARGATH_CHECK_DANCE3	= "Ours is the TRUE Horde! The only Horde!"
 DBM_KARGATH_WARN_DANCE		= "Blade Dance"
 
 -- Blood Guard Porung
