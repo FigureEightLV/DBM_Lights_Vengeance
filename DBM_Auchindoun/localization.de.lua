@@ -86,7 +86,7 @@ DBM_VORPIL_PULL1			= "I'll make an offering of your blood"
 DBM_VORPIL_PULL2			= "Good, a worthy sacrifice!"
 
 DBM_VORPIL_OPTION_TELEPORT		= "Teleport ansagen"
-DBM_VORPIL_WARN_PRETELEPORT		= "Teleport soon!"
+DBM_VORPIL_WARN_TELEPORT		= "Teleport soon!"
 
 -- Murmur
 DBM_MURMUR_DESCRIPTION			= "Ansages und Zeitgebers für Murmur"
@@ -95,7 +95,7 @@ DBM_MURMUR_OPTION_TOUCH_ICON		= "Puts an Icon on the person with Murmur's Touch"
 DBM_MURMUR_OPTION_BOOM			= "Sonic Boom ansagen"
 DBM_MURMUR_OPTION_TOUCH			= "Murmur's Touch ansagen"
 DBM_MURMUR_OPTION_WHISPER_TOUCH		= "Whisper the person with Murmur's Touch"
-DBM_MURMUR_CHECK_BOOM			= "Murmur draws energy out of the air..."
+DBM_MURMUR_CHECK_BOOM				= "Murmur draws energy from the air..."
 DBM_MURMUR_WARN_BOOM			= "Sonic Boom"
 DBM_MURMUR_WARN_TOUCH			= ">%s< is the bomb"
 DBM_MURMUR_WHISPER_TOUCH  		= "You are the bomb!"

@@ -17,7 +17,7 @@ Capacitus:AddOption("WarnDamage", true, DBM_CAPACITUS_OPTION_DAMAGE);
 
 function Capacitus:OnCombatStart(delay)
 	if GetInstanceDificulty() == 2 then
-		self:StartStatusTimerBar(180 - delay, "Enrage")
+		self:StartStatusBarTimer(180 - delay, "Enrage")
 		self:ScheduleSelf(135 - delay, "Enrage", 45);
 		self:ScheduleSelf(165 - delay, "Enrage", 15);
 	end

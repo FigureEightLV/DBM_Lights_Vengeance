@@ -27,7 +27,7 @@ function Hellmaw:OnEvent(event, args)
 	if event == "EnrageWarn" and type(args) == "number" and self.Options.WarnEnrage then
 		self:Announce(string.format(DBM_HELLMAW_WARN_ENRAGE, args, DBM_SEC), 3)
 	elseif event == "SPELL_CAST_SUCCESS" then
-		if args.spellId == "33547" then
+		if args.spellId == 33547 then
 			self:SendSync("Fear")			
 		end
 	elseif event == "NextFear" and self.Options.WarnFear then
@@ -37,7 +37,7 @@ end
 
 function Hellmaw:OnSync(msg)
 	if msg == "Fear" then
-		self:StartStatusTimerBar(25, "Next Fear")
+		self:StartStatusBarTimer(25, "Next Fear")
 		self:ScheduleSelf(24, "NextFear")
 	end
 end

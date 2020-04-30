@@ -38,6 +38,6 @@ function Dalliah:OnSync(msg)
 	elseif msg:sub(0,4) == "Gift" and self.Options.WarnGift then
 		target = msg:sub(5);
 		self:Announce(DBM_DALLIAH_WARN_GIFT:format(target), 3);
-		self:StartStatusTimerBar(10, "Gift");
+		self:StartStatusBarTimer(10, "Gift");
 	end
 end

@@ -80,7 +80,7 @@ function Kael:OnSync(msg)
 		self:EndStatusBarTimer("Next Phoenix");
 	elseif msg == "Barrier" and self.Options.WarnBarrier then
 		self:Announce(DBM_KAEL_WARN_BARRIER, 3)
-		self:StartStatusTimerBar(60, "Next Shock Barrier", 44165)
+		self:StartStatusBarTimer(60, "Next Shock Barrier", 44165)
 		self:ScheduleSelf(50, "NextBarrier")
 	end
 end

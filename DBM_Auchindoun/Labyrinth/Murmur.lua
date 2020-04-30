@@ -17,7 +17,7 @@ Murmur:AddOption("WarnBoom", true, DBM_MURMUR_OPTION_BOOM)
 
 function Murmur:OnEvent(event, args)
 	if event == "SPELL_AURA_APPLIED" then
-		if args.spellId == 33711 and args.destName then
+		if (args.spellId == 33711 or args.spellId == 38794) and args.destName then
 			self:SendSync("Touch"..tostring(args.destName))
 		end
 	elseif event == "CHAT_MSG_MONSTER_EMOTE" then
@@ -33,13 +33,13 @@ function Murmur:OnSync(msg)
 		if self.Options.IconTouch then
 			self:SetIcon(target);
 		end
-		if self.Option.WarnTouch then
+		if self.Options.WarnTouch then
 			self:Announce(DBM_MURMUR_WARN_TOUCH:format(target), 4)
 		end
 		if self.Options.WhisperTouch then
 			self:SendHiddenWhisper(DBM_MURMUR_WHISPER_TOUCH, target);
 		end
 	elseif msg == "Boom" and self.Options.WarnBoom then
-		self:Announce(SBM_MURMUR_WARN_BOOM, 4)
+		self:Announce(DBM_MURMUR_WARN_BOOM, 4)
 	end
 end

@@ -22,9 +22,9 @@ end
 
 function Vorpil:OnSync(msg)
 	if msg == "Teleport" then
-		self:StartStatusBarTimer(37, "Next Teleport");
+		self:StartStatusBarTimer(40, "Next Teleport");
 		if self.Options.WarnTeleport then
-			self:ScheduleAnnounce(32, DBM_VORPIL_WARN_TELEPORT, 3);
+			self:ScheduleAnnounce(35, DBM_VORPIL_WARN_TELEPORT, 3);
 		end
 	end
 end
