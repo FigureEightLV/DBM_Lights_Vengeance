@@ -177,7 +177,4 @@ DBM_OUTDOOR_YSONDRE		= "Ysondre";
 DBM_OUTDOOR_EMERISS		= "Emeriss";
 DBM_OUTDOOR_TAERAR		= "Taerar";
 DBM_OUTDOOR_LETHON		= "Lethon";
-
---18.3.07
-DBM_HEAVY_NW_BANDAGE	= "Bandage épais en tisse-néant";
 end

@@ -290,11 +290,6 @@ DBM_EAL_MOBDEAD_EXPR		= "(.+) умирает%.";
 --20.2.07
 DBM_MSG_CLEANICONS = "Значки рейда удалены!";
 
---18.3.07
-DBM_HEAVY_NW_BANDAGE = "Плотные бинты из ткани Пустоты";
-DBM_RANGE_FRAME_BANDAGE_MISSING	= "Ошибка при установке контрольных границ на 15 метров. Убедитесь, что у вас при себе Плотные бинты из ткани Пустоты."
-
-
 -- copied from "drt"
 
 DRT_SPAMBLOCK_SLASHHELP	= {

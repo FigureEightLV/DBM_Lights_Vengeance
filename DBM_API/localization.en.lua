@@ -296,11 +296,6 @@ DBM_EAL_MOBDEAD_EXPR		= "(.+) dies%.";
 --20.2.07
 DBM_MSG_CLEANICONS = "Cleaned up raid icons!";
 
---18.3.07
-DBM_HEAVY_NW_BANDAGE = "Heavy Netherweave Bandage";
-DBM_RANGE_FRAME_BANDAGE_MISSING	= "Error while setting the range check frame to 15 yards. Please make sure that you have a Heavy Netherweave Bandage with you."
-
-
 -- copied from "drt"
 
 DRT_SPAMBLOCK_SLASHHELP	= {

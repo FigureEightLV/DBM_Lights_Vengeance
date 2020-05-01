@@ -219,8 +219,6 @@ if (GetLocale() == "deDE") then
 	
 	
 	--18.3.07
-	DBM_HEAVY_NW_BANDAGE		= "Schwerer Netherstoffverband";
-	
 	DBM_HP_UNKNOWN				= "HP unbekannt"
 	
 	DBMGUI_OPTIONS_BAR_TARGET	= "<Ziel>"

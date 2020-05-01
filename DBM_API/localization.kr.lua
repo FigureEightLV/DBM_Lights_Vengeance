@@ -32,7 +32,4 @@ if (GetLocale() == "koKR") then
 	DBM_WARSONG		= "전쟁노래 협곡";
 	DBM_ALTERAC		= "알터랙 계곡";
 	DBM_AZSHARA		= "아즈샤라";
-
-	--18.3.07
-	DBM_HEAVY_NW_BANDAGE	= "두꺼운 황천매듭 붕대";
 end

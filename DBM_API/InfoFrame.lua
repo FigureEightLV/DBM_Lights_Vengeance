@@ -478,7 +478,7 @@ function DBM_Gui_CheckDistance(uID)
 	if DBMGui_DistanceFrame_Distance == 10 then
 		return CheckInteractDistance(uID, 3);
 	elseif DBMGui_DistanceFrame_Distance == 15 then
-		if IsItemInRange(DBM_HEAVY_NW_BANDAGE, uID) == 1 then -- IsItemInRange returns 0 for out of range...and 0 is true in lua
+		if IsItemInRange(21991, uID) == 1 then -- IsItemInRange returns 0 for out of range...and 0 is true in lua
 			return true;
 		else
 			return false;
@@ -495,13 +495,11 @@ function DBM_Gui_DistanceFrame_SetDistance(distance)
 			DBMDistanceFrame:SetText(DBMGUI_DISTANCE_FRAME_TEXT);
 		end
 	elseif distance == 15 then
-		if IsItemInRange(DBM_HEAVY_NW_BANDAGE, "player") then
+		if IsItemInRange(21991, "player") then
 			DBMGui_DistanceFrame_Distance = 15;
 			if DBMDistanceFrame then
 				DBMDistanceFrame:SetText(DBMGUI_DISTANCE_FRAME_TEXT_15YD);
 			end
-		elseif not UnitIsDeadOrGhost("player") then
-			DBM.AddMsg(DBM_RANGE_FRAME_BANDAGE_MISSING, "Deadly Boss Mods");
 		end
 	end
 end

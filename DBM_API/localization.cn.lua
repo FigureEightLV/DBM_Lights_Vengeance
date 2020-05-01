@@ -293,10 +293,6 @@ if (GetLocale() == "zhCN") then
 --20.2.07
 	DBM_MSG_CLEANICONS = "已清除团队标记";
 
---18.3.07
-	DBM_HEAVY_NW_BANDAGE			= "厚灵纹布绷带";
-	DBM_RANGE_FRAME_BANDAGE_MISSING	= "在设置距离检测窗口检测距离为15码时发生错误。请确定携带有厚灵纹布绷带。"
-
 -- drt
 	DRT_PULLCOMMAND_ANNOUNCE	= "*** 即将开战 ***";
 	DRT_PULLCOMMAND_SELFWARN	= "战斗开始";

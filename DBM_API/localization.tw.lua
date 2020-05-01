@@ -296,10 +296,6 @@ DBM_KARAZHAN_TAB_TITLE	= "卡拉贊"
 --20.2.07
 DBM_MSG_CLEANICONS = "已經清除團隊標記";
 
---18.3.07
-DBM_HEAVY_NW_BANDAGE			= "厚幽紋繃帶";
-DBM_RANGE_FRAME_BANDAGE_MISSING	= "再設置距離檢測窗口檢測距離為15碼時發生錯誤。請確定有攜帶厚幽紋繃帶。"
-
 -- copied from "drt"
 
 DRT_SPAMBLOCK_SLASHHELP	= {
