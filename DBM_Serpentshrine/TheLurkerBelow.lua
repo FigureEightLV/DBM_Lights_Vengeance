@@ -1,7 +1,7 @@
 local Lurker = DBM:NewBossMod("LurkerBelow", DBM_LURKER_NAME, DBM_LURKER_DESCRIPTION, DBM_COILFANG, DBM_SERPENT_TAB, 2);
 
-Lurker.Version		= "2.2";
-Lurker.Author		= "Tandanu";
+Lurker.Version		= "2.4";
+Lurker.Author		= "FigureEightLV"; -- Originally by Tandanu
 Lurker.MinVersionToSync = 2.7
 
 Lurker.SubmergeWarning = false; -- to prevent spam after a wipe
@@ -63,8 +63,8 @@ function Lurker:OnEvent(event, arg1)
 		self:Announce(DBM_LURKER_WARN_SPOUT_SOON, 2);
 		
 	elseif event == "NextSpout" then
-		self:StartStatusBarTimer(32, "Next Spout", "Interface\\Icons\\Spell_Frost_ChillingBlast");
-		self:ScheduleSelf(27, "SpoutWarning");
+		self:StartStatusBarTimer(30, "Next Spout", "Interface\\Icons\\Spell_Frost_ChillingBlast");
+		self:ScheduleSelf(25, "SpoutWarning");
 		
 	elseif event == "Submerge" then
 		self.Submerged = true;
@@ -134,8 +134,8 @@ end
 
 function Lurker:OnSync(msg)
 	if msg == "Whirl" then
-		self:StartStatusBarTimer(17.5, "Whirl", "Interface\\Icons\\Ability_Whirlwind");
-		self:ScheduleSelf(13.5, "WhirlWarning");
+		self:StartStatusBarTimer(18, "Whirl", "Interface\\Icons\\Ability_Whirlwind");
+		self:ScheduleSelf(14, "WhirlWarning");
 		if self.Options.WhirlWarn then
 			self:Announce(DBM_LURKER_WARN_WHIRL, 2);
 		end
