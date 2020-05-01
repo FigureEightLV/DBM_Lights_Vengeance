@@ -7,7 +7,7 @@ Broggok:RegisterCombat("COMBAT");
 
 Broggok:RegisterEvents(
 	"SPELL_DAMAGE",
-	"SPELL_SUMMON",
+	"SPELL_SUMMON"
 );
 
 Broggok:AddOption("WarnPoison", true, DBM_BROGGOK_OPTION_POISON)
