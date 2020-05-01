@@ -1,7 +1,7 @@
 local Leotheras = DBM:NewBossMod("Leotheras", DBM_LEO_NAME, DBM_LEO_DESCRIPTION, DBM_COILFANG, DBM_SERPENT_TAB, 5);
 
-Leotheras.Version			= "1.1";
-Leotheras.Author			= "Tandanu";
+Leotheras.Version			= "1.4";
+Leotheras.Author			= "FigureEightLV"; -- Originally by Tandanu
 Leotheras.Phase				= "normal";
 Leotheras.WhirlSpam			= 0;
 Leotheras.DemonSpam			= 0;
@@ -21,6 +21,7 @@ Leotheras:RegisterEvents(
 Leotheras:AddOption("WhirlWarn", true, DBM_LEO_OPTION_WHIRL);
 Leotheras:AddOption("DemonWarn", true, DBM_LEO_OPTION_DEMON);
 Leotheras:AddOption("WarnDemons", false, DBM_LEO_OPTION_DEMONWARN);
+Leotheras:AddOption("WhisperDemons", false, DBM_LEO_OPTION_WHISPER_DEMON);
 
 Leotheras:AddBarOption("Enrage")
 Leotheras:AddBarOption("Demon Form")
@@ -41,10 +42,10 @@ function Leotheras:OnCombatStart(delay)
 	self:ScheduleSelf(590 - delay, "EnrageWarn", 10);
 		
 	self:ScheduleSelf(55, "PhaseWarn");
-	self:StartStatusBarTimer(60, "Demon Form", "Interface\\Icons\\Spell_Shadow_Metamorphosis");
+	self:StartStatusBarTimer(65, "Demon Form", "Interface\\Icons\\Spell_Shadow_Metamorphosis");
 	
-	self:StartStatusBarTimer(18, "Next Whirlwind", "Interface\\Icons\\Ability_Whirlwind");
-	self:ScheduleSelf(14, "WhirlWarn2");	
+	self:StartStatusBarTimer(15, "Next Whirlwind", "Interface\\Icons\\Ability_Whirlwind");
+	self:ScheduleSelf(10, "WhirlWarn2");	
 end
 
 function Leotheras:OnEvent(event, arg1)
@@ -69,11 +70,15 @@ function Leotheras:OnEvent(event, arg1)
 			self:Announce(DBM_LEO_WARN_SHADOW, 3);
 			self:UnScheduleSelf("PhaseWarn");
 			self:UnScheduleSelf("NormalForm");
+			self:UnScheduleSelf("WhirlWarn");
+			self:UnScheduleSelf("WhirlWarn2");
 			self:EndStatusBarTimer("Normal Form");
 			self:EndStatusBarTimer("Demon Form");
+			self:EndStatusBarTimer("Whirlwind");
+			self:EndStatusBarTimer("Next Whirlwind");
 			
-			self:StartStatusBarTimer(22.5, "Next Whirlwind", "Interface\\Icons\\Ability_Whirlwind");
-			self:ScheduleSelf(18, "WhirlWarn2");
+			self:StartStatusBarTimer(15, "Next Whirlwind", "Interface\\Icons\\Ability_Whirlwind");
+			self:ScheduleSelf(10, "WhirlWarn2");
 			
 		elseif string.find(arg1, DBM_LEO_YELL_WHISPER) then
 			if (GetTime() - self.DemonSpam) > 5 then
@@ -168,13 +173,13 @@ function Leotheras:OnSync(msg)
 			self:Announce(DBM_LEO_WARN_WHIRL_FADED, 2);
 		end
 		if not self:GetStatusBarTimerTimeLeft("Demon Form") or self:GetStatusBarTimerTimeLeft("Demon Form") > 18 then
-			self:StartStatusBarTimer(20, "Next Whirlwind", "Interface\\Icons\\Ability_Whirlwind");
-			self:ScheduleSelf(15, "WhirlWarn");
+			self:StartStatusBarTimer(15, "Next Whirlwind", "Interface\\Icons\\Ability_Whirlwind");
+			self:ScheduleSelf(10, "WhirlWarn");
 		end
 	elseif msg:sub(0, 5) == "Demon" then
 		msg = msg:sub(6);
 		if msg then
-			if self.Options.Announce and DBM.Rank >= 1 then
+			if self.Options.Announce and DBM.Rank >= 1 and self.Options.WhisperDemons then
 				self:SendHiddenWhisper(DBM_LEO_WHISPER_INNER_DEMON, msg);
 			end
 			if msg == UnitName("player") then

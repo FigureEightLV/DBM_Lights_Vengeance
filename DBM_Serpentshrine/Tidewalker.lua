@@ -1,7 +1,7 @@
 local Tidewalker = DBM:NewBossMod("Tidewalker", DBM_TIDEWALKER_NAME, DBM_TIDEWALKER_DESCRIPTION, DBM_COILFANG, DBM_SERPENT_TAB, 3);
 
-Tidewalker.Version		= "1.0";
-Tidewalker.Author		= "Tandanu";
+Tidewalker.Version		= "1.2";
+Tidewalker.Author		= "FigureEightLV"; -- Originally by Tandanu
 Tidewalker.GraveTargets	= {};
 Tidewalker.GraveCounter	= 0;
 Tidewalker.MinVersionToSync  = 2.51;
@@ -9,22 +9,26 @@ Tidewalker.MinVersionToSync  = 2.51;
 Tidewalker:RegisterCombat("YELL", DBM_TIDEWALKER_YELL_PULL);
 
 Tidewalker:AddOption("Murlocs", true, DBM_TIDEWALKER_OPTION_1);
-Tidewalker:AddOption("Grave", false, DBM_TIDEWALKER_OPTION_2);
+Tidewalker:AddOption("Grave", true, DBM_TIDEWALKER_OPTION_2);
 
 Tidewalker:AddBarOption("Murlocs")
 Tidewalker:AddBarOption("Watery Grave")
+Tidewalker:AddBarOption("Tidal Wave")
 
 Tidewalker:RegisterEvents(
 	"CHAT_MSG_RAID_BOSS_EMOTE",
-	"SPELL_AURA_APPLIED" 
+	"SPELL_CAST_START",
+	"SPELL_AURA_APPLIED"
 );
 
 function Tidewalker:OnCombatStart(delay)
 	self.GraveTargets	= {};
 	self.GraveCounter	= 0;
 	
-	self:StartStatusBarTimer(42 - delay, "Murlocs", "Interface\\Icons\\INV_Misc_MonsterHead_02");
+	self:StartStatusBarTimer(30 - delay, "Watery Grave", "Interface\\Icons\\Spell_Shadow_DemonBreath");	
+	self:StartStatusBarTimer(40 - delay, "Murlocs", "Interface\\Icons\\INV_Misc_MonsterHead_02");
 	self:ScheduleSelf(35 - delay, "MurlocWarn");
+	self:StartStatusBarTimer(15 - delay, "Tidal Wave", "Interface\\Icons\\Spell_Frost_ChillingBlast");
 end
 
 function Tidewalker:OnCombatEnd()
@@ -41,6 +45,14 @@ function Tidewalker:OnEvent(event, arg1)
 		or arg1.spellId == 38049 then -- ???
 			self:SendSync(tostring(arg1.destName))
 		end
+		
+	elseif event == "SPELL_CAST_START" then
+		if arg1.spellId == 37730 then
+			self:ScheduleSelf(1.5, "TidalWaveTimer");
+		end
+
+	elseif event == "TidalWaveTimer" then
+		self:StartStatusBarTimer(25, "Tidal Wave", "Interface\\Icons\\Spell_Frost_ChillingBlast");
 		
 	elseif event == "GraveCheck" then
 		if self.Options.Grave and self.GraveCounter > 0 and self.GraveCounter < 4 then
