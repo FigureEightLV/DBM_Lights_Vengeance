@@ -1,7 +1,7 @@
 local Hydross = DBM:NewBossMod("Hydross", DBM_HYDROSS_NAME, DBM_HYDROSS_DESCRIPTION, DBM_COILFANG, DBM_SERPENT_TAB, 1);
 
-Hydross.Version		= "1.0";
-Hydross.Author		= "Tandanu";
+Hydross.Version		= "1.2";
+Hydross.Author		= "FigureEightLV"; -- Originally by Tandanu
 Hydross.LastMark	= 0;
 Hydross.Marks		= 0;
 Hydross.Phase		= "frost";
@@ -30,16 +30,18 @@ function Hydross:OnCombatStart(delay)
 	self.Phase = "frost";
 	self:ScheduleSelf(11 - delay, "MarkWarning");
 	self:StartStatusBarTimer(600 - delay, "Enrage", "Interface\\Icons\\Spell_Shadow_UnholyFrenzy");
-	self:StartStatusBarTimer(16 - delay, "Mark of Hydross #"..(self.Marks + 1), "Interface\\Icons\\Spell_Frost_FrozenCore");
+	self:StartStatusBarTimer(15 - delay, "Mark of Hydross #"..(self.Marks + 1), "Interface\\Icons\\Spell_Frost_FrozenCore");
 	
 	if self.Options.RangeCheck then
 		DBM_Gui_DistanceFrame_Show();
+		DBM_Gui_DistanceFrame_SetDistance(5);
 	end
 end
 
 function Hydross:OnCombatEnd()
 	if self.Options.RangeCheck then
 		DBM_Gui_DistanceFrame_Hide();
+		DBM_Gui_DistanceFrame_SetDistance(10);
 	end
 end
 
@@ -64,6 +66,7 @@ function Hydross:OnEvent(event, arg1)
 				self:Announce(string.format(DBM_HYDROSS_FROST_MARK_NOW, self.Marks), 1);
 			end
 			
+			--[[
 			if self.Marks == 1 then
 				timer = 14.4;
 			elseif self.Marks == 2 then
@@ -77,15 +80,22 @@ function Hydross:OnEvent(event, arg1)
 			else
 				timer = nil;
 			end
+			--]]
+			if self.Marks >= 1 and self.Marks <= 5 then
+				timer = 15;
+			else
+				timer = nil;
+			end
+
 			for i = 1, 7 do
 				self:EndStatusBarTimer("Mark of Hydross #"..i);
 				self:EndStatusBarTimer("Mark of Corruption #"..i);
 			end
+
 			if timer then
 				self:ScheduleSelf(timer - 5, "MarkWarning");
 				self:StartStatusBarTimer(timer, "Mark of Hydross #"..(self.Marks + 1), "Interface\\Icons\\Spell_Frost_FrozenCore");
 			end
-		
 		elseif (GetTime() - self.LastMark) > 7 and 
 		(arg1.spellId == 38219 or
 		arg1.spellId == 38220 or
@@ -105,6 +115,7 @@ function Hydross:OnEvent(event, arg1)
 				self:Announce(string.format(DBM_HYDROSS_NATURE_MARK_NOW, self.Marks), 2);
 			end
 			
+			--[[
 			if self.Marks == 1 then
 				timer = 14.8;
 			elseif self.Marks == 2 then
@@ -115,6 +126,12 @@ function Hydross:OnEvent(event, arg1)
 				timer = 14;
 			elseif self.Marks == 5 then
 				timer = 14;
+			else
+				timer = nil;
+			end
+			--]]
+			if self.Marks >= 1 and self.Marks <= 5 then
+				timer = 15;
 			else
 				timer = nil;
 			end
@@ -164,7 +181,7 @@ function Hydross:OnEvent(event, arg1)
 			self.Marks = 0;
 			self.Phase = "nature";
 			self:ScheduleSelf(11, "MarkWarning");
-			self:StartStatusBarTimer(16, "Mark of Corruption #"..(self.Marks + 1), "Interface\\Icons\\Spell_Nature_ElementalShields");
+			self:StartStatusBarTimer(15, "Mark of Corruption #"..(self.Marks + 1), "Interface\\Icons\\Spell_Nature_ElementalShields");
 		elseif arg1 == DBM_HYDROSS_YELL_FROST then
 			self:UnScheduleSelf();
 			for i = 1, 7 do
@@ -178,7 +195,7 @@ function Hydross:OnEvent(event, arg1)
 			self.Marks = 0;
 			self.Phase = "frost";
 			self:ScheduleSelf(11, "MarkWarning");
-			self:StartStatusBarTimer(16, "Mark of Hydross #"..(self.Marks + 1), "Interface\\Icons\\Spell_Frost_FrozenCore");
+			self:StartStatusBarTimer(15, "Mark of Hydross #"..(self.Marks + 1), "Interface\\Icons\\Spell_Frost_FrozenCore");
 		end
 	end
 end
