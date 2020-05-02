@@ -14,7 +14,7 @@ Freywinn:AddBarOption("Tranquility")
 
 function Freywinn:OnEvent(event, args)
 	if event == "SPELL_CAST_SUCCESS" then
-		if args.spellId == 34557 then
+		if args.spellId == 34550 then
 			self:SendSync("Tranq")
 		end
 	end
@@ -23,6 +23,6 @@ end
 function Freywinn:OnSync(msg)
 	if msg == "Tranq" and self.Options.WarnTranq then
 		self:Announce(DBM_FREYWINN_WARN_TRANQ);
-		self:StartStatusBarTimer(15, "Tranquility", 34557)
+		self:StartStatusBarTimer(15, "Tranquility", 34550)
 	end
 end
