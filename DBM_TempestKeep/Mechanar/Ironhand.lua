@@ -13,7 +13,7 @@ Ironhand:RegisterEvents(
 	"SPELL_CAST_START",
 	"SPELL_AURA_APPLIED",
 	"SPELL_AURA_REMOVED",
-	"CHAT_MSG_RAID_BOSS_EMOTE"
+	"CHAT_MSG_MONSTER_EMOTE"
 );
 
 function Ironhand:OnEvent(event, args)
@@ -29,7 +29,7 @@ function Ironhand:OnEvent(event, args)
 		if args.spellId == 39193 then
 			self:SendSync("ShadowRemoved")
 		end
-	elseif event == "CHAT_MSG_RAID_BOSS_EMOTE" then
+	elseif event == "CHAT_MSG_MONSTER_EMOTE" then
 		if args == DBM_IRONHAND_CHECK_HAMMER then
 			self:SendSync("Hammer")
 		end

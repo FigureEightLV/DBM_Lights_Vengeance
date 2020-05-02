@@ -16,6 +16,25 @@ DBM_BOTANICA			= "波塔尼卡"
 DBM_ARCATRAZ			= "亞克崔茲"
 
 
+-- Gatewatcher Gyro-Kill		
+DBM_GYROKILL_NAME				= "Gatewatcher Gyro-Kill"
+DBM_GYROKILL_DESCRIPTION		= "Announces and timers for Gatewatcher Gyro-Kill"
+
+DBM_GYROKILL_OPTION_SHADOW		= "Warns for Shadow Power"
+DBM_GYROKILL_WARN_SHADOW		= "Casting Shadow Power"
+DBM_GYROKILL_WARN_SHADOWAURA	= "Gyro-Kill gains Shadow Power"
+
+-- Gatewatcher Iron-Hand		
+DBM_IRONHAND_NAME				= "Gatewatcher Iron-Hand"
+DBM_IRONHAND_DESCRIPTION		= "Announces and timers for Gatewatcher Iron-Hand"
+DBM_IRONHAND_CHECK_HAMMER		= "%s raises his hammer menacingly..."
+
+DBM_IRONHAND_OPTION_SHADOW		= "Warns for Shadow Power"
+DBM_IRONHAND_OPTION_HAMMER		= "Warns for Jackhammer"
+DBM_IRONHAND_WARN_SHADOW		= "Casting Shadow Power"
+DBM_IRONHAND_WARN_SHADOWAURA	= "Iron-Hand gains Shadow Power"
+DBM_IRONHAND_WARN_HAMMER		= "Jackhammer"
+
 -- Mechano-Lord Capacitus
 DBM_CAPACITUS_NAME			= "機械王卡帕希特斯"
 DBM_CAPACITUS_DESCRIPTION		= "Announces and timers for Mechano-Lord Capacitus" 
