@@ -55,6 +55,7 @@
 	DBM_FATHOMLORD_OPTION_TOTEM_1		= "Tiefenwächter Flutvess' Totem ansagen";
 	DBM_FATHOMLORD_OPTION_TOTEM_2		= "Tiefenlord Karathress' Totem ansagen";
 	DBM_FATHOMLORD_OPTION_HEAL			= "Welle der Heilung ansagen";
+	DBM_FATHOMLORD_OPTION_SOUND			= "Play Sound on Spitfire Totem Spawn";
 
 	DBM_FATHOMLORD_TIDALVESS_TOTEM		= "Tiefenwächter Flutvess wirkt Feuerspuckendes Totem.";
 	DBM_FATHOMLORD_KARATHRESS_TOTEM		= "Tiefenlord Karathress wirkt Feuerspuckendes Totem.";
@@ -98,6 +99,8 @@
 	DBM_LEO_DESCRIPTION					= "Sagt Wirbelwind, Innere Dämonen und seine Phasen an.";
 	DBM_LEO_OPTION_WHIRL				= "Wirbelwind ansagen";
 	DBM_LEO_OPTION_DEMON				= "Innere Dämonen ansagen";
+	DBM_LEO_OPTION_DEMONWARN			= "Announce Inner Demons targets";
+	DBM_LEO_OPTION_WHISPER_DEMON		= "Announce Inner Demons in whispers";
 
 	DBM_LEO_YELL_PULL					= "Endlich hat meine Verbannung ein Ende!";
 	DBM_LEO_YELL_DEMON					= "Hinfort, unbedeutender Elf%.%s*Ich habe jetzt die Kontrolle!"; -- stupid spaces...there are 2 spaces at the moment :[

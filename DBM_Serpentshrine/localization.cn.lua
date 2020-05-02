@@ -78,6 +78,7 @@ if (GetLocale() == "zhCN") then
 	DBM_FATHOMLORD_OPTION_TOTEM_1		= "警报泰达维斯的溅火图腾";
 	DBM_FATHOMLORD_OPTION_TOTEM_2		= "警报卡拉瑟雷斯的溅火图腾";
 	DBM_FATHOMLORD_OPTION_HEAL			= "警报治疗波";
+	DBM_FATHOMLORD_OPTION_SOUND			= "Play Sound on Spitfire Totem Spawn";
 
 	DBM_FATHOMLORD_TIDALVESS_TOTEM		= "深水卫士泰达维斯施放了飞火图腾。";
 	DBM_FATHOMLORD_KARATHRESS_TOTEM		= "深水领主卡拉瑟雷斯施放了飞火图腾。";
@@ -126,6 +127,7 @@ if (GetLocale() == "zhCN") then
 	DBM_LEO_OPTION_WHIRL				= "警报旋风斩";
 	DBM_LEO_OPTION_DEMON				= "警报心魔";
 	DBM_LEO_OPTION_DEMONWARN			= "警报心魔的目标";
+	DBM_LEO_OPTION_WHISPER_DEMON		= "Announce Inner Demons in whispers";
 
 	DBM_LEO_YELL_PULL					= "我的放逐终于结束了！";
 	DBM_LEO_YELL_DEMON					= "滚开吧，脆弱的精灵。现在我说了算！";

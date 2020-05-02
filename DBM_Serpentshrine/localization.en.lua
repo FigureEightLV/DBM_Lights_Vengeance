@@ -57,6 +57,7 @@ DBM_FATHOMLORD_YELL_PULL			= "Guards, attention! We have visitors....";
 DBM_FATHOMLORD_OPTION_TOTEM_1		= "Announce Fathom-Guard Tidalvess' Spitfire Totem";
 DBM_FATHOMLORD_OPTION_TOTEM_2		= "Announce Fathom-Lord Karathress' Spitfire Totem";
 DBM_FATHOMLORD_OPTION_HEAL			= "Announce Healing Wave";
+DBM_FATHOMLORD_OPTION_SOUND			= "Play Sound on Spitfire Totem Spawn";
 
 DBM_FATHOMLORD_TIDALVESS_TOTEM		= "Fathom-Guard Tidalvess casts Spitfire Totem.";
 DBM_FATHOMLORD_KARATHRESS_TOTEM		= "Fathom-Lord Karathress casts Spitfire Totem.";
@@ -94,6 +95,7 @@ DBM_LEO_DESCRIPTION					= "Announces Whirlwind, Insidious Whisper and his phases
 DBM_LEO_OPTION_WHIRL				= "Announce Whirlwind";
 DBM_LEO_OPTION_DEMON				= "Announce Inner Demons";
 DBM_LEO_OPTION_DEMONWARN			= "Announce Inner Demons targets";
+DBM_LEO_OPTION_WHISPER_DEMON		= "Announce Inner Demons in whispers";
 
 DBM_LEO_YELL_PULL					= "Finally, my banishment ends!";
 DBM_LEO_YELL_DEMON					= "Be gone, trifling elf%.%s*I am in control now!"; -- stupid spaces...there are 2 spaces at the moment :[

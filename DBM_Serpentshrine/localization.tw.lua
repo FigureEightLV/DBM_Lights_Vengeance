@@ -66,6 +66,7 @@ DBM_FATHOMLORD_YELL_PULL			= "守衛，注意!我們有訪客了……";
 DBM_FATHOMLORD_OPTION_TOTEM_1			= "提示深淵守衛提達費斯的飛火圖騰";
 DBM_FATHOMLORD_OPTION_TOTEM_2			= "提示深淵之王卡拉薩瑞斯的飛火圖騰";
 DBM_FATHOMLORD_OPTION_HEAL			= "提示治療波";
+DBM_FATHOMLORD_OPTION_SOUND			= "Play Sound on Spitfire Totem Spawn";
 
 DBM_FATHOMLORD_TIDALVESS_TOTEM			= "深淵守衛提達費斯施放了飛火圖騰。";
 DBM_FATHOMLORD_KARATHRESS_TOTEM			= "深淵之王卡拉薩瑞斯施放了飛火圖騰。";
@@ -112,6 +113,7 @@ DBM_LEO_DESCRIPTION				= "提示旋風斬、 陰險之語和階段轉換";
 DBM_LEO_OPTION_WHIRL				= "提示旋風斬";
 DBM_LEO_OPTION_DEMON				= "提示內心的惡靈";
 DBM_LEO_OPTION_DEMONWARN			= "提示內心的惡靈目標";
+DBM_LEO_OPTION_WHISPER_DEMON		= "Announce Inner Demons in whispers";
 
 DBM_LEO_YELL_PULL				= "終於結束了我的流放生涯!";
 DBM_LEO_YELL_DEMON				= "消失吧，微不足道的精靈。現在開始由我掌管!"; -- stupid spaces...there are 2 spaces at the moment :[

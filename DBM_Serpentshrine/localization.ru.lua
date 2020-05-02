@@ -62,6 +62,7 @@ DBM_FATHOMLORD_YELL_PULL			= "Guards, attention! We have visitors....";
 DBM_FATHOMLORD_OPTION_TOTEM_1		= "Объявить Тотем огненного всполоха Тидалвесса";
 DBM_FATHOMLORD_OPTION_TOTEM_2		= "Объявить Тотем огненного всполоха Каратресса";
 DBM_FATHOMLORD_OPTION_HEAL			= "Объявить Волна исцеления";
+DBM_FATHOMLORD_OPTION_SOUND			= "Play Sound on Spitfire Totem Spawn";
 
 DBM_FATHOMLORD_TIDALVESS_TOTEM		= "Хранитель глубин Волниис ставит тотем огненного всполоха.";
 DBM_FATHOMLORD_KARATHRESS_TOTEM		= "Повелитель глубин Каратресс ставит тотем огненного всполоха.";
@@ -108,6 +109,7 @@ DBM_LEO_DESCRIPTION					= "Объявляет Вихрь, Коварный ше�
 DBM_LEO_OPTION_WHIRL				= "Объявить Вихрь";
 DBM_LEO_OPTION_DEMON				= "Объявить Внутренний демон";
 DBM_LEO_OPTION_DEMONWARN			= "Сообщить цели Внутренний демон";
+DBM_LEO_OPTION_WHISPER_DEMON		= "Announce Inner Demons in whispers";
 
 DBM_LEO_YELL_PULL					= "Finally, my banishment ends!";
 DBM_LEO_YELL_DEMON					= "Be gone, trifling elf%.%s*I am in control now!"; -- stupid spaces...there are 2 spaces at the moment :[
