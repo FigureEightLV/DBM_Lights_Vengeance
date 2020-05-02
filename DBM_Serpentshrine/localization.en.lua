@@ -128,11 +128,14 @@ DBM_VASHJ_DESCRIPTION				= "Announce Static Charge, spawns, phases, Tainted Core
 
 DBM_VASHJ_OPTION_RANGECHECK			= "Show distance frame";
 DBM_VASHJ_OPTION_CHARGE				= "Announce Static Charge";
+DBM_VASHJ_OPTION_CHARGEWHISP		= "Whisper Static Charge Target";
 DBM_VASHJ_OPTION_CHARGEICON			= "Set icons on static charge targets";
 DBM_VASHJ_OPTION_SPAWNS				= "Announce spawns in phase 2";
 DBM_VASHJ_OPTION_COREWARN			= "Announce who loots the Tainted Cores";
 DBM_VASHJ_OPTION_COREICON			= "Set icon on players with a Tainted Core";
 DBM_VASHJ_OPTION_CORESPECWARN		= "Show special warning if you receive a Tainted Core";
+DBM_VASHJ_OPTION_MINDCONTROL		= "Announce mind control targets";
+DBM_VASHJ_OPTION_ROOTS				= "Timer bars for roots";
 
 
 DBM_VASHJ_YELL_PULL1				= "I spit on you, surface filth! ";
@@ -160,6 +163,7 @@ DBM_VASHJ_WARN_NAGA_NOW				= "*** Naga spawned ***";
 DBM_VASHJ_WARN_SHIELD_FADED			= "*** Shield %d/4 down ***";
 DBM_VASHJ_WARN_CORE_LOOT			= "*** >%s< has the Tainted Core ***";
 DBM_VASHJ_SPECWARN_CORE				= "You have the Tainted Core!";
+DBM_VASHJ_WARN_MINDCONTROL			= "*** >%s< is mind controlled! ***";
 
 DBM_VASHJ_WARN_PHASE3				= "*** Shield 4/4 down - Phase 3 ***";
 DBM_VASHJ_WARN_ENRAGE				= "*** Enrage in %s %s ***";

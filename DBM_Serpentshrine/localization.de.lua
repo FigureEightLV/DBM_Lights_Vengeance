@@ -138,11 +138,14 @@
 
 	DBM_VASHJ_OPTION_RANGECHECK			= "Distanz Frame anzeigen";
 	DBM_VASHJ_OPTION_CHARGE				= "Statische Aufladung ansagen";
+	DBM_VASHJ_OPTION_CHARGEWHISP		= "Whisper Static Charge Target";
 	DBM_VASHJ_OPTION_CHARGEICON			= "Icon auf Spieler mit Statische Aufladung setzen";
 	DBM_VASHJ_OPTION_SPAWNS				= "Spawns in Phase 2 ansagen";
 	DBM_VASHJ_OPTION_COREWARN			= "Besudelte Kerne ansagen";
 	DBM_VASHJ_OPTION_COREICON			= "Icon auf Spieler mit Besudelten Kernen setzen";
 	DBM_VASHJ_OPTION_CORESPECWARN		= "Special Warning anzeigen, wenn du einen Besudelten Kern hast";
+	DBM_VASHJ_OPTION_MINDCONTROL		= "Announce mind control targets";
+	DBM_VASHJ_OPTION_ROOTS				= "Timer bars for roots";
 
 
 --[[DBM_VASHJ_YELL_PULL1				= "I spit on you, surface filth! ";
@@ -170,6 +173,7 @@
 	DBM_VASHJ_WARN_SHIELD_FADED			= "*** Schild %d/4 down ***";
 	DBM_VASHJ_WARN_CORE_LOOT			= "*** >%s< hat den Besudelten Kern  ***";
 	DBM_VASHJ_SPECWARN_CORE				= "Du hast den Besudelten Kern!";
+	DBM_VASHJ_WARN_MINDCONTROL			= "*** >%s< is mind controlled! ***";
 
 	DBM_VASHJ_WARN_PHASE3				= "*** Schild 4/4 down - Phase 3 ***";
 	DBM_VASHJ_WARN_ENRAGE				= "*** Enrage in %s %s ***";

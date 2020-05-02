@@ -168,11 +168,14 @@ if (GetLocale() == "zhCN") then
 
 	DBM_VASHJ_OPTION_RANGECHECK			= "显示距离框体";
 	DBM_VASHJ_OPTION_CHARGE				= "警报静电充能";
+	DBM_VASHJ_OPTION_CHARGEWHISP		= "Whisper Static Charge Target";
 	DBM_VASHJ_OPTION_CHARGEICON			= "对静电充能的目标添加标注";
 	DBM_VASHJ_OPTION_SPAWNS				= "警报第二阶段的敌人出现";
 	DBM_VASHJ_OPTION_COREWARN			= "警报是谁拾取了污染之核";
 	DBM_VASHJ_OPTION_COREICON			= "对拾取了污染之核的队友添加标注";
 	DBM_VASHJ_OPTION_CORESPECWARN		= "当你拾取污染之核时显示特殊警报";
+	DBM_VASHJ_OPTION_MINDCONTROL		= "Announce mind control targets";
+	DBM_VASHJ_OPTION_ROOTS				= "Timer bars for roots";
 
 	DBM_VASHJ_YELL_PULL1				= "我唾弃你们，地表的渣滓！";
 	DBM_VASHJ_YELL_PULL2				= "伊利丹大人必胜！";
@@ -184,6 +187,7 @@ if (GetLocale() == "zhCN") then
 	DBM_VASHJ_FADE_SHIELD				= "魔法屏障效果从瓦丝琪身上消失。";
 	DBM_VASHJ_DEBUFF_CORE				= "([^%s]+)受([^%s]+)麻痹效果的影响。";
 	DBM_VASHJ_YELL_PHASE3				= "你们最好找掩护。";
+	DBM_VASHJ_LOOT						= "(.+)(.*)了物品：(%d+)。";
 
 	DBM_VASHJ_WARN_CHARGE				= "*** 静电充能 -> >%s< ***";
 	DBM_VASHJ_SPECWARN_CHARGE			= "你受到了静电充能效果！";
@@ -198,7 +202,7 @@ if (GetLocale() == "zhCN") then
 	DBM_VASHJ_WARN_SHIELD_FADED			= "*** 护盾 - %d/4被击碎 ***";
 	DBM_VASHJ_WARN_CORE_LOOT			= "*** >%s<获得了污染之核 ***";
 	DBM_VASHJ_SPECWARN_CORE				= "你获得了污染之核！";
-	DBM_VASHJ_LOOT						= "(.+)(.*)了物品：(%d+)。";
+	DBM_VASHJ_WARN_MINDCONTROL			= "*** >%s< is mind controlled! ***";
 
 	DBM_VASHJ_WARN_PHASE3				= "*** 护盾被完全击碎 - 第三阶段开始 ***";
 	DBM_VASHJ_WARN_ENRAGE				= "*** %s%s后激怒 ***";

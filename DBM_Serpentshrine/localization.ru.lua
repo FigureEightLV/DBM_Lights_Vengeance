@@ -149,11 +149,14 @@ DBM_VASHJ_DESCRIPTION				= "Объявляет Статический заряд
 
 DBM_VASHJ_OPTION_RANGECHECK			= "Показать область границы контроля";
 DBM_VASHJ_OPTION_CHARGE				= "Объявить Статический заряд";
+DBM_VASHJ_OPTION_CHARGEWHISP		= "Whisper Static Charge Target";
 DBM_VASHJ_OPTION_CHARGEICON			= "Установить метку на цель Статический заряд";
 DBM_VASHJ_OPTION_SPAWNS				= "Объявить возрождения в фазе 2";
 DBM_VASHJ_OPTION_COREWARN			= "Объявить наличие порченой магмы";
 DBM_VASHJ_OPTION_COREICON			= "Установить метку на цел у кого Порченая магма";
 DBM_VASHJ_OPTION_CORESPECWARN		= "Показать спец-предупреждение если Порченая магма у тебя";
+DBM_VASHJ_OPTION_MINDCONTROL		= "Announce mind control targets";
+DBM_VASHJ_OPTION_ROOTS				= "Timer bars for roots";
 
 
 DBM_VASHJ_YELL_PULL1				= "I spit on you, surface filth! ";
@@ -181,6 +184,7 @@ DBM_VASHJ_WARN_NAGA_NOW				= "*** Нага появилась ***";
 DBM_VASHJ_WARN_SHIELD_FADED			= "*** Магический барьер - деактивировано %d/4 ***";
 DBM_VASHJ_WARN_CORE_LOOT			= "*** >%s< получил порченую магму ***";
 DBM_VASHJ_SPECWARN_CORE				= "У тебя порченая магма!";
+DBM_VASHJ_WARN_MINDCONTROL			= "*** >%s< is mind controlled! ***";
 
 DBM_VASHJ_WARN_PHASE3				= "*** Магический барьер снят 4/4 - Фаза 3 ***";
 DBM_VASHJ_WARN_ENRAGE				= "*** Ярость через %s %s ***";

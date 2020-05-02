@@ -154,11 +154,14 @@ DBM_VASHJ_DESCRIPTION				= "提示靜電衝鋒, 召喚, 階段, 受污染的核�
 
 DBM_VASHJ_OPTION_RANGECHECK			= "顯示距離框";
 DBM_VASHJ_OPTION_CHARGE				= "提示靜電衝鋒";
+DBM_VASHJ_OPTION_CHARGEWHISP		= "Whisper Static Charge Target";
 DBM_VASHJ_OPTION_CHARGEICON			= "標記中了靜電衝鋒的人";
 DBM_VASHJ_OPTION_SPAWNS				= "提示第二階段的召喚";
 DBM_VASHJ_OPTION_COREWARN			= "提示誰拾取了受污染的核心";
 DBM_VASHJ_OPTION_COREICON			= "標記擁有受污染的核心的人";
-DBM_VASHJ_OPTION_CORESPECWARN			= "顯示特別警告當你擁有受污染的核心";
+DBM_VASHJ_OPTION_CORESPECWARN		= "顯示特別警告當你擁有受污染的核心";
+DBM_VASHJ_OPTION_MINDCONTROL		= "Announce mind control targets";
+DBM_VASHJ_OPTION_ROOTS				= "Timer bars for roots";
 
 
 DBM_VASHJ_YELL_PULL1				= "我唾棄你們，地表的渣滓!";
@@ -186,6 +189,7 @@ DBM_VASHJ_WARN_NAGA_NOW				= "*** 盤牙精英出現!中間坦克注意! ***";
 DBM_VASHJ_WARN_SHIELD_FADED			= "*** 魔法屏障 %d/4 消失! ***";
 DBM_VASHJ_WARN_CORE_LOOT			= "*** >%s< 擁有受污染的核心! ***";
 DBM_VASHJ_SPECWARN_CORE				= "你擁有受污染的核心!";
+DBM_VASHJ_WARN_MINDCONTROL			= "*** >%s< is mind controlled! ***";
 
 DBM_VASHJ_WARN_PHASE3				= "*** 魔法屏障 4/4 消失! - 進入第三階段! ***";
 DBM_VASHJ_WARN_ENRAGE				= "*** %s %s後狂暴! ***";
