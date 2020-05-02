@@ -38,9 +38,9 @@ function Skyriss:OnEvent(event, args)
 			end
 		end
 	elseif event == "SPELL_AURA_APPLIED" then
-		if args.spellId == 39019 and args.destName then
+		if (args.spellId == 37162 or args.spellId == 39019) and args.destName then
 			self:SendSync("MC"..tostring(args.destName))
-		elseif args.spellId == 39017 and args.destName then
+		elseif (args.spellId == 36924 or args.spellId == 39017) and args.destName then
 			self:SendSync("Rend"..tostring(args.destName))
 		end	
 	end

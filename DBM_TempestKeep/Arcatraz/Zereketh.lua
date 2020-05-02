@@ -7,6 +7,7 @@ Zereketh:RegisterCombat("COMBAT");
 
 Zereketh:RegisterEvents(
 	"SPELL_CAST_START",
+	"SPELL_CAST_SUCCESS",
 	"SPELL_AURA_APPLIED"
 );
 
@@ -19,11 +20,13 @@ function Zereketh:OnEvent(event, args)
 	if event == "SPELL_CAST_START" then
 		if args.spellId == 39005 then
 			self:SendSync("Nova")
-		elseif args.spellId == 36119 or args.spellId == 30533 then
+		end
+	elseif event == "SPELL_CAST_SUCCESS" then
+		if args.spellId == 36119 or args.spellId == 30533 then
 			self:SendSync("Void")
 		end
 	elseif event == "SPELL_AURA_APPLIED" then
-		if (args.spellId == 39367 or args.spellId == 32863) and args.destName then
+		if (args.spellId == 39367 or args.spellId == 32863 or args.spellId == 36123) and args.destName then
 			self:SendSync("SOC"..tostring(args.destName))
 		end
 	end

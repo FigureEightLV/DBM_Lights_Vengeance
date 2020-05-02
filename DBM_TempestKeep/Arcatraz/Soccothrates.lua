@@ -6,13 +6,13 @@ Socco.Author	= "Arta";
 Socco:RegisterCombat("COMBAT");
 
 Socco:RegisterEvents(
-	"SPELL_CAST_START"
+	"SPELL_CAST_SUCCESS"
 );
 
 Socco:AddOption("WarnKnock", true, DBM_SOCCO_OPTION_KNOCK)
 
 function Socco:OnEvent(event, args)
-	if event == "SPELL_CAST_START" then
+	if event == "SPELL_CAST_SUCCESS" then
 		if args.spellId == 36512 then
 			self:SendSync("Knock")
 		end

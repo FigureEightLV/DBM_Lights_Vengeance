@@ -102,6 +102,7 @@ DBM_DALLIAH_WARN_GIFT		= ">%s< has Gift of the Doomsayer"
 -- Harbinger Skyriss
 DBM_SKYRISS_NAME		= "Herold Horizontiss"
 DBM_SKYRISS_DESCRIPTION		= "Ansages und Zeitgebers für Herold Horizontiss"
+DBM_ARCA_SKYRISS_CHECK_SPLIT	= "We span the universe, as countless as the stars!"
 
 DBM_SKYRISS_OPTION_REND		= "Warns for Mind Rend"
 DBM_SKYRISS_OPTION_MC		= "Warns for Mind Control"
