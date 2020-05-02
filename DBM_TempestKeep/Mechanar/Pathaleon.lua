@@ -30,6 +30,6 @@ function Pathaleon:OnSync(msg)
 		self:Announce(DBM_PATHALEON_WARN_SUMMON, 3)
 	elseif msg:sub(0,2) == "MC" and self.Options.WarnMC then
 		msg = msg:sub(3)
-		self:Announce(DBM_PATHALEON_WARN_MS:format(msg), 3)
+		self:Announce(DBM_PATHALEON_WARN_MC:format(msg), 3)
 	end
 end

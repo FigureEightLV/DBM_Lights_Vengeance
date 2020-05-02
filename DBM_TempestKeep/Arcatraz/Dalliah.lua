@@ -7,6 +7,7 @@ Dalliah:RegisterCombat("COMBAT");
 
 Dalliah:RegisterEvents(
 	"SPELL_CAST_START",
+	"SPELL_CAST_SUCCESS",
 	"SPELL_AURA_APPLIED"
 );
 
@@ -20,7 +21,9 @@ function Dalliah:OnEvent(event, args)
 	if event == "SPELL_CAST_START" then
 		if args.spellId == 39013 then
 			self:SendSync("Heal")
-		elseif args.spellId == 36142 then
+		end
+	elseif event == "SPELL_CAST_SUCCESS" then
+		if args.spellId == 36142 then
 			self:SendSync("WW")
 		end
 	elseif event == "SPELL_AURA_APPLIED" then
