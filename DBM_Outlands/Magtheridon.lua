@@ -72,7 +72,7 @@ function Mag:OnSync(msg)
 	elseif msg == "Firstnova" then
 		self:StartStatusBarTimer(55, "Blast Nova", "Interface\\Icons\\Spell_Fire_SealOfFire");
 	elseif msg:sub(1,5) == "Quake" then -- Quake timers can become off when Blast Nova occurs at the same time
-		local count = tonumber(msg:sub(6,7))
+		local count = tonumber(msg:sub(6))
 		local timer = count > 1 and 50 or 38
 		self:StartStatusBarTimer(timer, "Quake"..count, "Interface\\Icons\\Spell_Nature_Earthquake");
 		self:ScheduleMethod(timer, "SendSync", "Quake"..(count + 1));
