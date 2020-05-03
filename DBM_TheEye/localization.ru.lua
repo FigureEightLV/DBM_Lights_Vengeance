@@ -10,6 +10,8 @@ DBM_VOIDREAVER_OPTION_YELL_ORB			= "Отправить сообщение в ч�
 DBM_VOIDREAVER_OPTION_ORB_ICON			= "Установить метку на цель Чародейский шар";
 DBM_VOIDREAVER_OPTION_WARN_POUNDING		= "Объявить Тяжкий удар";
 DBM_VOIDREAVER_OPTION_WARN_POUNDINGSOON	= "Показать предупреждение \"Скоро Тяжкий удар\"";
+DBM_VOIDREAVER_OPTION_WARN_KNOCK		= "Announce Knock Away";
+DBM_VOIDREAVER_OPTION_WARN_KNOCKSOON	= "Show \"Knock Away soon\" warning";
 DBM_VOIDREAVER_OPTION_SOUND				= "Звуковое уведомление, если бросается Чародейский шар на вас"
 
 DBM_VOIDREAVER_POUNDING					= "Тяжкий удар";
@@ -19,6 +21,7 @@ DBM_VOIDREAVER_YELL_ORB					= "Чародейский шар приближае�
 DBM_VOIDREAVER_WARN_ENRAGE				= "*** Ярость через %s %s ***";
 DBM_VOIDREAVER_WARN_POUNDING			= "*** Тяжкий удар ***";
 DBM_VOIDREAVER_WARN_POUNDING_SOON		= "*** Скоро Тяжкий удар ***";
+DBM_VOIDREAVER_WARN_KNOCK_SOON			= "*** Knock Away soon ***";
 DBM_VOIDREAVER_SPECWARN_ORB				= "Чародейский шар на вас!";
 
 DBM_VOIDREAVER_R_FURY					= "Праведное неистовство"

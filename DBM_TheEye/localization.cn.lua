@@ -19,6 +19,8 @@ if (GetLocale() == "zhCN") then
 	DBM_VOIDREAVER_OPTION_ORB_ICON			= "对奥术宝珠的目标添加标注";
 	DBM_VOIDREAVER_OPTION_WARN_POUNDING		= "警报重击";
 	DBM_VOIDREAVER_OPTION_WARN_POUNDINGSOON	= "显示“重击 - 即将施放”警报";
+	DBM_VOIDREAVER_OPTION_WARN_KNOCK		= "Announce Knock Away";
+	DBM_VOIDREAVER_OPTION_WARN_KNOCKSOON	= "Show \"Knock Away soon\" warning";
 	DBM_VOIDREAVER_OPTION_SOUND				= "当奥术宝珠对你施放时播放声音警报";
 
 	DBM_VOIDREAVER_POUNDING					= "重击";
@@ -28,6 +30,7 @@ if (GetLocale() == "zhCN") then
 	DBM_VOIDREAVER_WARN_ENRAGE				= "*** %s%s后激怒 ***";
 	DBM_VOIDREAVER_WARN_POUNDING			= "*** 重击 ***";
 	DBM_VOIDREAVER_WARN_POUNDING_SOON		= "*** 重击 - 即将施放 ***";
+	DBM_VOIDREAVER_WARN_KNOCK_SOON			= "*** Knock Away soon ***";
 	DBM_VOIDREAVER_SPECWARN_ORB				= "奥术宝珠于你！";
 
 	DBM_VOIDREAVER_R_FURY					= "正义之怒"

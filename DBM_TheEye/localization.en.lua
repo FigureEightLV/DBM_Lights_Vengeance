@@ -10,6 +10,8 @@ DBM_VOIDREAVER_OPTION_YELL_ORB			= "Send chat message when he casts Arcane Orb o
 DBM_VOIDREAVER_OPTION_ORB_ICON			= "Set icon on Arcane Orb target";
 DBM_VOIDREAVER_OPTION_WARN_POUNDING		= "Announce Pounding";
 DBM_VOIDREAVER_OPTION_WARN_POUNDINGSOON	= "Show \"Pounding soon\" warning";
+DBM_VOIDREAVER_OPTION_WARN_KNOCK		= "Announce Knock Away";
+DBM_VOIDREAVER_OPTION_WARN_KNOCKSOON	= "Show \"Knock Away soon\" warning";
 DBM_VOIDREAVER_OPTION_SOUND				= "Play sound when he casts Arcane Orb on you"
 
 DBM_VOIDREAVER_POUNDING					= "Pounding";
@@ -19,6 +21,7 @@ DBM_VOIDREAVER_YELL_ORB					= "Arcane Orb incoming! Run away from me!";
 DBM_VOIDREAVER_WARN_ENRAGE				= "*** Enrage in %s %s ***";
 DBM_VOIDREAVER_WARN_POUNDING			= "*** Pounding ***";
 DBM_VOIDREAVER_WARN_POUNDING_SOON		= "*** Pounding soon ***";
+DBM_VOIDREAVER_WARN_KNOCK_SOON			= "*** Knock Away soon ***";
 DBM_VOIDREAVER_SPECWARN_ORB				= "Arcane Orb on you!";
 
 DBM_VOIDREAVER_R_FURY					= "Righteous Fury"

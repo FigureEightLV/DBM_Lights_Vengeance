@@ -11,6 +11,8 @@ DBM_VOIDREAVER_OPTION_YELL_ORB			= "當秘法寶珠在你身上時大叫";
 DBM_VOIDREAVER_OPTION_ORB_ICON			= "標記秘法寶珠目標";
 DBM_VOIDREAVER_OPTION_WARN_POUNDING		= "提示猛擊";
 DBM_VOIDREAVER_OPTION_WARN_POUNDINGSOON		= "顯示\"即將發動猛擊\"警告";
+DBM_VOIDREAVER_OPTION_WARN_KNOCK		= "Announce Knock Away";
+DBM_VOIDREAVER_OPTION_WARN_KNOCKSOON	= "Show \"Knock Away soon\" warning";
 DBM_VOIDREAVER_OPTION_SOUND			= "當秘法寶珠在你身上時播放音效"
 
 DBM_VOIDREAVER_POUNDING				= "猛擊";
@@ -20,6 +22,7 @@ DBM_VOIDREAVER_YELL_ORB				= "秘法寶珠向著我來了!不想死的快閃開!
 DBM_VOIDREAVER_WARN_ENRAGE			= "*** %s %s後狂暴 ***";
 DBM_VOIDREAVER_WARN_POUNDING			= "*** 猛擊 ***";
 DBM_VOIDREAVER_WARN_POUNDING_SOON		= "*** 即將發動猛擊 ***";
+DBM_VOIDREAVER_WARN_KNOCK_SOON			= "*** Knock Away soon ***";
 DBM_VOIDREAVER_SPECWARN_ORB			= "秘法寶珠在你身上!";
 
 DBM_VOIDREAVER_R_FURY				= "正義之怒"

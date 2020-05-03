@@ -1,13 +1,14 @@
 local Solarian = DBM:NewBossMod("Solarian", DBM_SOLARIAN_NAME, DBM_SOLARIAN_DESCRIPTION, DBM_TEMPEST_KEEP, DBM_EYE_TAB, 3);
 
-Solarian.Version	= "1.0";
-Solarian.Author		= "Tandanu";
+Solarian.Version	= "1.2";
+Solarian.Author		= "FigureEightLV"; -- Originally by Tandanu
 
 local warnPhase = false;
 local split = false
 
 Solarian:RegisterEvents(
 	"SPELL_CAST_START",
+	"SPELL_SUMMON",
 	"SPELL_AURA_APPLIED",
 	"CHAT_MSG_MONSTER_YELL"
 );
@@ -17,8 +18,8 @@ Solarian:RegisterCombat("COMBAT");
 Solarian:AddOption("WarnWrath", true, DBM_SOLARIAN_OPTION_WARN_WRATH);
 Solarian:AddOption("IconWrath", true, DBM_SOLARIAN_OPTION_ICON_WRATH);
 Solarian:AddOption("SpecWrath", true, DBM_SOLARIAN_OPTION_SPECWARN_WRATH);
-Solarian:AddOption("SoundWarning", false, DBM_SOLARIAN_OPTION_SOUND);
-Solarian:AddOption("WhisperWrath", true, DBM_SOLARIAN_OPTION_WHISPER_WRATH);
+Solarian:AddOption("SoundWarning", true, DBM_SOLARIAN_OPTION_SOUND);
+Solarian:AddOption("WhisperWrath", false, DBM_SOLARIAN_OPTION_WHISPER_WRATH);
 Solarian:AddOption("WarnPhase", true, DBM_SOLARIAN_OPTION_WARN_PHASE);
 
 Solarian:AddBarOption("Wrath: (.*)")
@@ -61,7 +62,7 @@ function Solarian:OnEvent(event, arg1)
 		if arg1.spellId == 42783 then
 			self:SendSync("Wrath"..tostring(arg1.destName));
 		end
-	elseif event == "SPELL_CAST_START" then
+	elseif event == "SPELL_CAST_START" or event == "SPELL_SUMMON" then
 		if arg1.spellId and splitIds[arg1.spellId] then -- wtf?
 			self:SendSync("Split");
 		end
@@ -87,6 +88,9 @@ function Solarian:OnEvent(event, arg1)
 				warnPhase = true;
 				break;
 			end
+		end
+		if not warnPhase then
+			warnPhase = UnitExists("focus") and UnitName("focus") == DBM_SOLARIAN_NAME -- fallback
 		end
 	elseif event == "ResetSplit" then
 		split = false
@@ -123,14 +127,14 @@ function Solarian:OnSync(msg)
 		split = true
 		if self.Options.WarnPhase then
 			self:Announce(DBM_SOLARIAN_ANNOUNCE_SPLIT, 3);
-			self:ScheduleSelf(6, "AgentsNow");
-			self:ScheduleSelf(17, "PriestsWarn");
-			self:ScheduleSelf(22, "PriestsNow");
-			self:ScheduleSelf(85, "SplitWarn");
+			self:ScheduleSelf(4.5, "AgentsNow");
+			self:ScheduleSelf(11, "PriestsWarn");
+			self:ScheduleSelf(20.5, "PriestsNow");
+			self:ScheduleSelf(91, "SplitWarn");
 		end		
-		self:StartStatusBarTimer(90, "Split", "Interface\\Icons\\Spell_Holy_SummonLightwell");
-		self:StartStatusBarTimer(22.5, "Priests & Solarian", "Interface\\Icons\\Spell_Holy_Renew");
-		self:StartStatusBarTimer(6.5, "Agents", "Interface\\Icons\\Spell_Holy_AuraMastery");
+		self:StartStatusBarTimer(96, "Split", "Interface\\Icons\\Spell_Holy_SummonLightwell");
+		self:StartStatusBarTimer(21, "Priests & Solarian", "Interface\\Icons\\Spell_Holy_Renew");
+		self:StartStatusBarTimer(5, "Agents", "Interface\\Icons\\Spell_Holy_AuraMastery");
 		self:ScheduleEvent(50, "ResetSplit")
 	end
 end
@@ -143,6 +147,9 @@ function Solarian:OnUpdate(elapsed) -- this can be used to detect the phase if n
 				foundIt = true;
 				break;
 			end
+		end
+		if not foundIt then
+			foundIt = UnitExists("focus") and UnitName("focus") == DBM_SOLARIAN_NAME -- fallback
 		end
 		if not foundIt and warnPhase then
 			self:SendSync("Split");

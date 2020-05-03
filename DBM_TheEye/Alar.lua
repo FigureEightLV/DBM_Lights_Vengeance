@@ -1,7 +1,7 @@
 local Alar = DBM:NewBossMod("Alar", DBM_ALAR_NAME, DBM_ALAR_DESCRIPTION, DBM_TEMPEST_KEEP, DBM_EYE_TAB, 1);
 
-Alar.Version	= "1.0";
-Alar.Author		= "Tandanu";
+Alar.Version	= "1.2";
+Alar.Author		= "FigureEightLV"; -- Originally by Tandanu
 
 local warnPhase = false;
 local phase2	= false;
@@ -11,7 +11,9 @@ local langError	= false;
 local lastMeteor= 0;
 
 Alar:RegisterEvents(
-	"SPELL_AURA_APPLIED"	
+	"SPELL_CAST_SUCCESS",
+	"SPELL_AURA_APPLIED",
+	"SPELL_AURA_REFRESH"
 );
 
 Alar:RegisterCombat("COMBAT");
@@ -21,6 +23,7 @@ Alar:AddOption("Meteor", true, DBM_ALAR_OPTION_METEOR);
 
 Alar:AddBarOption("Enrage")
 Alar:AddBarOption("Meteor")
+Alar:AddBarOption("Flame Quills")
 Alar:AddBarOption("Melt Armor: (.*)")
 
 function Alar:OnCombatStart(delay)	
@@ -29,7 +32,7 @@ function Alar:OnCombatStart(delay)
 	lastAdd	= 0;
 	flying = false;
 	langError = false;
-	self:StartStatusBarTimer(35 - delay, "Next Platform", "Interface\\AddOns\\DBM_API\\Textures\\CryptFiendUnBurrow");
+	self:StartStatusBarTimer(30 - delay, "Next Platform", "Interface\\AddOns\\DBM_API\\Textures\\CryptFiendUnBurrow");
 	self:ScheduleSelf(10, "CheckForAlar"); -- to prevent bugs if you are using an unsupported client language...
 end
 
@@ -44,8 +47,13 @@ function Alar:OnEvent(event, arg1)
 		if not warnPhase then
 			langError = true;
 		end
-		
-	elseif event == "SPELL_AURA_APPLIED" then
+	elseif event == "SPELL_CAST_SUCCESS" then
+		if arg1.spellId == 35181 then
+			self:SendSync("DiveBomb");
+		elseif arg1.spellId == 34229 then
+			self:SendSync("FlameQuills");
+		end
+	elseif event == "SPELL_AURA_APPLIED" or event == "SPELL_AURA_REFRESH" then
 		if arg1.spellId == 35383 and arg1.destName == UnitName("player") then
 			self:AddSpecialWarning(DBM_ALAR_WARN_FIRE);
 		elseif arg1.spellId == 35410 then
@@ -71,15 +79,23 @@ function Alar:OnSync(msg)
 		warnPhase = false;
 		phase2 = GetTime();
 		self:EndStatusBarTimer("Next Platform");
-		self:ScheduleSelf(47, "MeteorSoon");
-		self:StartStatusBarTimer(52, "Meteor", "Interface\\Icons\\Spell_Fire_Fireball02");
+		self:UnScheduleSelf("NextPlatform");
+		self:ScheduleSelf(30, "MeteorSoon");
+		self:StartStatusBarTimer(35, "Meteor", "Interface\\Icons\\Spell_Fire_Fireball02");
 		self:StartStatusBarTimer(600, "Enrage", "Interface\\Icons\\Spell_Shadow_UnholyFrenzy");
 		self:ScheduleSelf(300, "EnrageWarn", 300);
 		self:ScheduleSelf(480, "EnrageWarn", 120);
 		self:ScheduleSelf(540, "EnrageWarn", 60);
 		self:ScheduleSelf(570, "EnrageWarn", 30);
 		self:ScheduleSelf(590, "EnrageWarn", 10);
-		
+	elseif msg == "DiveBomb" then
+		if self.Options.Meteor then
+			self:Announce(DBM_ALAR_WARN_METEOR, 3);
+		end
+		self:ScheduleSelf(30, "MeteorSoon");
+		self:StartStatusBarTimer(35, "Meteor", "Interface\\Icons\\Spell_Fire_Fireball02");
+	elseif msg == "FlameQuills" then
+		self:StartStatusBarTimer(10, "Flame Quills", "Interface\\Icons\\Spell_Fire_Flare");
 	elseif string.sub(msg, 0, 9) == "MeltArmor" then
 		local target = string.sub(msg, 10);
 		if target then
@@ -102,14 +118,13 @@ function Alar:OnSync(msg)
 		if self.Options.Meteor then
 			self:Announce(DBM_ALAR_WARN_METEOR, 3);
 		end
-		self:ScheduleSelf(49, "MeteorSoon");
-		self:StartStatusBarTimer(54.5, "Meteor", "Interface\\Icons\\Spell_Fire_Fireball02");
+		self:ScheduleSelf(45, "MeteorSoon");
+		self:StartStatusBarTimer(50, "Meteor", "Interface\\Icons\\Spell_Fire_Fireball02");
 	elseif msg == "NextPlatform" and self.InCombat then
 		flying = false;
-		self:StartStatusBarTimer(35, "Next Platform", "Interface\\AddOns\\DBM_API\\Textures\\CryptFiendUnBurrow");
+		self:StartStatusBarTimer(28, "Next Platform", "Interface\\AddOns\\DBM_API\\Textures\\CryptFiendUnBurrow");
 	end
 end
-
 
 function Alar:OnUpdate(elapsed)
 	if self.InCombat and not langError and not self:IsWipe() then
@@ -124,6 +139,10 @@ function Alar:OnUpdate(elapsed)
 				end
 				break;
 			end
+		end
+
+		if not foundIt and not phase2 then
+			foundIt = UnitExists("focus") and UnitName("focus") == DBM_ALAR_NAME -- fallback
 		end
 
 		if not foundIt and warnPhase then

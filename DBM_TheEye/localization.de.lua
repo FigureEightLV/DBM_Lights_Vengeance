@@ -8,6 +8,9 @@
 	DBM_VOIDREAVER_OPTION_YELL_ORB			= "Chat Nachricht verschicken, wenn Arkane Kugel auf dich gecastet wird";
 	DBM_VOIDREAVER_OPTION_WARN_POUNDING		= "Hämmern ansagen";
 	DBM_VOIDREAVER_OPTION_WARN_POUNDINGSOON	= "\"Hämmern bald\" Warnung anzeigen";
+	DBM_VOIDREAVER_OPTION_WARN_KNOCK		= "Announce Knock Away";
+	DBM_VOIDREAVER_OPTION_WARN_KNOCKSOON	= "Show \"Knock Away soon\" warning";
+	DBM_VOIDREAVER_OPTION_SOUND				= "Play sound when he casts Arcane Orb on you"
 
 	DBM_VOIDREAVER_POUNDING					= "Hämmern";
 
@@ -16,6 +19,7 @@
 	DBM_VOIDREAVER_WARN_ENRAGE				= "*** Enrage in %s %s ***";
 	DBM_VOIDREAVER_WARN_POUNDING			= "*** Hämmern ***";
 	DBM_VOIDREAVER_WARN_POUNDING_SOON		= "*** Hämmern bald ***";
+	DBM_VOIDREAVER_WARN_KNOCK_SOON			= "*** Knock Away soon ***";
 	DBM_VOIDREAVER_SPECWARN_ORB				= "Arkane Kugel auf dir!";
 	
 	DBM_VOIDREAVER_R_FURY					= "Zorn der Gerechtigkeit"
